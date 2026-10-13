@@ -70,7 +70,9 @@ SUPPORTED_EXTENSIONS = [".csv", ".xlsx", ".xls"]
 MAX_FILE_SIZE_MB = 100
 
 # Built-in default Groq API Key
-GROQ_API_KEY = ""
+DEFAULT_GROQ_API_KEY = ""
+DEFAULT_GROQ_API_KEY = GROQ_API_KEY
+
 
 # Default Groq Models
 DEFAULT_GROQ_MODEL = "qwen/qwen3.8-27b"
