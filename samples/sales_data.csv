@@ -1,0 +1,1099 @@
+Date,Region,Product_Category,Product_Name,Sales_Rep,Customer_Segment,Units_Sold,Unit_Price,Discount_Pct,Revenue,Cost,Profit
+2024-01-01,Europe,Electronics,Smartphone Pro,Diana Prince,Enterprise,1,1299,0.2,1039.2,773.27,265.93
+2024-01-02,Europe,Electronics,Smartwatch,Bob Miller,Mid-Market,14,299,0.0,4186.0,3084.9,1101.1
+2024-01-02,Europe,Software,Cloud Storage Sub,Diana Prince,Mid-Market,24,49,0.0,1176.0,294.24,881.76
+2024-01-03,Latin America,Electronics,Ultra Laptop,Alice Chen,Mid-Market,9,899,0.0,8091.0,6072.1,2018.9
+2024-01-04,Asia-Pacific,Electronics,Ultra Laptop,Alice Chen,Consumer,12,499,0.0,5988.0,4441.66,1546.34
+2024-01-04,North America,Software,BI Analytics Tool,Evan Wright,Enterprise,49,199,0.0,9751.0,3339.58,6411.42
+2024-01-04,Asia-Pacific,Electronics,Smartwatch,Diana Prince,Enterprise,16,499,0.0,7984.0,4917.2,3066.8
+2024-01-04,Latin America,Office Supplies,Noise-Cancelling Pod,Fatima Al-Mansoor,Consumer,28,650,0.05,17290.0,11012.3,6277.7
+2024-01-04,North America,Electronics,Ultra Laptop,Carlos Rossi,Enterprise,3,1299,0.1,3507.3,2714.07,793.23
+2024-01-04,North America,Office Supplies,Ergonomic Chair,Evan Wright,Mid-Market,29,320,0.15,7888.0,5199.18,2688.82
+2024-01-05,Europe,Electronics,Smartwatch,Evan Wright,Mid-Market,17,1299,0.2,17666.4,9949.5,7716.9
+2024-01-05,Europe,Office Supplies,Noise-Cancelling Pod,Carlos Rossi,Consumer,13,320,0.1,3744.0,2578.14,1165.86
+2024-01-05,Asia-Pacific,Electronics,Ultra Laptop,Bob Miller,Consumer,19,299,0.2,4544.8,3110.15,1434.65
+2024-01-05,North America,Office Supplies,Ergonomic Chair,Evan Wright,Enterprise,8,320,0.05,2432.0,1147.61,1284.39
+2024-01-07,Asia-Pacific,Office Supplies,Ergonomic Chair,Fatima Al-Mansoor,Small Business,7,320,0.0,2240.0,1109.33,1130.67
+2024-01-07,North America,Electronics,Smartwatch,Fatima Al-Mansoor,Consumer,2,899,0.0,1798.0,1129.4,668.6
+2024-01-07,Europe,Electronics,Smartphone Pro,Fatima Al-Mansoor,Enterprise,8,1299,0.0,10392.0,6487.34,3904.66
+2024-01-08,North America,Electronics,Smartphone Pro,Diana Prince,Consumer,14,1299,0.0,18186.0,11552.45,6633.55
+2024-01-09,North America,Office Supplies,Monitor Arm,Carlos Rossi,Consumer,34,149,0.0,5066.0,2570.44,2495.56
+2024-01-09,Asia-Pacific,Office Supplies,Ergonomic Chair,Fatima Al-Mansoor,Enterprise,10,89,0.1,801.0,363.21,437.79
+2024-01-09,Europe,Office Supplies,Noise-Cancelling Pod,Alice Chen,Enterprise,5,320,0.15,1360.0,898.03,461.97
+2024-01-09,Europe,Electronics,Smartphone Pro,Carlos Rossi,Consumer,15,299,0.1,4036.5,2846.14,1190.36
+2024-01-09,Europe,Electronics,Smartphone Pro,Bob Miller,Enterprise,16,299,0.0,4784.0,3809.05,974.95
+2024-01-09,Europe,Electronics,Wireless Headphones,Evan Wright,Enterprise,4,1299,0.0,5196.0,2983.0,2213.0
+2024-01-09,North America,Electronics,Wireless Headphones,Bob Miller,Mid-Market,10,499,0.0,4990.0,2894.95,2095.05
+2024-01-10,Latin America,Software,Cloud Storage Sub,Evan Wright,Enterprise,5,49,0.2,196.0,49.77,146.23
+2024-01-10,Asia-Pacific,Software,BI Analytics Tool,Evan Wright,Enterprise,43,499,0.1,19311.3,4302.9,15008.4
+2024-01-10,North America,Office Supplies,Noise-Cancelling Pod,Alice Chen,Enterprise,6,89,0.0,534.0,250.96,283.04
+2024-01-10,Europe,Electronics,Smartphone Pro,Bob Miller,Enterprise,19,899,0.0,17081.0,11738.97,5342.03
+2024-01-10,North America,Electronics,Ultra Laptop,Evan Wright,Enterprise,17,499,0.1,7634.7,5438.32,2196.38
+2024-01-12,North America,Software,Security Suite,Carlos Rossi,Consumer,49,499,0.1,22005.9,6900.53,15105.37
+2024-01-12,Latin America,Electronics,Ultra Laptop,Evan Wright,Mid-Market,10,1299,0.1,11691.0,6815.69,4875.31
+2024-01-12,Asia-Pacific,Office Supplies,Monitor Arm,Evan Wright,Small Business,13,320,0.05,3952.0,2185.71,1766.29
+2024-01-13,Europe,Electronics,Wireless Headphones,Evan Wright,Enterprise,11,299,0.05,3124.55,2130.03,994.52
+2024-01-13,Europe,Software,Cloud Storage Sub,Bob Miller,Mid-Market,49,499,0.0,24451.0,4744.25,19706.75
+2024-01-13,North America,Electronics,Wireless Headphones,Carlos Rossi,Small Business,12,899,0.05,10248.6,6422.45,3826.15
+2024-01-13,North America,Office Supplies,Standing Desk,Bob Miller,Enterprise,26,149,0.0,3874.0,2003.08,1870.92
+2024-01-14,Europe,Electronics,Smartwatch,Bob Miller,Small Business,19,499,0.15,8058.85,5009.89,3048.96
+2024-01-14,North America,Electronics,Smartphone Pro,Fatima Al-Mansoor,Enterprise,6,499,0.1,2694.6,1980.66,713.94
+2024-01-14,Europe,Electronics,Wireless Headphones,Fatima Al-Mansoor,Mid-Market,17,499,0.0,8483.0,6529.15,1953.85
+2024-01-14,Latin America,Office Supplies,Ergonomic Chair,Carlos Rossi,Enterprise,30,149,0.05,4246.5,2035.91,2210.59
+2024-01-14,Asia-Pacific,Electronics,Smartwatch,Evan Wright,Small Business,3,499,0.0,1497.0,929.5,567.5
+2024-01-15,Asia-Pacific,Software,Security Suite,Alice Chen,Mid-Market,14,49,0.1,617.4,99.28,518.12
+2024-01-15,Asia-Pacific,Software,BI Analytics Tool,Fatima Al-Mansoor,Enterprise,40,99,0.0,3960.0,1087.67,2872.33
+2024-01-15,Asia-Pacific,Office Supplies,Monitor Arm,Fatima Al-Mansoor,Mid-Market,3,149,,424.65,249.07,175.58
+2024-01-15,North America,Software,Team Chat License,Diana Prince,Enterprise,27,99,0.0,2673.0,736.51,1936.49
+2024-01-15,North America,Software,Cloud Storage Sub,Diana Prince,Small Business,21,49,0.0,1029.0,351.27,677.73
+2024-01-15,Europe,Electronics,Wireless Headphones,Bob Miller,Small Business,6,299,0.05,1704.3,1057.1,647.2
+2024-01-15,North America,Electronics,Wireless Headphones,Evan Wright,Small Business,9,1299,0.15,9937.35,6319.79,3617.56
+2024-01-16,Europe,Office Supplies,Ergonomic Chair,Diana Prince,Small Business,33,89,0.1,2643.3,1137.76,1505.54
+2024-01-16,Europe,Electronics,Smartphone Pro,Evan Wright,Consumer,16,1299,0.0,20784.0,15285.45,5498.55
+2024-01-17,Europe,Software,Security Suite,Diana Prince,Enterprise,14,49,,686.0,112.46,573.54
+2024-01-17,Europe,Office Supplies,Ergonomic Chair,Carlos Rossi,Small Business,25,149,0.0,3725.0,1781.95,1943.05
+2024-01-18,North America,Electronics,Smartwatch,Carlos Rossi,Consumer,18,299,0.0,5382.0,3858.32,1523.68
+2024-01-18,North America,Software,BI Analytics Tool,Alice Chen,Consumer,46,199,0.0,9154.0,2144.71,7009.29
+2024-01-19,Europe,Electronics,Ultra Laptop,Alice Chen,Enterprise,19,499,0.05,9006.95,5974.57,3032.38
+2024-01-19,Europe,Office Supplies,Noise-Cancelling Pod,Alice Chen,Enterprise,24,320,,6528.0,2751.85,3776.15
+2024-01-19,Europe,Electronics,Ultra Laptop,Carlos Rossi,Small Business,14,1299,0.0,18186.0,11749.86,6436.14
+2024-01-20,Europe,Electronics,Ultra Laptop,Alice Chen,Mid-Market,3,1299,0.1,3507.3,1974.21,1533.09
+2024-01-20,Europe,Office Supplies,Noise-Cancelling Pod,Alice Chen,Mid-Market,3,89,0.1,240.3,125.12,115.18
+2024-01-20,North America,Electronics,Wireless Headphones,Fatima Al-Mansoor,Consumer,4,299,0.05,1136.2,799.49,336.71
+2024-01-20,Europe,Electronics,Smartphone Pro,Evan Wright,Small Business,3,1299,0.05,3702.15,2076.78,1625.37
+2024-01-21,Asia-Pacific,Electronics,Smartwatch,Fatima Al-Mansoor,Consumer,5,899,0.05,4270.25,2818.63,1451.62
+2024-01-21,Europe,Electronics,Ultra Laptop,Carlos Rossi,Enterprise,18,899,0.05,15372.9,8918.88,6454.02
+2024-01-21,North America,Office Supplies,Noise-Cancelling Pod,Diana Prince,Enterprise,33,89,0.0,2937.0,1426.69,1510.31
+2024-01-21,Latin America,Electronics,Smartphone Pro,Fatima Al-Mansoor,Small Business,18,1299,0.05,22212.9,14401.07,7811.83
+2024-01-22,Europe,Office Supplies,Standing Desk,Bob Miller,Enterprise,22,149,0.1,2950.2,1747.66,1202.54
+2024-01-22,North America,Software,Security Suite,Alice Chen,Mid-Market,20,49,0.0,980.0,173.21,806.79
+2024-01-22,Europe,Office Supplies,Noise-Cancelling Pod,Bob Miller,Enterprise,7,650,0.05,4322.5,2396.73,1925.77
+2024-01-23,Europe,Software,Team Chat License,Bob Miller,Mid-Market,22,99,0.0,2178.0,495.95,1682.05
+2024-01-23,Europe,Electronics,Ultra Laptop,Evan Wright,Enterprise,1,1299,0.1,1169.1,772.57,396.53
+2024-01-24,North America,Electronics,Ultra Laptop,Evan Wright,Enterprise,10,899,0.0,8990.0,5799.47,3190.53
+2024-01-24,Asia-Pacific,Electronics,Smartwatch,Bob Miller,Small Business,6,299,0.0,1794.0,1410.08,383.92
+2024-01-25,Europe,Electronics,Smartphone Pro,Evan Wright,Enterprise,16,499,0.1,7185.6,5730.55,1455.05
+2024-01-25,North America,Electronics,Ultra Laptop,Diana Prince,Enterprise,19,1299,0.1,22212.9,15931.39,6281.51
+2024-01-25,Europe,Office Supplies,Standing Desk,Alice Chen,Enterprise,2,89,0.15,151.3,98.09,53.21
+2024-01-26,Asia-Pacific,Software,Team Chat License,Alice Chen,Mid-Market,26,199,0.1,4656.6,1461.34,3195.26
+2024-01-26,North America,Electronics,Wireless Headphones,Alice Chen,Enterprise,15,899,0.0,13485.0,7784.78,5700.22
+2024-01-26,North America,Software,Security Suite,Alice Chen,Mid-Market,8,499,0.05,3792.4,913.46,2878.94
+2024-01-26,North America,Electronics,Smartwatch,Alice Chen,Small Business,2,899,0.05,1708.1,1040.75,667.35
+2024-01-27,Asia-Pacific,Office Supplies,Ergonomic Chair,Evan Wright,Enterprise,32,650,0.0,20800.0,10079.59,10720.41
+2024-01-27,Europe,Electronics,Smartphone Pro,Evan Wright,Enterprise,19,1299,0.0,24681.0,18650.14,6030.86
+2024-01-28,North America,Electronics,Wireless Headphones,Fatima Al-Mansoor,Enterprise,17,1299,0.0,22083.0,15773.19,6309.81
+2024-01-28,North America,Electronics,Smartphone Pro,Fatima Al-Mansoor,Small Business,10,1299,0.0,12990.0,10323.98,2666.02
+2024-01-28,North America,Office Supplies,Ergonomic Chair,Bob Miller,Mid-Market,17,320,0.1,4896.0,1971.23,2924.77
+2024-01-29,Asia-Pacific,Electronics,Smartphone Pro,Diana Prince,Mid-Market,12,1299,0.1,14029.2,7771.88,6257.32
+2024-01-30,Latin America,Electronics,Smartwatch,Carlos Rossi,Mid-Market,17,1299,0.0,22083.0,15270.29,6812.71
+2024-01-30,North America,Electronics,Smartwatch,Alice Chen,Consumer,4,499,0.0,1996.0,1339.0,657.0
+2024-01-30,Europe,Electronics,Smartphone Pro,Carlos Rossi,Consumer,19,299,0.1,5112.9,3570.37,1542.53
+2024-01-30,North America,Office Supplies,Monitor Arm,Alice Chen,Mid-Market,5,89,0.15,378.25,204.01,174.24
+2024-01-30,Europe,Electronics,Ultra Laptop,Bob Miller,Mid-Market,8,899,0.1,6472.8,5133.17,1339.63
+2024-01-31,North America,Office Supplies,Monitor Arm,Alice Chen,Enterprise,22,320,0.0,7040.0,4433.67,2606.33
+2024-02-01,North America,Electronics,Wireless Headphones,Diana Prince,Small Business,15,499,0.15,6362.25,4763.92,1598.33
+2024-02-01,Asia-Pacific,Office Supplies,Standing Desk,Bob Miller,Mid-Market,17,149,0.0,2533.0,1107.18,1425.82
+2024-02-01,North America,Office Supplies,Ergonomic Chair,Bob Miller,Enterprise,9,89,0.0,801.0,335.98,465.02
+2024-02-02,North America,Electronics,Wireless Headphones,Fatima Al-Mansoor,Enterprise,15,499,0.2,5988.0,4219.38,1768.62
+2024-02-02,North America,Office Supplies,Standing Desk,Carlos Rossi,Enterprise,22,149,,3278.0,2281.91,996.09
+2024-02-02,Europe,Office Supplies,Monitor Arm,Alice Chen,Enterprise,7,149,0.0,1043.0,678.62,364.38
+2024-02-03,North America,Electronics,Wireless Headphones,Alice Chen,Enterprise,15,899,0.0,13485.0,9063.08,4421.92
+2024-02-03,North America,Electronics,Ultra Laptop,Carlos Rossi,Small Business,17,1299,0.0,22083.0,13719.62,8363.38
+2024-02-03,North America,Software,Cloud Storage Sub,Bob Miller,Mid-Market,19,99,0.05,1786.95,414.81,1372.14
+2024-02-04,Latin America,Office Supplies,Monitor Arm,Evan Wright,Enterprise,15,89,0.1,1201.5,552.86,648.64
+2024-02-04,North America,Electronics,Smartphone Pro,Evan Wright,Mid-Market,8,1299,0.0,10392.0,6133.5,4258.5
+2024-02-04,Europe,Electronics,Smartwatch,Diana Prince,Enterprise,16,899,0.0,14384.0,8824.97,5559.03
+2024-02-05,Asia-Pacific,Office Supplies,Monitor Arm,Fatima Al-Mansoor,Small Business,24,650,0.05,14820.0,10251.22,4568.78
+2024-02-05,Europe,Office Supplies,Ergonomic Chair,Evan Wright,Enterprise,3,149,0.0,447.0,264.21,182.79
+2024-02-06,Asia-Pacific,Electronics,Ultra Laptop,Fatima Al-Mansoor,Enterprise,19,1299,0.0,24681.0,16834.75,7846.25
+2024-02-06,Asia-Pacific,Office Supplies,Ergonomic Chair,Alice Chen,Mid-Market,9,149,,1072.8,722.09,350.71
+2024-02-07,North America,Software,BI Analytics Tool,Evan Wright,Small Business,14,499,0.0,6986.0,2437.11,4548.89
+2024-02-07,North America,Office Supplies,Ergonomic Chair,Fatima Al-Mansoor,Enterprise,19,320,0.0,6080.0,3804.32,2275.68
+2024-02-07,North America,Electronics,Smartwatch,Alice Chen,Mid-Market,17,299,0.15,4320.55,2454.42,1866.13
+2024-02-07,Asia-Pacific,Office Supplies,Standing Desk,Diana Prince,Consumer,8,320,0.0,2560.0,1341.6,1218.4
+2024-02-08,Europe,Software,BI Analytics Tool,Diana Prince,Small Business,18,199,0.0,3582.0,1088.89,2493.11
+2024-02-08,Asia-Pacific,Office Supplies,Ergonomic Chair,Diana Prince,Mid-Market,10,650,0.0,6500.0,3370.56,3129.44
+2024-02-08,North America,Electronics,Smartphone Pro,Diana Prince,Mid-Market,1,499,0.0,499.0,349.7,149.3
+2024-02-08,North America,Electronics,Smartphone Pro,Diana Prince,Mid-Market,14,299,0.0,4186.0,2991.16,1194.84
+2024-02-08,North America,Software,Security Suite,Alice Chen,Enterprise,48,99,0.2,3801.6,691.06,3110.54
+2024-02-08,North America,Electronics,Smartwatch,Alice Chen,Enterprise,10,899,0.0,8990.0,7178.69,1811.31
+2024-02-09,Europe,Software,Security Suite,Bob Miller,Mid-Market,8,199,0.2,1273.6,444.41,829.19
+2024-02-09,North America,Electronics,Smartphone Pro,Carlos Rossi,Mid-Market,4,1299,0.0,5196.0,2910.29,2285.71
+2024-02-10,North America,Software,BI Analytics Tool,Fatima Al-Mansoor,Mid-Market,24,49,0.0,1176.0,272.14,903.86
+2024-02-10,Europe,Electronics,Smartwatch,Fatima Al-Mansoor,Small Business,7,299,0.0,2093.0,1272.77,820.23
+2024-02-10,North America,Office Supplies,Monitor Arm,Carlos Rossi,Mid-Market,23,149,0.0,3427.0,1406.77,2020.23
+2024-02-10,North America,Office Supplies,Monitor Arm,Alice Chen,Small Business,33,320,0.0,10560.0,4504.3,6055.7
+2024-02-11,Latin America,Software,Security Suite,Evan Wright,Small Business,47,49,0.2,1842.4,384.76,1457.64
+2024-02-11,Latin America,Office Supplies,Monitor Arm,Evan Wright,Consumer,10,320,0.0,3200.0,1929.56,1270.44
+2024-02-11,Europe,Electronics,Wireless Headphones,Bob Miller,Small Business,19,1299,0.05,23446.95,17751.04,5695.91
+2024-02-12,North America,Electronics,Wireless Headphones,Fatima Al-Mansoor,Enterprise,18,899,0.0,16182.0,10182.5,5999.5
+2024-02-13,Latin America,Office Supplies,Noise-Cancelling Pod,Evan Wright,Enterprise,12,89,0.0,1068.0,453.12,614.88
+2024-02-13,Asia-Pacific,Electronics,Smartphone Pro,Diana Prince,Mid-Market,17,499,0.05,8058.85,5926.82,2132.03
+2024-02-14,North America,Electronics,Ultra Laptop,Evan Wright,Small Business,1,499,0.0,499.0,356.13,142.87
+2024-02-14,Latin America,Office Supplies,Noise-Cancelling Pod,Evan Wright,Small Business,10,650,0.0,6500.0,2605.39,3894.61
+2024-02-15,North America,Office Supplies,Monitor Arm,Fatima Al-Mansoor,Enterprise,28,149,0.0,4172.0,2377.73,1794.27
+2024-02-15,Asia-Pacific,Software,Cloud Storage Sub,Alice Chen,Small Business,8,99,0.1,712.8,193.04,519.76
+2024-02-16,North America,Electronics,Wireless Headphones,Diana Prince,Mid-Market,16,899,0.1,12945.6,9992.37,2953.23
+2024-02-16,Asia-Pacific,Software,Security Suite,Diana Prince,Mid-Market,47,499,0.0,23453.0,4295.94,19157.06
+2024-02-16,North America,Electronics,Ultra Laptop,Fatima Al-Mansoor,Mid-Market,6,899,0.2,4315.2,3315.83,999.37
+2024-02-17,North America,Electronics,Smartphone Pro,Alice Chen,Mid-Market,15,1299,0.15,16562.25,11028.01,5534.24
+2024-02-17,North America,Software,Team Chat License,Fatima Al-Mansoor,Enterprise,43,99,0.1,3831.3,1146.94,2684.36
+2024-02-17,Europe,Software,Team Chat License,Alice Chen,Enterprise,41,499,0.1,18413.1,3127.77,15285.33
+2024-02-18,North America,Electronics,Smartwatch,Bob Miller,Mid-Market,6,899,0.0,5394.0,3459.25,1934.75
+2024-02-18,North America,Office Supplies,Ergonomic Chair,Fatima Al-Mansoor,Mid-Market,20,89,0.0,1780.0,827.61,952.39
+2024-02-18,Europe,Electronics,Ultra Laptop,Bob Miller,Small Business,14,299,0.15,3558.1,2602.12,955.98
+2024-02-19,Europe,Electronics,Ultra Laptop,Diana Prince,Mid-Market,8,499,0.05,3792.4,2478.75,1313.65
+2024-02-20,North America,Software,Cloud Storage Sub,Carlos Rossi,Consumer,25,199,0.0,4975.0,1293.0,3682.0
+2024-02-20,Asia-Pacific,Office Supplies,Standing Desk,Evan Wright,Mid-Market,34,650,0.1,19890.0,12757.99,7132.01
+2024-02-20,Latin America,Electronics,Ultra Laptop,Bob Miller,Consumer,5,299,0.0,1495.0,1016.26,478.74
+2024-02-20,North America,Software,Team Chat License,Fatima Al-Mansoor,Mid-Market,43,99,0.0,4257.0,1078.3,3178.7
+2024-02-21,Europe,Office Supplies,Ergonomic Chair,Evan Wright,Mid-Market,14,89,0.0,1246.0,843.42,402.58
+2024-02-21,Europe,Software,Team Chat License,Carlos Rossi,Mid-Market,40,99,0.0,3960.0,817.63,3142.37
+2024-02-21,North America,Office Supplies,Ergonomic Chair,Alice Chen,Small Business,6,149,0.0,894.0,492.42,401.58
+2024-02-21,Europe,Office Supplies,Ergonomic Chair,Fatima Al-Mansoor,Enterprise,24,650,0.0,15600.0,7183.99,8416.01
+2024-02-21,Latin America,Office Supplies,Monitor Arm,Evan Wright,Enterprise,10,320,0.1,2880.0,1962.64,917.36
+2024-02-21,Asia-Pacific,Office Supplies,Ergonomic Chair,Diana Prince,Enterprise,20,650,0.0,13000.0,7277.76,5722.24
+2024-02-22,North America,Electronics,Smartphone Pro,Fatima Al-Mansoor,Small Business,6,499,0.05,2844.3,1585.75,1258.55
+2024-02-22,North America,Electronics,Smartphone Pro,Alice Chen,Mid-Market,15,499,0.0,7485.0,5687.33,1797.67
+2024-02-22,North America,Electronics,Smartphone Pro,Bob Miller,Small Business,2,1299,0.15,2208.3,1629.29,579.01
+2024-02-23,Europe,Electronics,Smartwatch,Evan Wright,Enterprise,5,1299,0.1,5845.5,4008.16,1837.34
+2024-02-23,Latin America,Electronics,Wireless Headphones,Alice Chen,Mid-Market,15,899,0.1,12136.5,8433.24,3703.26
+2024-02-23,North America,Office Supplies,Ergonomic Chair,Evan Wright,Enterprise,31,149,0.05,4388.05,1876.54,2511.51
+2024-02-23,Europe,Electronics,Ultra Laptop,Fatima Al-Mansoor,Enterprise,17,1299,0.0,22083.0,17079.34,5003.66
+2024-02-24,Asia-Pacific,Office Supplies,Noise-Cancelling Pod,Fatima Al-Mansoor,Mid-Market,2,149,0.15,253.3,154.62,98.68
+2024-02-24,Latin America,Software,BI Analytics Tool,Alice Chen,Enterprise,37,499,0.1,16616.7,5138.63,11478.07
+2024-02-25,Europe,Electronics,Smartphone Pro,Fatima Al-Mansoor,Enterprise,9,899,0.15,6877.35,4803.13,2074.22
+2024-02-25,Asia-Pacific,Office Supplies,Monitor Arm,Fatima Al-Mansoor,Enterprise,2,89,0.2,142.4,92.81,49.59
+2024-02-25,Asia-Pacific,Electronics,Smartwatch,Bob Miller,Mid-Market,12,299,0.15,3049.8,2429.37,620.43
+2024-02-25,North America,Office Supplies,Standing Desk,Alice Chen,Small Business,33,320,0.05,10032.0,4153.54,5878.46
+2024-02-26,North America,Electronics,Wireless Headphones,Diana Prince,Mid-Market,5,899,0.05,4270.25,2797.03,1473.22
+2024-02-26,North America,Software,BI Analytics Tool,Bob Miller,Mid-Market,34,99,0.0,3366.0,1068.92,2297.08
+2024-02-27,North America,Software,Team Chat License,Evan Wright,Enterprise,45,499,0.15,19086.75,3758.88,15327.87
+2024-02-27,Europe,Office Supplies,Ergonomic Chair,Alice Chen,Enterprise,11,149,0.0,1639.0,860.92,778.08
+2024-02-27,Europe,Office Supplies,Monitor Arm,Diana Prince,Enterprise,18,89,0.0,1602.0,697.4,904.6
+2024-02-28,Europe,Software,Security Suite,Diana Prince,Consumer,32,199,0.0,6368.0,1606.65,4761.35
+2024-02-28,Europe,Office Supplies,Noise-Cancelling Pod,Alice Chen,Mid-Market,31,89,0.05,2621.05,1084.82,1536.23
+2024-03-01,North America,Office Supplies,Noise-Cancelling Pod,Fatima Al-Mansoor,Mid-Market,14,149,0.1,1877.4,757.05,1120.35
+2024-03-01,North America,Office Supplies,Standing Desk,Fatima Al-Mansoor,Consumer,33,320,0.05,10032.0,5627.81,4404.19
+2024-03-01,Latin America,Electronics,Wireless Headphones,Alice Chen,Mid-Market,13,499,0.15,5513.95,3449.43,2064.52
+2024-03-01,North America,Office Supplies,Monitor Arm,Bob Miller,Mid-Market,6,149,0.0,894.0,413.76,480.24
+2024-03-02,North America,Office Supplies,Monitor Arm,Fatima Al-Mansoor,Consumer,15,89,0.1,1201.5,535.06,666.44
+2024-03-02,Asia-Pacific,Electronics,Ultra Laptop,Fatima Al-Mansoor,Mid-Market,3,499,0.0,1497.0,1135.57,361.43
+2024-03-02,Europe,Electronics,Ultra Laptop,Carlos Rossi,Mid-Market,13,299,0.0,3887.0,2307.01,1579.99
+2024-03-02,Latin America,Office Supplies,Standing Desk,Alice Chen,Enterprise,30,650,0.0,19500.0,9668.72,9831.28
+2024-03-03,Asia-Pacific,Office Supplies,Ergonomic Chair,Alice Chen,Enterprise,16,149,0.0,2384.0,1306.43,1077.57
+2024-03-03,North America,Electronics,Smartphone Pro,Evan Wright,Enterprise,15,1299,0.0,19485.0,11346.66,8138.34
+2024-03-03,Asia-Pacific,Office Supplies,Noise-Cancelling Pod,Alice Chen,Mid-Market,33,89,0.15,2496.45,1049.14,1447.31
+2024-03-03,Europe,Electronics,Ultra Laptop,Diana Prince,Mid-Market,13,899,0.0,11687.0,8640.95,3046.05
+2024-03-04,Asia-Pacific,Office Supplies,Monitor Arm,Fatima Al-Mansoor,Consumer,24,149,0.05,3397.2,2129.57,1267.63
+2024-03-04,Asia-Pacific,Office Supplies,Monitor Arm,Bob Miller,Enterprise,11,89,0.0,979.0,470.35,508.65
+2024-03-04,North America,Electronics,Ultra Laptop,Fatima Al-Mansoor,Consumer,3,1299,0.1,3507.3,2235.8,1271.5
+2024-03-04,Asia-Pacific,Electronics,Smartwatch,Alice Chen,Small Business,8,1299,0.05,9872.4,7121.49,2750.91
+2024-03-04,North America,Electronics,Ultra Laptop,Diana Prince,Mid-Market,19,899,0.05,16226.95,12194.03,4032.92
+2024-03-04,North America,Electronics,Ultra Laptop,Alice Chen,Enterprise,13,1299,0.05,16042.65,9792.49,6250.16
+2024-03-05,North America,Electronics,Smartphone Pro,Diana Prince,Enterprise,11,899,0.1,8900.1,6677.65,2222.45
+2024-03-06,Asia-Pacific,Software,Team Chat License,Diana Prince,Consumer,38,99,0.05,3573.9,795.8,2778.1
+2024-03-06,North America,Electronics,Wireless Headphones,Fatima Al-Mansoor,Consumer,1,1299,0.0,1299.0,767.37,531.63
+2024-03-06,Europe,Software,Security Suite,Bob Miller,Enterprise,5,199,0.2,796.0,227.16,568.84
+2024-03-06,Asia-Pacific,Electronics,Ultra Laptop,Fatima Al-Mansoor,Mid-Market,13,899,0.0,11687.0,9206.0,2481.0
+2024-03-06,Europe,Software,Security Suite,Bob Miller,Mid-Market,14,199,0.0,2786.0,769.08,2016.92
+2024-03-07,Europe,Electronics,Smartwatch,Fatima Al-Mansoor,Mid-Market,8,1299,0.0,10392.0,7192.15,3199.85
+2024-03-07,Europe,Electronics,Wireless Headphones,Fatima Al-Mansoor,Small Business,12,899,0.05,10248.6,6503.15,3745.45
+2024-03-07,North America,Electronics,Wireless Headphones,Bob Miller,Mid-Market,9,499,0.2,3592.8,2566.85,1025.95
+2024-03-07,Europe,Electronics,Smartwatch,Evan Wright,Consumer,15,1299,0.05,18510.75,14503.96,4006.79
+2024-03-07,North America,Electronics,Ultra Laptop,Carlos Rossi,Small Business,19,1299,0.0,24681.0,18857.31,5823.69
+2024-03-08,Asia-Pacific,Electronics,Wireless Headphones,Alice Chen,Enterprise,5,499,0.0,2495.0,1552.41,942.59
+2024-03-08,Europe,Electronics,Smartwatch,Carlos Rossi,Small Business,2,299,0.0,598.0,467.92,130.08
+2024-03-09,North America,Electronics,Ultra Laptop,Diana Prince,Enterprise,16,1299,0.0,20784.0,12434.48,8349.52
+2024-03-09,North America,Electronics,Wireless Headphones,Evan Wright,Small Business,16,899,0.0,14384.0,8667.73,5716.27
+2024-03-09,North America,Electronics,Ultra Laptop,Evan Wright,Small Business,9,299,0.0,2691.0,1725.39,965.61
+2024-03-09,Asia-Pacific,Electronics,Ultra Laptop,Evan Wright,Consumer,12,499,0.15,5089.8,3565.46,1524.34
+2024-03-09,Latin America,Software,BI Analytics Tool,Fatima Al-Mansoor,Small Business,34,199,0.0,6766.0,2000.43,4765.57
+2024-03-11,North America,Office Supplies,Noise-Cancelling Pod,Bob Miller,Mid-Market,2,89,0.1,160.2,111.27,48.93
+2024-03-11,North America,Office Supplies,Noise-Cancelling Pod,Fatima Al-Mansoor,Mid-Market,26,650,0.0,16900.0,6968.52,9931.48
+2024-03-11,Latin America,Software,BI Analytics Tool,Evan Wright,Enterprise,23,99,0.2,1821.6,410.44,1411.16
+2024-03-11,Asia-Pacific,Electronics,Ultra Laptop,Diana Prince,Consumer,12,299,0.0,3588.0,2367.46,1220.54
+2024-03-11,Asia-Pacific,Electronics,Ultra Laptop,Carlos Rossi,Enterprise,14,299,0.0,4186.0,2535.46,1650.54
+2024-03-13,North America,Office Supplies,Noise-Cancelling Pod,Bob Miller,Small Business,27,650,0.0,17550.0,11423.88,6126.12
+2024-03-14,Europe,Software,Team Chat License,Diana Prince,Enterprise,33,49,0.0,1617.0,310.85,1306.15
+2024-03-14,Europe,Office Supplies,Monitor Arm,Diana Prince,Small Business,29,149,0.0,4321.0,2720.52,1600.48
+2024-03-14,North America,Electronics,Smartwatch,Bob Miller,Enterprise,14,1299,0.0,18186.0,12668.17,5517.83
+2024-03-14,Asia-Pacific,Electronics,Ultra Laptop,Fatima Al-Mansoor,Enterprise,14,299,0.0,4186.0,3181.75,1004.25
+2024-03-14,North America,Electronics,Wireless Headphones,Evan Wright,Mid-Market,19,499,0.2,7584.8,5681.99,1902.81
+2024-03-14,Europe,Electronics,Smartwatch,Alice Chen,Small Business,14,499,0.0,6986.0,4724.71,2261.29
+2024-03-15,Asia-Pacific,Office Supplies,Ergonomic Chair,Evan Wright,Enterprise,10,149,0.05,1415.5,749.43,666.07
+2024-03-15,Europe,Software,BI Analytics Tool,Evan Wright,Mid-Market,23,499,0.05,10903.15,2451.72,8451.43
+2024-03-15,North America,Electronics,Ultra Laptop,Bob Miller,Mid-Market,7,899,0.0,6293.0,3594.42,2698.58
+2024-03-15,Asia-Pacific,Electronics,Smartphone Pro,Alice Chen,Enterprise,10,899,0.05,8540.5,6081.46,2459.04
+2024-03-16,North America,Electronics,Smartphone Pro,Carlos Rossi,Consumer,8,499,0.05,3792.4,2796.2,996.2
+2024-03-16,Europe,Office Supplies,Noise-Cancelling Pod,Diana Prince,Mid-Market,33,89,0.0,2937.0,1727.03,1209.97
+2024-03-16,Asia-Pacific,Electronics,Smartphone Pro,Alice Chen,Enterprise,7,899,0.0,6293.0,4230.32,2062.68
+2024-03-17,North America,Electronics,Ultra Laptop,Fatima Al-Mansoor,Mid-Market,18,499,0.0,8982.0,5341.05,3640.95
+2024-03-17,Europe,Electronics,Wireless Headphones,Diana Prince,Enterprise,7,299,0.1,1883.7,1367.91,515.79
+2024-03-17,Europe,Electronics,Wireless Headphones,Alice Chen,Mid-Market,10,1299,0.0,12990.0,8594.74,4395.26
+2024-03-18,North America,Software,BI Analytics Tool,Fatima Al-Mansoor,Consumer,25,99,0.0,2475.0,804.26,1670.74
+2024-03-18,Asia-Pacific,Electronics,Smartwatch,Carlos Rossi,Consumer,10,499,0.0,4990.0,3843.52,1146.48
+2024-03-18,Asia-Pacific,Office Supplies,Ergonomic Chair,Alice Chen,Mid-Market,5,89,0.0,445.0,247.88,197.12
+2024-03-19,Latin America,Office Supplies,Monitor Arm,Diana Prince,Enterprise,21,149,0.0,3129.0,1777.73,1351.27
+2024-03-19,Europe,Software,Cloud Storage Sub,Alice Chen,Mid-Market,18,99,0.05,1692.9,413.32,1279.58
+2024-03-20,Europe,Electronics,Smartphone Pro,Bob Miller,Small Business,1,499,0.0,499.0,334.62,164.38
+2024-03-21,Latin America,Software,Team Chat License,Carlos Rossi,Small Business,27,199,0.15,4567.05,1484.18,3082.87
+2024-03-21,Europe,Office Supplies,Monitor Arm,Alice Chen,Mid-Market,7,149,0.0,1043.0,481.93,561.07
+2024-03-21,North America,Electronics,Wireless Headphones,Alice Chen,Mid-Market,16,499,0.0,7984.0,5921.34,2062.66
+2024-03-22,Asia-Pacific,Electronics,Smartphone Pro,Carlos Rossi,Mid-Market,7,499,0.0,3493.0,2789.37,703.63
+2024-03-22,Europe,Electronics,Smartwatch,Evan Wright,Mid-Market,10,299,0.2,2392.0,1380.13,1011.87
+2024-03-22,North America,Office Supplies,Monitor Arm,Diana Prince,Consumer,16,650,0.0,10400.0,4940.47,5459.53
+2024-03-22,North America,Software,BI Analytics Tool,Diana Prince,Consumer,46,199,0.0,9154.0,2615.92,6538.08
+2024-03-22,North America,Electronics,Ultra Laptop,Carlos Rossi,Mid-Market,13,499,0.0,6487.0,4431.82,2055.18
+2024-03-22,Asia-Pacific,Electronics,Smartphone Pro,Diana Prince,Consumer,1,1299,0.0,1299.0,1032.98,266.02
+2024-03-22,North America,Office Supplies,Ergonomic Chair,Diana Prince,Mid-Market,30,89,0.0,2670.0,1480.12,1189.88
+2024-03-23,North America,Electronics,Ultra Laptop,Alice Chen,Consumer,4,299,0.05,1136.2,844.01,292.19
+2024-03-24,Europe,Electronics,Wireless Headphones,Alice Chen,Mid-Market,6,1299,0.0,7794.0,5924.8,1869.2
+2024-03-24,Europe,Office Supplies,Standing Desk,Carlos Rossi,Small Business,21,89,0.0,1869.0,1152.51,716.49
+2024-03-24,North America,Electronics,Wireless Headphones,Alice Chen,Small Business,6,1299,0.05,7404.3,5832.73,1571.57
+2024-03-24,North America,Electronics,Ultra Laptop,Fatima Al-Mansoor,Mid-Market,19,499,0.0,9481.0,6479.38,3001.62
+2024-03-24,Asia-Pacific,Office Supplies,Monitor Arm,Evan Wright,Enterprise,8,650,0.1,4680.0,2805.2,1874.8
+2024-03-25,North America,Electronics,Wireless Headphones,Fatima Al-Mansoor,Small Business,12,1299,0.05,14808.6,11016.51,3792.09
+2024-03-25,Asia-Pacific,Office Supplies,Standing Desk,Diana Prince,Mid-Market,30,650,0.05,18525.0,11229.6,7295.4
+2024-03-25,Asia-Pacific,Electronics,Ultra Laptop,Evan Wright,Mid-Market,1,299,0.05,284.05,222.89,61.16
+2024-03-26,Asia-Pacific,Office Supplies,Standing Desk,Alice Chen,Enterprise,29,650,0.0,18850.0,11959.72,6890.28
+2024-03-26,North America,Office Supplies,Noise-Cancelling Pod,Bob Miller,Mid-Market,19,149,0.15,2406.35,1238.42,1167.93
+2024-03-26,Asia-Pacific,Office Supplies,Standing Desk,Fatima Al-Mansoor,Mid-Market,12,320,0.1,3456.0,1835.06,1620.94
+2024-03-26,North America,Office Supplies,Standing Desk,Bob Miller,Mid-Market,16,149,0.0,2384.0,1190.04,1193.96
+2024-03-28,North America,Electronics,Smartphone Pro,Evan Wright,Small Business,19,899,0.0,17081.0,13017.56,4063.44
+2024-03-29,Latin America,Software,Cloud Storage Sub,Bob Miller,Enterprise,32,499,0.0,15968.0,4183.13,11784.87
+2024-03-29,Europe,Office Supplies,Standing Desk,Carlos Rossi,Consumer,29,320,0.0,9280.0,5168.93,4111.07
+2024-03-29,North America,Electronics,Wireless Headphones,Bob Miller,Consumer,5,899,0.0,4495.0,3516.34,978.66
+2024-03-29,North America,Office Supplies,Ergonomic Chair,Fatima Al-Mansoor,Mid-Market,17,320,0.15,4624.0,2795.62,1828.38
+2024-03-30,North America,Office Supplies,Monitor Arm,Fatima Al-Mansoor,Mid-Market,32,149,0.0,4768.0,1913.44,2854.56
+2024-03-30,North America,Office Supplies,Noise-Cancelling Pod,Fatima Al-Mansoor,Consumer,21,320,0.1,6048.0,3708.44,2339.56
+2024-03-31,Europe,Electronics,Smartwatch,Fatima Al-Mansoor,Mid-Market,8,1299,0.15,8833.2,6093.58,2739.62
+2024-04-01,North America,Electronics,Smartwatch,Fatima Al-Mansoor,Mid-Market,11,499,0.15,4665.65,2609.67,2055.98
+2024-04-01,Asia-Pacific,Software,Team Chat License,Evan Wright,Enterprise,49,99,0.0,4851.0,1650.01,3200.99
+2024-04-01,Asia-Pacific,Electronics,Smartphone Pro,Diana Prince,Enterprise,18,899,0.0,16182.0,12840.84,3341.16
+2024-04-01,North America,Office Supplies,Monitor Arm,Diana Prince,Small Business,27,320,0.0,8640.0,4798.67,3841.33
+2024-04-02,Europe,Office Supplies,Standing Desk,Carlos Rossi,Mid-Market,14,650,0.15,7735.0,4168.37,3566.63
+2024-04-02,Europe,Office Supplies,Monitor Arm,Evan Wright,Enterprise,28,320,0.05,8512.0,5254.76,3257.24
+2024-04-02,Europe,Electronics,Smartphone Pro,Evan Wright,Enterprise,7,299,0.05,1988.35,1519.68,468.67
+2024-04-02,North America,Electronics,Wireless Headphones,Diana Prince,Mid-Market,13,299,0.0,3887.0,3048.8,838.2
+2024-04-02,Asia-Pacific,Electronics,Smartphone Pro,Carlos Rossi,Enterprise,15,899,0.0,13485.0,8709.87,4775.13
+2024-04-02,North America,Office Supplies,Monitor Arm,Bob Miller,Enterprise,25,320,0.0,8000.0,5027.0,2973.0
+2024-04-02,Europe,Office Supplies,Noise-Cancelling Pod,Alice Chen,Mid-Market,25,89,0.15,1891.25,770.11,1121.14
+2024-04-03,North America,Office Supplies,Ergonomic Chair,Bob Miller,Mid-Market,27,650,0.1,15795.0,9729.82,6065.18
+2024-04-03,North America,Software,Team Chat License,Diana Prince,Mid-Market,15,49,0.0,735.0,119.31,615.69
+2024-04-03,North America,Electronics,Wireless Headphones,Diana Prince,Consumer,5,299,0.0,1495.0,1009.66,485.34
+2024-04-03,North America,Electronics,Wireless Headphones,Fatima Al-Mansoor,Consumer,16,299,0.0,4784.0,3771.87,1012.13
+2024-04-04,Asia-Pacific,Office Supplies,Ergonomic Chair,Fatima Al-Mansoor,Small Business,24,149,0.1,3218.4,1680.87,1537.53
+2024-04-05,North America,Office Supplies,Monitor Arm,Fatima Al-Mansoor,Small Business,26,149,0.15,3292.9,1418.0,1874.9
+2024-04-05,Latin America,Office Supplies,Monitor Arm,Fatima Al-Mansoor,Consumer,6,320,0.1,1728.0,718.38,1009.62
+2024-04-05,Europe,Electronics,Wireless Headphones,Carlos Rossi,Enterprise,12,299,0.05,3408.6,2662.51,746.09
+2024-04-06,Asia-Pacific,Electronics,Smartphone Pro,Bob Miller,Enterprise,1,899,0.0,899.0,557.67,341.33
+2024-04-06,North America,Electronics,Wireless Headphones,Diana Prince,Consumer,15,299,0.15,3812.25,2383.04,1429.21
+2024-04-07,North America,Electronics,Ultra Laptop,Evan Wright,Small Business,6,299,0.0,1794.0,1405.07,388.93
+2024-04-07,North America,Electronics,Smartwatch,Alice Chen,Small Business,8,299,0.0,2392.0,1745.53,646.47
+2024-04-08,Europe,Electronics,Wireless Headphones,Fatima Al-Mansoor,Mid-Market,17,1299,0.1,19874.7,12521.83,7352.87
+2024-04-08,Asia-Pacific,Office Supplies,Ergonomic Chair,Evan Wright,Mid-Market,25,89,0.05,2113.75,1391.33,722.42
+2024-04-08,Asia-Pacific,Office Supplies,Monitor Arm,Carlos Rossi,Consumer,23,320,0.0,7360.0,4957.38,2402.62
+2024-04-08,Europe,Office Supplies,Ergonomic Chair,Alice Chen,Mid-Market,14,89,0.1,1121.4,678.51,442.89
+2024-04-09,North America,Office Supplies,Ergonomic Chair,Bob Miller,Small Business,3,149,0.0,447.0,288.52,158.48
+2024-04-09,Asia-Pacific,Electronics,Smartphone Pro,Fatima Al-Mansoor,Mid-Market,1,1299,0.1,1169.1,702.56,466.54
+2024-04-09,Europe,Software,Team Chat License,Evan Wright,Mid-Market,47,199,0.0,9353.0,1473.54,7879.46
+2024-04-09,Asia-Pacific,Electronics,Wireless Headphones,Carlos Rossi,Mid-Market,18,899,0.0,16182.0,12156.74,4025.26
+2024-04-09,Asia-Pacific,Software,Security Suite,Bob Miller,Enterprise,11,99,0.0,1089.0,227.12,861.88
+2024-04-09,Asia-Pacific,Software,Cloud Storage Sub,Evan Wright,Mid-Market,19,49,0.2,744.8,254.71,490.09
+2024-04-10,North America,Office Supplies,Standing Desk,Carlos Rossi,Mid-Market,7,89,0.0,623.0,322.88,300.12
+2024-04-10,North America,Office Supplies,Noise-Cancelling Pod,Evan Wright,Consumer,8,149,0.1,1072.8,637.5,435.3
+2024-04-12,Asia-Pacific,Electronics,Smartwatch,Evan Wright,Mid-Market,19,499,0.0,9481.0,7347.83,2133.17
+2024-04-12,Europe,Office Supplies,Standing Desk,Carlos Rossi,Small Business,8,320,0.05,2432.0,1133.16,1298.84
+2024-04-12,Europe,Electronics,Wireless Headphones,Bob Miller,Mid-Market,8,499,0.15,3393.2,1904.41,1488.79
+2024-04-13,Europe,Electronics,Ultra Laptop,Alice Chen,Small Business,18,299,0.05,5112.9,3884.77,1228.13
+2024-04-13,North America,Electronics,Ultra Laptop,Alice Chen,Small Business,1,899,0.15,764.15,566.96,197.19
+2024-04-13,North America,Software,Security Suite,Carlos Rossi,Enterprise,43,49,0.05,2001.65,454.38,1547.27
+2024-04-13,Europe,Office Supplies,Monitor Arm,Bob Miller,Enterprise,19,650,0.05,11732.5,6885.85,4846.65
+2024-04-14,Asia-Pacific,Electronics,Smartwatch,Diana Prince,Enterprise,9,899,0.15,6877.35,4967.15,1910.2
+2024-04-14,North America,Electronics,Smartwatch,Alice Chen,Enterprise,2,899,0.1,1618.2,1242.01,376.19
+2024-04-14,Europe,Electronics,Smartphone Pro,Evan Wright,Mid-Market,19,499,0.2,7584.8,5625.92,1958.88
+2024-04-15,North America,Electronics,Wireless Headphones,Diana Prince,Small Business,16,499,0.0,7984.0,5646.27,2337.73
+2024-04-15,North America,Office Supplies,Noise-Cancelling Pod,Evan Wright,Consumer,21,89,0.05,1775.55,1234.46,541.09
+2024-04-15,Asia-Pacific,Office Supplies,Monitor Arm,Diana Prince,Enterprise,12,320,0.0,3840.0,1712.39,2127.61
+2024-04-15,Europe,Software,Cloud Storage Sub,Evan Wright,Enterprise,37,49,0.15,1541.05,393.25,1147.8
+2024-04-17,Europe,Electronics,Ultra Laptop,Diana Prince,Mid-Market,17,1299,0.2,17666.4,13528.85,4137.55
+2024-04-17,Europe,Office Supplies,Noise-Cancelling Pod,Bob Miller,Mid-Market,2,650,0.15,1105.0,527.62,577.38
+2024-04-18,Europe,Electronics,Smartphone Pro,Bob Miller,Consumer,5,499,0.05,2370.25,1895.27,474.98
+2024-04-18,Europe,Electronics,Ultra Laptop,Diana Prince,Small Business,6,499,0.0,2994.0,1872.66,1121.34
+2024-04-19,North America,Office Supplies,Standing Desk,Bob Miller,Small Business,16,320,0.1,4608.0,2150.06,2457.94
+2024-04-19,Asia-Pacific,Office Supplies,Ergonomic Chair,Bob Miller,Enterprise,14,89,0.0,1246.0,753.74,492.26
+2024-04-19,Europe,Electronics,Smartphone Pro,Evan Wright,Consumer,8,1299,0.1,9352.8,7353.27,1999.53
+2024-04-20,Europe,Office Supplies,Noise-Cancelling Pod,Carlos Rossi,Small Business,34,149,0.1,4559.4,2224.56,2334.84
+2024-04-20,North America,Software,Team Chat License,Evan Wright,Mid-Market,30,499,0.0,14970.0,3210.94,11759.06
+2024-04-21,Asia-Pacific,Office Supplies,Standing Desk,Bob Miller,Small Business,13,149,0.0,1937.0,922.55,1014.45
+2024-04-22,North America,Electronics,Smartwatch,Fatima Al-Mansoor,Small Business,17,899,0.2,12226.4,9328.48,2897.92
+2024-04-22,North America,Electronics,Smartwatch,Carlos Rossi,Mid-Market,4,299,0.0,1196.0,927.11,268.89
+2024-04-22,Europe,Office Supplies,Standing Desk,Alice Chen,Consumer,31,320,0.0,9920.0,4628.53,5291.47
+2024-04-22,North America,Electronics,Smartwatch,Fatima Al-Mansoor,Mid-Market,6,899,0.2,4315.2,2712.96,1602.24
+2024-04-23,Europe,Electronics,Smartphone Pro,Carlos Rossi,Small Business,8,1299,0.05,9872.4,6224.51,3647.89
+2024-04-23,North America,Office Supplies,Monitor Arm,Alice Chen,Enterprise,33,650,0.0,21450.0,10804.63,10645.37
+2024-04-23,Asia-Pacific,Software,Security Suite,Diana Prince,Small Business,37,499,0.0,18463.0,4435.33,14027.67
+2024-04-23,North America,Electronics,Smartphone Pro,Fatima Al-Mansoor,Enterprise,15,299,0.0,4485.0,3364.3,1120.7
+2024-04-23,Asia-Pacific,Electronics,Smartphone Pro,Carlos Rossi,Mid-Market,14,899,0.0,12586.0,10020.19,2565.81
+2024-04-23,North America,Software,BI Analytics Tool,Carlos Rossi,Enterprise,35,99,0.1,3118.5,985.72,2132.78
+2024-04-24,Europe,Office Supplies,Noise-Cancelling Pod,Carlos Rossi,Enterprise,11,320,0.0,3520.0,2102.29,1417.71
+2024-04-24,North America,Electronics,Ultra Laptop,Carlos Rossi,Consumer,9,299,0.1,2421.9,1478.89,943.01
+2024-04-24,North America,Electronics,Ultra Laptop,Diana Prince,Enterprise,8,1299,0.05,9872.4,6117.78,3754.62
+2024-04-25,North America,Software,BI Analytics Tool,Carlos Rossi,Small Business,49,99,0.05,4608.45,1453.06,3155.39
+2024-04-25,North America,Software,Cloud Storage Sub,Alice Chen,Enterprise,21,49,0.05,977.55,313.17,664.38
+2024-04-25,North America,Electronics,Smartwatch,Carlos Rossi,Mid-Market,14,499,0.0,6986.0,5464.52,1521.48
+2024-04-25,Latin America,Electronics,Ultra Laptop,Fatima Al-Mansoor,Mid-Market,8,1299,0.0,10392.0,7023.65,3368.35
+2024-04-25,Asia-Pacific,Electronics,Wireless Headphones,Fatima Al-Mansoor,Enterprise,18,1299,0.0,23382.0,16341.15,7040.85
+2024-04-25,Asia-Pacific,Office Supplies,Ergonomic Chair,Alice Chen,Mid-Market,6,89,0.0,534.0,325.31,208.69
+2024-04-26,Asia-Pacific,Electronics,Smartphone Pro,Bob Miller,Mid-Market,12,899,0.0,10788.0,7344.75,3443.25
+2024-04-26,North America,Software,Cloud Storage Sub,Bob Miller,Mid-Market,17,49,0.0,833.0,282.81,550.19
+2024-04-26,North America,Office Supplies,Noise-Cancelling Pod,Carlos Rossi,Small Business,25,320,0.0,8000.0,5035.08,2964.92
+2024-04-27,Europe,Office Supplies,Standing Desk,Alice Chen,Mid-Market,9,650,0.05,5557.5,2606.56,2950.94
+2024-04-27,North America,Electronics,Ultra Laptop,Alice Chen,Enterprise,12,1299,0.05,14808.6,10930.73,3877.87
+2024-04-29,Asia-Pacific,Electronics,Ultra Laptop,Alice Chen,Mid-Market,9,899,0.05,7686.45,5127.67,2558.78
+2024-05-01,North America,Electronics,Ultra Laptop,Fatima Al-Mansoor,Small Business,13,1299,0.2,13509.6,9862.23,3647.37
+2024-05-01,North America,Electronics,Smartwatch,Bob Miller,Mid-Market,11,1299,0.0,14289.0,10554.74,3734.26
+2024-05-01,North America,Electronics,Smartphone Pro,Fatima Al-Mansoor,Enterprise,15,499,0.05,7110.75,4828.16,2282.59
+2024-05-02,Asia-Pacific,Electronics,Smartwatch,Bob Miller,Mid-Market,15,299,0.1,4036.5,3164.61,871.89
+2024-05-02,Latin America,Electronics,Smartwatch,Evan Wright,Mid-Market,12,899,0.1,9709.2,7014.0,2695.2
+2024-05-02,Asia-Pacific,Electronics,Ultra Laptop,Fatima Al-Mansoor,Mid-Market,10,499,0.15,4241.5,2730.37,1511.13
+2024-05-02,North America,Software,BI Analytics Tool,Alice Chen,Small Business,17,499,0.0,8483.0,1745.31,6737.69
+2024-05-03,Asia-Pacific,Electronics,Smartphone Pro,Evan Wright,Mid-Market,11,499,0.0,5489.0,3120.23,2368.77
+2024-05-03,North America,Software,Team Chat License,Diana Prince,Enterprise,18,99,0.0,1782.0,387.8,1394.2
+2024-05-04,Asia-Pacific,Electronics,Wireless Headphones,Fatima Al-Mansoor,Small Business,3,499,0.1,1347.3,1060.34,286.96
+2024-05-04,North America,Electronics,Smartwatch,Fatima Al-Mansoor,Small Business,13,499,0.0,6487.0,4272.63,2214.37
+2024-05-04,Latin America,Software,BI Analytics Tool,Bob Miller,Enterprise,25,499,0.0,12475.0,2062.62,10412.38
+2024-05-05,Europe,Electronics,Smartwatch,Fatima Al-Mansoor,Enterprise,8,1299,0.05,9872.4,7607.85,2264.55
+2024-05-05,North America,Electronics,Smartwatch,Fatima Al-Mansoor,Mid-Market,9,299,0.05,2556.45,1691.28,865.17
+2024-05-05,Latin America,Electronics,Smartwatch,Bob Miller,Enterprise,18,499,0.0,8982.0,5740.5,3241.5
+2024-05-06,Europe,Office Supplies,Ergonomic Chair,Fatima Al-Mansoor,Mid-Market,23,149,0.05,3255.65,2146.89,1108.76
+2024-05-06,Europe,Office Supplies,Noise-Cancelling Pod,Diana Prince,Mid-Market,30,89,0.1,2403.0,1355.34,1047.66
+2024-05-07,Europe,Electronics,Ultra Laptop,Bob Miller,Consumer,2,899,0.0,1798.0,1102.91,695.09
+2024-05-07,North America,Electronics,Smartphone Pro,Bob Miller,Mid-Market,10,899,0.05,8540.5,5483.59,3056.91
+2024-05-07,Europe,Software,Security Suite,Carlos Rossi,Small Business,49,99,0.0,4851.0,1175.76,3675.24
+2024-05-07,North America,Electronics,Smartphone Pro,Carlos Rossi,Small Business,9,499,0.1,4041.9,3030.79,1011.11
+2024-05-07,Asia-Pacific,Office Supplies,Noise-Cancelling Pod,Fatima Al-Mansoor,Small Business,29,89,0.0,2581.0,1484.42,1096.58
+2024-05-07,North America,Electronics,Smartphone Pro,Evan Wright,Small Business,13,299,0.05,3692.65,2427.13,1265.52
+2024-05-08,North America,Office Supplies,Ergonomic Chair,Fatima Al-Mansoor,Enterprise,7,149,0.0,1043.0,487.01,555.99
+2024-05-08,Latin America,Office Supplies,Monitor Arm,Diana Prince,Consumer,10,650,0.1,5850.0,3687.7,2162.3
+2024-05-09,Latin America,Electronics,Smartwatch,Bob Miller,Small Business,3,899,0.05,2562.15,1775.91,786.24
+2024-05-09,Asia-Pacific,Electronics,Smartwatch,Alice Chen,Consumer,19,899,0.0,17081.0,9846.42,7234.58
+2024-05-09,North America,Electronics,Smartphone Pro,Diana Prince,Enterprise,15,499,0.05,7110.75,5592.72,1518.03
+2024-05-10,North America,Office Supplies,Standing Desk,Carlos Rossi,Consumer,15,149,0.1,2011.5,931.7,1079.8
+2024-05-11,North America,Office Supplies,Noise-Cancelling Pod,Evan Wright,Mid-Market,28,320,0.0,8960.0,5603.43,3356.57
+2024-05-11,Latin America,Office Supplies,Monitor Arm,Carlos Rossi,Enterprise,16,89,0.0,1424.0,783.54,640.46
+2024-05-11,Europe,Software,BI Analytics Tool,Fatima Al-Mansoor,Enterprise,21,49,0.05,977.55,312.93,664.62
+2024-05-12,North America,Office Supplies,Ergonomic Chair,Alice Chen,Enterprise,29,650,0.1,16965.0,11688.86,5276.14
+2024-05-12,North America,Office Supplies,Ergonomic Chair,Alice Chen,Enterprise,20,149,0.1,2682.0,1275.72,1406.28
+2024-05-12,North America,Software,Cloud Storage Sub,Fatima Al-Mansoor,Enterprise,12,499,0.0,5988.0,1230.13,4757.87
+2024-05-13,North America,Software,BI Analytics Tool,Bob Miller,Enterprise,38,99,0.0,3762.0,566.46,3195.54
+2024-05-13,North America,Office Supplies,Ergonomic Chair,Evan Wright,Small Business,14,650,0.0,9100.0,5167.33,3932.67
+2024-05-14,Asia-Pacific,Electronics,Smartwatch,Diana Prince,Mid-Market,14,499,0.2,5588.8,3646.87,1941.93
+2024-05-14,North America,Electronics,Smartphone Pro,Alice Chen,Enterprise,8,299,0.1,2152.8,1217.9,934.9
+2024-05-15,North America,Office Supplies,Monitor Arm,Evan Wright,Consumer,28,650,0.05,17290.0,8481.64,8808.36
+2024-05-15,Europe,Office Supplies,Monitor Arm,Evan Wright,Mid-Market,18,650,0.0,11700.0,8138.65,3561.35
+2024-05-16,Europe,Office Supplies,Standing Desk,Diana Prince,Enterprise,33,320,0.1,9504.0,5173.62,4330.38
+2024-05-16,North America,Software,BI Analytics Tool,Fatima Al-Mansoor,Mid-Market,46,49,0.0,2254.0,390.22,1863.78
+2024-05-16,Europe,Electronics,Smartphone Pro,Diana Prince,Enterprise,16,499,0.05,7584.8,4253.71,3331.09
+2024-05-16,North America,Electronics,Ultra Laptop,Fatima Al-Mansoor,Enterprise,18,899,0.05,15372.9,8899.07,6473.83
+2024-05-17,Latin America,Electronics,Smartwatch,Diana Prince,Mid-Market,6,499,0.0,2994.0,2026.48,967.52
+2024-05-17,North America,Electronics,Wireless Headphones,Carlos Rossi,Small Business,13,299,0.0,3887.0,3036.08,850.92
+2024-05-17,Asia-Pacific,Electronics,Wireless Headphones,Bob Miller,Small Business,10,1299,0.05,12340.5,7586.68,4753.82
+2024-05-17,North America,Software,BI Analytics Tool,Diana Prince,Enterprise,31,99,0.05,2915.55,797.72,2117.83
+2024-05-18,North America,Office Supplies,Ergonomic Chair,Diana Prince,Enterprise,30,650,0.05,18525.0,10824.79,7700.21
+2024-05-18,Asia-Pacific,Electronics,Wireless Headphones,Alice Chen,Enterprise,5,1299,0.0,6495.0,4585.16,1909.84
+2024-05-18,Europe,Electronics,Smartphone Pro,Alice Chen,Enterprise,13,299,0.0,3887.0,2999.05,887.95
+2024-05-19,Asia-Pacific,Office Supplies,Standing Desk,Evan Wright,Enterprise,29,650,0.1,16965.0,9317.78,7647.22
+2024-05-20,Europe,Electronics,Smartwatch,Diana Prince,Small Business,1,299,0.1,269.1,152.7,116.4
+2024-05-20,North America,Office Supplies,Monitor Arm,Alice Chen,Enterprise,3,89,0.0,267.0,186.11,80.89
+2024-05-20,North America,Office Supplies,Monitor Arm,Bob Miller,Small Business,11,149,0.0,1639.0,791.83,847.17
+2024-05-21,Latin America,Electronics,Smartphone Pro,Carlos Rossi,Enterprise,18,899,0.15,13754.7,8765.98,4988.72
+2024-05-21,Latin America,Office Supplies,Standing Desk,Alice Chen,Small Business,34,320,0.0,10880.0,6664.82,4215.18
+2024-05-21,Europe,Software,Security Suite,Carlos Rossi,Small Business,9,499,0.15,3817.35,1334.87,2482.48
+2024-05-22,North America,Electronics,Smartwatch,Evan Wright,Enterprise,17,499,0.0,8483.0,5910.12,2572.88
+2024-05-23,Asia-Pacific,Office Supplies,Monitor Arm,Alice Chen,Enterprise,13,650,0.15,7182.5,3824.77,3357.73
+2024-05-23,Asia-Pacific,Software,Security Suite,Fatima Al-Mansoor,Mid-Market,12,499,0.05,5688.6,1797.96,3890.64
+2024-05-23,North America,Office Supplies,Noise-Cancelling Pod,Bob Miller,Mid-Market,5,89,0.05,422.75,172.42,250.33
+2024-05-23,Europe,Electronics,Smartwatch,Bob Miller,Enterprise,19,1299,0.0,24681.0,14342.82,10338.18
+2024-05-23,Latin America,Electronics,Wireless Headphones,Fatima Al-Mansoor,Enterprise,19,299,0.05,5396.95,3569.85,1827.1
+2024-05-24,Europe,Office Supplies,Monitor Arm,Fatima Al-Mansoor,Enterprise,27,149,0.0,4023.0,2329.87,1693.13
+2024-05-25,Europe,Electronics,Wireless Headphones,Alice Chen,Small Business,14,899,0.1,11327.4,8767.1,2560.3
+2024-05-25,North America,Office Supplies,Noise-Cancelling Pod,Diana Prince,Mid-Market,24,149,0.05,3397.2,1529.15,1868.05
+2024-05-25,Asia-Pacific,Software,Team Chat License,Bob Miller,Small Business,35,49,0.05,1629.25,526.92,1102.33
+2024-05-25,North America,Electronics,Ultra Laptop,Diana Prince,Consumer,18,899,0.0,16182.0,11548.83,4633.17
+2024-05-26,Europe,Office Supplies,Monitor Arm,Alice Chen,Consumer,30,149,0.15,3799.5,2340.99,1458.51
+2024-05-26,Latin America,Office Supplies,Ergonomic Chair,Alice Chen,Small Business,2,320,0.05,608.0,311.13,296.87
+2024-05-26,Europe,Software,Cloud Storage Sub,Alice Chen,Mid-Market,16,199,0.05,3024.8,524.95,2499.85
+2024-05-26,Asia-Pacific,Software,BI Analytics Tool,Carlos Rossi,Enterprise,44,99,0.0,4356.0,1511.09,2844.91
+2024-05-26,North America,Office Supplies,Ergonomic Chair,Carlos Rossi,Consumer,19,89,0.0,1691.0,1099.01,591.99
+2024-05-27,Asia-Pacific,Electronics,Ultra Laptop,Fatima Al-Mansoor,Small Business,9,899,0.0,8091.0,4550.55,3540.45
+2024-05-28,Latin America,Office Supplies,Standing Desk,Diana Prince,Enterprise,23,650,0.0,14950.0,7086.95,7863.05
+2024-05-28,Asia-Pacific,Electronics,Ultra Laptop,Diana Prince,Enterprise,1,499,0.15,424.15,270.78,153.37
+2024-05-28,North America,Office Supplies,Ergonomic Chair,Alice Chen,Small Business,15,650,0.0,9750.0,6461.29,3288.71
+2024-05-29,North America,Electronics,Smartwatch,Diana Prince,Consumer,9,499,0.05,4266.45,3327.58,938.87
+2024-05-29,Asia-Pacific,Office Supplies,Ergonomic Chair,Diana Prince,Mid-Market,25,320,0.0,8000.0,3374.93,4625.07
+2024-05-29,North America,Electronics,Smartphone Pro,Alice Chen,Mid-Market,1,299,0.0,299.0,197.76,101.24
+2024-05-30,North America,Electronics,Wireless Headphones,Evan Wright,Small Business,19,1299,0.0,24681.0,16082.99,8598.01
+2024-05-31,North America,Electronics,Ultra Laptop,Carlos Rossi,Small Business,12,1299,0.1,14029.2,9215.68,4813.52
+2024-05-31,North America,Office Supplies,Monitor Arm,Bob Miller,Mid-Market,12,650,0.15,6630.0,2710.18,3919.82
+2024-05-31,Asia-Pacific,Office Supplies,Standing Desk,Carlos Rossi,Consumer,27,650,0.0,17550.0,7923.11,9626.89
+2024-05-31,North America,Office Supplies,Standing Desk,Diana Prince,Mid-Market,12,89,0.0,1068.0,479.71,588.29
+2024-05-31,Europe,Electronics,Wireless Headphones,Bob Miller,Enterprise,8,1299,0.0,10392.0,7581.8,2810.2
+2024-06-01,North America,Office Supplies,Standing Desk,Alice Chen,Enterprise,31,650,0.05,19142.5,8068.65,11073.85
+2024-06-01,North America,Office Supplies,Noise-Cancelling Pod,Evan Wright,Consumer,6,320,0.05,1824.0,1181.77,642.23
+2024-06-02,Europe,Electronics,Smartphone Pro,Evan Wright,Consumer,5,499,0.0,2495.0,1587.96,907.04
+2024-06-02,Europe,Office Supplies,Noise-Cancelling Pod,Fatima Al-Mansoor,Consumer,23,89,0.0,2047.0,1048.96,998.04
+2024-06-02,Asia-Pacific,Office Supplies,Ergonomic Chair,Bob Miller,Mid-Market,24,89,0.1,1922.4,915.61,1006.79
+2024-06-02,Europe,Electronics,Wireless Headphones,Bob Miller,Enterprise,6,299,0.0,1794.0,1403.03,390.97
+2024-06-02,Latin America,Office Supplies,Ergonomic Chair,Evan Wright,Enterprise,4,650,0.05,2470.0,1601.22,868.78
+2024-06-03,North America,Electronics,Smartphone Pro,Evan Wright,Enterprise,2,299,,598.0,329.91,268.09
+2024-06-03,North America,Electronics,Ultra Laptop,Evan Wright,Enterprise,10,1299,0.0,12990.0,8923.43,4066.57
+2024-06-04,North America,Electronics,Wireless Headphones,Alice Chen,Small Business,4,1299,0.15,4416.6,2662.18,1754.42
+2024-06-04,North America,Electronics,Smartwatch,Bob Miller,Consumer,10,499,0.1,4491.0,2728.1,1762.9
+2024-06-04,North America,Office Supplies,Monitor Arm,Bob Miller,Enterprise,9,149,0.0,1341.0,613.53,727.47
+2024-06-05,North America,Electronics,Smartphone Pro,Bob Miller,Mid-Market,1,499,0.2,399.2,285.02,114.18
+2024-06-06,Europe,Software,Security Suite,Carlos Rossi,Small Business,41,49,0.0,2009.0,652.05,1356.95
+2024-06-07,Asia-Pacific,Electronics,Wireless Headphones,Diana Prince,Mid-Market,7,1299,0.0,9093.0,6137.14,2955.86
+2024-06-07,Asia-Pacific,Office Supplies,Standing Desk,Alice Chen,Mid-Market,25,149,0.15,3166.25,2204.25,962.0
+2024-06-08,Europe,Electronics,Smartphone Pro,Evan Wright,Enterprise,2,299,0.05,568.1,415.49,152.61
+2024-06-08,North America,Office Supplies,Monitor Arm,Carlos Rossi,Mid-Market,20,89,0.0,1780.0,1143.59,636.41
+2024-06-08,Europe,Electronics,Smartwatch,Carlos Rossi,Mid-Market,4,1299,0.0,5196.0,3033.61,2162.39
+2024-06-08,North America,Software,Security Suite,Fatima Al-Mansoor,Mid-Market,5,199,0.15,845.75,260.92,584.83
+2024-06-09,North America,Electronics,Smartphone Pro,Bob Miller,Consumer,3,499,0.0,1497.0,984.25,512.75
+2024-06-09,Europe,Electronics,Ultra Laptop,Diana Prince,Consumer,11,1299,0.0,14289.0,11369.12,2919.88
+2024-06-09,Europe,Electronics,Wireless Headphones,Diana Prince,Small Business,9,299,0.0,2691.0,1611.84,1079.16
+2024-06-09,North America,Electronics,Wireless Headphones,Diana Prince,Mid-Market,2,899,0.0,1798.0,1123.14,674.86
+2024-06-10,North America,Electronics,Smartwatch,Evan Wright,Enterprise,7,899,0.0,6293.0,4486.76,1806.24
+2024-06-10,Europe,Electronics,Ultra Laptop,Fatima Al-Mansoor,Mid-Market,3,299,0.1,807.3,550.07,257.23
+2024-06-11,Europe,Software,BI Analytics Tool,Evan Wright,Small Business,14,199,0.0,2786.0,736.9,2049.1
+2024-06-11,North America,Electronics,Wireless Headphones,Fatima Al-Mansoor,Consumer,10,299,0.0,2990.0,2051.51,938.49
+2024-06-12,Europe,Office Supplies,Standing Desk,Evan Wright,Enterprise,5,320,0.0,1600.0,852.96,747.04
+2024-06-12,Europe,Software,BI Analytics Tool,Alice Chen,Enterprise,21,99,0.05,1975.05,310.89,1664.16
+2024-06-12,Asia-Pacific,Electronics,Ultra Laptop,Evan Wright,Enterprise,7,499,0.0,3493.0,2789.28,703.72
+2024-06-12,North America,Office Supplies,Ergonomic Chair,Evan Wright,Enterprise,15,320,0.1,4320.0,2123.5,2196.5
+2024-06-13,Asia-Pacific,Office Supplies,Standing Desk,Fatima Al-Mansoor,Mid-Market,26,89,0.0,2314.0,1145.67,1168.33
+2024-06-13,Latin America,Software,Security Suite,Fatima Al-Mansoor,Enterprise,38,49,0.1,1675.8,416.91,1258.89
+2024-06-14,Europe,Electronics,Wireless Headphones,Evan Wright,Small Business,18,899,0.15,13754.7,10625.29,3129.41
+2024-06-14,North America,Office Supplies,Standing Desk,Alice Chen,Enterprise,3,89,0.0,267.0,155.08,111.92
+2024-06-14,North America,Office Supplies,Ergonomic Chair,Diana Prince,Enterprise,30,320,0.1,8640.0,5399.12,3240.88
+2024-06-14,Europe,Electronics,Wireless Headphones,Carlos Rossi,Consumer,15,899,0.0,13485.0,7797.34,5687.66
+2024-06-14,North America,Office Supplies,Standing Desk,Fatima Al-Mansoor,Enterprise,11,149,0.05,1557.05,850.57,706.48
+2024-06-14,North America,Electronics,Ultra Laptop,Fatima Al-Mansoor,Consumer,10,499,0.0,4990.0,2927.67,2062.33
+2024-06-14,North America,Electronics,Wireless Headphones,Bob Miller,Enterprise,19,499,0.0,9481.0,5609.73,3871.27
+2024-06-15,North America,Electronics,Smartphone Pro,Diana Prince,Enterprise,10,1299,0.15,11041.5,6684.69,4356.81
+2024-06-16,North America,Office Supplies,Noise-Cancelling Pod,Fatima Al-Mansoor,Enterprise,20,650,0.0,13000.0,7553.44,5446.56
+2024-06-16,Europe,Office Supplies,Monitor Arm,Alice Chen,Enterprise,6,320,0.05,1824.0,1025.9,798.1
+2024-06-16,North America,Electronics,Smartwatch,Bob Miller,Mid-Market,7,299,0.0,2093.0,1570.16,522.84
+2024-06-16,North America,Software,Cloud Storage Sub,Evan Wright,Consumer,10,199,0.0,1990.0,519.35,1470.65
+2024-06-16,Europe,Software,BI Analytics Tool,Evan Wright,Mid-Market,49,99,0.0,4851.0,876.78,3974.22
+2024-06-17,Asia-Pacific,Office Supplies,Ergonomic Chair,Alice Chen,Enterprise,8,650,0.0,5200.0,3227.73,1972.27
+2024-06-18,Latin America,Electronics,Smartphone Pro,Evan Wright,Mid-Market,3,1299,0.0,3897.0,3049.37,847.63
+2024-06-18,North America,Office Supplies,Monitor Arm,Evan Wright,Consumer,32,149,0.0,4768.0,2156.35,2611.65
+2024-06-18,North America,Electronics,Ultra Laptop,Diana Prince,Consumer,17,299,0.05,4828.85,3756.6,1072.25
+2024-06-21,North America,Office Supplies,Ergonomic Chair,Evan Wright,Enterprise,24,650,0.0,15600.0,7567.61,8032.39
+2024-06-21,North America,Office Supplies,Noise-Cancelling Pod,Bob Miller,Small Business,2,149,0.15,253.3,162.75,90.55
+2024-06-21,North America,Electronics,Wireless Headphones,Fatima Al-Mansoor,Consumer,9,1299,0.0,11691.0,8743.95,2947.05
+2024-06-21,North America,Electronics,Wireless Headphones,Bob Miller,Small Business,10,1299,0.1,11691.0,8653.65,3037.35
+2024-06-21,Europe,Office Supplies,Noise-Cancelling Pod,Carlos Rossi,Enterprise,20,650,0.05,12350.0,8410.61,3939.39
+2024-06-21,Latin America,Electronics,Wireless Headphones,Fatima Al-Mansoor,Consumer,7,499,0.05,3318.35,2398.46,919.89
+2024-06-22,North America,Software,Security Suite,Fatima Al-Mansoor,Consumer,16,49,0.0,784.0,130.31,653.69
+2024-06-22,North America,Office Supplies,Noise-Cancelling Pod,Carlos Rossi,Mid-Market,18,320,0.05,5472.0,2318.87,3153.13
+2024-06-22,Asia-Pacific,Electronics,Smartphone Pro,Fatima Al-Mansoor,Small Business,4,499,0.0,1996.0,1246.95,749.05
+2024-06-22,Asia-Pacific,Office Supplies,Noise-Cancelling Pod,Diana Prince,Enterprise,17,89,0.2,1210.4,527.95,682.45
+2024-06-23,Europe,Office Supplies,Ergonomic Chair,Bob Miller,Mid-Market,5,320,0.15,1360.0,877.77,482.23
+2024-06-23,North America,Office Supplies,Ergonomic Chair,Evan Wright,Consumer,12,650,0.1,7020.0,2911.67,4108.33
+2024-06-23,North America,Electronics,Ultra Laptop,Diana Prince,Mid-Market,13,299,0.05,3692.65,2452.99,1239.66
+2024-06-24,Europe,Office Supplies,Monitor Arm,Carlos Rossi,Small Business,34,320,0.05,10336.0,6843.68,3492.32
+2024-06-24,Europe,Software,BI Analytics Tool,Bob Miller,Small Business,24,199,0.0,4776.0,1408.9,3367.1
+2024-06-24,Asia-Pacific,Office Supplies,Noise-Cancelling Pod,Diana Prince,Small Business,32,320,0.0,10240.0,5520.15,4719.85
+2024-06-25,North America,Software,Team Chat License,Bob Miller,Small Business,40,49,0.2,1568.0,353.52,1214.48
+2024-06-25,Europe,Electronics,Smartphone Pro,Diana Prince,Small Business,1,899,0.0,899.0,609.54,289.46
+2024-06-26,Europe,Electronics,Smartphone Pro,Carlos Rossi,Small Business,3,1299,0.05,3702.15,2202.38,1499.77
+2024-06-26,Europe,Electronics,Ultra Laptop,Diana Prince,Enterprise,16,299,0.15,4066.4,2527.61,1538.79
+2024-06-26,Europe,Software,Security Suite,Evan Wright,Small Business,20,499,0.1,8982.0,1561.28,7420.72
+2024-06-26,Asia-Pacific,Office Supplies,Ergonomic Chair,Fatima Al-Mansoor,Small Business,6,320,0.0,1920.0,1320.77,599.23
+2024-06-27,North America,Electronics,Wireless Headphones,Evan Wright,Consumer,14,299,0.0,4186.0,2344.38,1841.62
+2024-06-27,North America,Office Supplies,Monitor Arm,Fatima Al-Mansoor,Mid-Market,20,650,0.0,13000.0,8606.04,4393.96
+2024-06-27,Asia-Pacific,Software,Team Chat License,Bob Miller,Mid-Market,33,499,0.1,14820.3,4682.83,10137.47
+2024-06-28,North America,Electronics,Smartphone Pro,Alice Chen,Mid-Market,7,499,0.0,3493.0,2435.65,1057.35
+2024-06-28,North America,Office Supplies,Noise-Cancelling Pod,Fatima Al-Mansoor,Mid-Market,34,89,0.05,2874.7,1748.22,1126.48
+2024-06-29,Europe,Electronics,Wireless Headphones,Fatima Al-Mansoor,Small Business,8,899,0.0,7192.0,5028.07,2163.93
+2024-06-30,North America,Electronics,Smartwatch,Bob Miller,Enterprise,1,899,0.0,899.0,672.48,226.52
+2024-06-30,Asia-Pacific,Office Supplies,Noise-Cancelling Pod,Fatima Al-Mansoor,Mid-Market,12,650,0.1,7020.0,3530.93,3489.07
+2024-06-30,Europe,Electronics,Smartphone Pro,Diana Prince,Enterprise,11,899,0.1,8900.1,5335.0,3565.1
+2024-07-01,North America,Electronics,Ultra Laptop,Bob Miller,Small Business,9,299,0.0,2691.0,1820.95,870.05
+2024-07-01,Europe,Office Supplies,Ergonomic Chair,Carlos Rossi,Mid-Market,5,149,0.0,745.0,329.06,415.94
+2024-07-02,North America,Electronics,Smartwatch,Alice Chen,Small Business,8,899,0.05,6832.4,3775.87,3056.53
+2024-07-02,Asia-Pacific,Electronics,Smartwatch,Evan Wright,Mid-Market,12,899,0.05,10248.6,6039.12,4209.48
+2024-07-03,North America,Software,Security Suite,Diana Prince,Consumer,26,499,0.05,12325.3,3344.61,8980.69
+2024-07-03,Asia-Pacific,Electronics,Ultra Laptop,Carlos Rossi,Consumer,17,1299,0.05,20978.85,12957.25,8021.6
+2024-07-03,Asia-Pacific,Electronics,Smartphone Pro,Bob Miller,Enterprise,2,299,0.0,598.0,416.9,181.1
+2024-07-04,North America,Electronics,Smartwatch,Carlos Rossi,Small Business,18,499,0.05,8532.9,4710.81,3822.09
+2024-07-04,Europe,Electronics,Ultra Laptop,Carlos Rossi,Small Business,4,499,0.1,1796.4,1278.54,517.86
+2024-07-05,Europe,Office Supplies,Standing Desk,Evan Wright,Enterprise,20,89,0.05,1691.0,838.38,852.62
+2024-07-05,Latin America,Office Supplies,Ergonomic Chair,Fatima Al-Mansoor,Mid-Market,11,89,0.0,979.0,454.92,524.08
+2024-07-05,North America,Electronics,Smartwatch,Carlos Rossi,Mid-Market,13,1299,0.0,16887.0,10644.47,6242.53
+2024-07-06,North America,Electronics,Wireless Headphones,Diana Prince,Mid-Market,8,299,0.0,2392.0,1381.59,1010.41
+2024-07-07,North America,Electronics,Ultra Laptop,Alice Chen,Small Business,18,299,0.1,4843.8,3393.24,1450.56
+2024-07-07,Asia-Pacific,Software,Security Suite,Carlos Rossi,Mid-Market,24,99,0.2,1900.8,453.36,1447.44
+2024-07-07,North America,Electronics,Wireless Headphones,Bob Miller,Mid-Market,18,899,0.0,16182.0,12261.09,3920.91
+2024-07-07,Europe,Electronics,Smartwatch,Diana Prince,Mid-Market,14,899,0.0,12586.0,7144.88,5441.12
+2024-07-08,Europe,Office Supplies,Noise-Cancelling Pod,Fatima Al-Mansoor,Consumer,16,320,0.15,4352.0,1751.04,2600.96
+2024-07-08,Asia-Pacific,Software,Cloud Storage Sub,Bob Miller,Mid-Market,46,49,0.15,1915.9,558.11,1357.79
+2024-07-08,North America,Electronics,Smartwatch,Evan Wright,Small Business,8,899,0.1,6472.8,4365.21,2107.59
+2024-07-08,North America,Electronics,Smartphone Pro,Bob Miller,Consumer,18,499,0.05,8532.9,6069.17,2463.73
+2024-07-09,Asia-Pacific,Electronics,Ultra Laptop,Fatima Al-Mansoor,Consumer,16,899,0.05,13664.8,9816.31,3848.49
+2024-07-09,North America,Software,BI Analytics Tool,Fatima Al-Mansoor,Mid-Market,39,49,0.0,1911.0,377.17,1533.83
+2024-07-09,North America,Software,Cloud Storage Sub,Carlos Rossi,Enterprise,46,49,0.05,2141.3,381.53,1759.77
+2024-07-09,Europe,Software,Cloud Storage Sub,Alice Chen,Enterprise,40,99,0.0,3960.0,793.03,3166.97
+2024-07-09,Europe,Electronics,Wireless Headphones,Fatima Al-Mansoor,Mid-Market,7,899,0.1,5663.7,4243.71,1419.99
+2024-07-09,North America,Office Supplies,Noise-Cancelling Pod,Alice Chen,Enterprise,5,149,0.15,633.25,423.68,209.57
+2024-07-10,Europe,Office Supplies,Noise-Cancelling Pod,Carlos Rossi,Enterprise,23,650,0.0,14950.0,10400.45,4549.55
+2024-07-10,Europe,Electronics,Smartwatch,Fatima Al-Mansoor,Small Business,3,499,0.1,1347.3,930.7,416.6
+2024-07-10,Europe,Office Supplies,Standing Desk,Carlos Rossi,Enterprise,24,650,0.0,15600.0,10534.97,5065.03
+2024-07-10,Europe,Electronics,Smartwatch,Carlos Rossi,Mid-Market,16,499,0.1,7185.6,4289.66,2895.94
+2024-07-10,North America,Electronics,Smartphone Pro,Bob Miller,Enterprise,7,299,0.0,2093.0,1567.28,525.72
+2024-07-11,Latin America,Electronics,Ultra Laptop,Diana Prince,Mid-Market,11,899,0.1,8900.1,6261.5,2638.6
+2024-07-11,North America,Office Supplies,Standing Desk,Bob Miller,Small Business,15,89,0.05,1268.25,864.72,403.53
+2024-07-11,North America,Electronics,Smartphone Pro,Alice Chen,Mid-Market,6,1299,0.05,7404.3,4827.05,2577.25
+2024-07-12,North America,Software,Team Chat License,Alice Chen,Small Business,32,199,0.2,5094.4,1227.15,3867.25
+2024-07-13,Latin America,Electronics,Smartwatch,Evan Wright,Consumer,5,1299,0.0,6495.0,4159.19,2335.81
+2024-07-13,Europe,Electronics,Smartphone Pro,Bob Miller,Mid-Market,12,299,0.0,3588.0,2377.3,1210.7
+2024-07-14,Europe,Software,Team Chat License,Evan Wright,Enterprise,25,499,0.05,11851.25,3505.25,8346.0
+2024-07-14,North America,Office Supplies,Standing Desk,Bob Miller,Small Business,21,320,0.15,5712.0,3779.08,1932.92
+2024-07-14,North America,Office Supplies,Ergonomic Chair,Fatima Al-Mansoor,Enterprise,30,320,0.0,9600.0,3865.76,5734.24
+2024-07-15,Asia-Pacific,Electronics,Smartphone Pro,Diana Prince,Enterprise,1,1299,0.1,1169.1,663.33,505.77
+2024-07-16,North America,Software,Team Chat License,Alice Chen,Enterprise,10,199,0.15,1691.5,356.63,1334.87
+2024-07-16,Latin America,Software,Team Chat License,Carlos Rossi,Consumer,30,49,0.1,1323.0,452.62,870.38
+2024-07-16,Asia-Pacific,Electronics,Smartphone Pro,Bob Miller,Small Business,2,299,0.15,508.3,394.24,114.06
+2024-07-16,Europe,Software,BI Analytics Tool,Fatima Al-Mansoor,Enterprise,36,99,0.15,3029.4,567.45,2461.95
+2024-07-16,North America,Office Supplies,Noise-Cancelling Pod,Alice Chen,Enterprise,20,149,0.0,2980.0,1238.16,1741.84
+2024-07-17,Latin America,Office Supplies,Standing Desk,Bob Miller,Enterprise,8,320,,2176.0,1329.09,846.91
+2024-07-17,Europe,Electronics,Smartphone Pro,Diana Prince,Consumer,14,1299,0.0,18186.0,12447.87,5738.13
+2024-07-17,Asia-Pacific,Software,Team Chat License,Evan Wright,Mid-Market,27,499,,13473.0,3432.02,10040.98
+2024-07-17,North America,Software,Team Chat License,Fatima Al-Mansoor,Enterprise,44,199,0.05,8318.2,2394.45,5923.75
+2024-07-17,North America,Electronics,Ultra Laptop,Evan Wright,Enterprise,6,499,0.15,2544.9,1843.91,700.99
+2024-07-18,Asia-Pacific,Software,BI Analytics Tool,Fatima Al-Mansoor,Small Business,28,499,0.0,13972.0,2528.82,11443.18
+2024-07-18,North America,Electronics,Smartphone Pro,Bob Miller,Consumer,2,899,0.0,1798.0,1322.38,475.62
+2024-07-19,North America,Electronics,Smartphone Pro,Carlos Rossi,Mid-Market,7,299,0.0,2093.0,1634.67,458.33
+2024-07-19,Asia-Pacific,Software,Security Suite,Alice Chen,Small Business,8,99,0.0,792.0,212.71,579.29
+2024-07-19,North America,Software,BI Analytics Tool,Diana Prince,Consumer,20,99,0.1,1782.0,480.0,1302.0
+2024-07-19,Europe,Software,BI Analytics Tool,Fatima Al-Mansoor,Small Business,31,49,0.0,1519.0,458.65,1060.35
+2024-07-20,Latin America,Electronics,Ultra Laptop,Evan Wright,Consumer,6,499,0.2,2395.2,1588.15,807.05
+2024-07-21,Latin America,Electronics,Smartphone Pro,Carlos Rossi,Consumer,18,899,0.05,15372.9,10594.02,4778.88
+2024-07-21,North America,Electronics,Smartphone Pro,Evan Wright,Enterprise,2,499,0.05,948.1,633.43,314.67
+2024-07-22,Asia-Pacific,Office Supplies,Standing Desk,Diana Prince,Enterprise,8,320,0.05,2432.0,1220.27,1211.73
+2024-07-22,Europe,Software,Team Chat License,Diana Prince,Consumer,48,99,0.0,4752.0,1150.07,3601.93
+2024-07-22,North America,Electronics,Ultra Laptop,Carlos Rossi,Small Business,7,899,0.05,5978.35,4082.31,1896.04
+2024-07-23,North America,Electronics,Ultra Laptop,Bob Miller,Mid-Market,6,899,0.05,5124.3,3725.8,1398.5
+2024-07-23,Asia-Pacific,Electronics,Ultra Laptop,Diana Prince,Consumer,5,299,0.05,1420.25,947.76,472.49
+2024-07-23,Europe,Office Supplies,Standing Desk,Fatima Al-Mansoor,Mid-Market,14,89,0.0,1246.0,668.2,577.8
+2024-07-23,North America,Office Supplies,Ergonomic Chair,Carlos Rossi,Mid-Market,6,149,0.0,894.0,591.97,302.03
+2024-07-23,Europe,Electronics,Smartwatch,Bob Miller,Mid-Market,17,299,0.15,4320.55,3299.71,1020.84
+2024-07-23,North America,Office Supplies,Noise-Cancelling Pod,Fatima Al-Mansoor,Enterprise,19,89,0.0,1691.0,1127.43,563.57
+2024-07-23,North America,Office Supplies,Monitor Arm,Alice Chen,Consumer,29,650,0.0,18850.0,11799.64,7050.36
+2024-07-24,Asia-Pacific,Software,Team Chat License,Alice Chen,Enterprise,40,49,0.05,1862.0,422.87,1439.13
+2024-07-24,North America,Electronics,Wireless Headphones,Bob Miller,Mid-Market,15,1299,0.15,16562.25,12219.66,4342.59
+2024-07-24,Europe,Office Supplies,Ergonomic Chair,Evan Wright,Enterprise,7,149,0.0,1043.0,475.73,567.27
+2024-07-25,Europe,Office Supplies,Standing Desk,Diana Prince,Mid-Market,19,320,0.0,6080.0,2507.7,3572.3
+2024-07-25,Asia-Pacific,Electronics,Smartwatch,Carlos Rossi,Enterprise,3,499,0.0,1497.0,912.84,584.16
+2024-07-25,North America,Office Supplies,Noise-Cancelling Pod,Alice Chen,Small Business,5,320,0.0,1600.0,904.97,695.03
+2024-07-25,North America,Software,Cloud Storage Sub,Alice Chen,Consumer,26,99,0.0,2574.0,577.39,1996.61
+2024-07-25,North America,Electronics,Smartwatch,Fatima Al-Mansoor,Enterprise,3,299,0.0,897.0,618.59,278.41
+2024-07-25,North America,Office Supplies,Ergonomic Chair,Evan Wright,Enterprise,33,650,,18232.5,11377.52,6854.98
+2024-07-25,Europe,Electronics,Smartphone Pro,Alice Chen,Mid-Market,5,899,0.0,4495.0,2944.75,1550.25
+2024-07-26,Europe,Electronics,Smartphone Pro,Alice Chen,Enterprise,15,1299,0.05,18510.75,12709.05,5801.7
+2024-07-26,Europe,Electronics,Wireless Headphones,Alice Chen,Enterprise,12,1299,0.0,15588.0,11406.71,4181.29
+2024-07-26,North America,Electronics,Wireless Headphones,Fatima Al-Mansoor,Enterprise,1,299,0.05,284.05,176.87,107.18
+2024-07-28,Europe,Software,Team Chat License,Carlos Rossi,Enterprise,28,199,0.0,5572.0,1306.49,4265.51
+2024-07-28,Asia-Pacific,Software,Cloud Storage Sub,Diana Prince,Small Business,16,199,0.0,3184.0,1098.74,2085.26
+2024-07-28,Latin America,Electronics,Smartwatch,Alice Chen,Small Business,4,299,0.05,1136.2,791.45,344.75
+2024-07-28,North America,Office Supplies,Ergonomic Chair,Evan Wright,Mid-Market,23,650,0.05,14202.5,6820.27,7382.23
+2024-07-28,Latin America,Office Supplies,Monitor Arm,Evan Wright,Mid-Market,4,149,0.15,506.6,227.28,279.32
+2024-07-29,North America,Electronics,Smartphone Pro,Evan Wright,Mid-Market,8,1299,0.0,10392.0,6787.4,3604.6
+2024-07-29,Asia-Pacific,Software,Security Suite,Diana Prince,Mid-Market,28,49,0.1,1234.8,310.13,924.67
+2024-07-29,Latin America,Software,Security Suite,Carlos Rossi,Enterprise,39,199,0.05,7372.95,2267.26,5105.69
+2024-07-29,Asia-Pacific,Software,BI Analytics Tool,Fatima Al-Mansoor,Enterprise,31,99,0.05,2915.55,476.67,2438.88
+2024-07-30,Europe,Electronics,Smartphone Pro,Fatima Al-Mansoor,Enterprise,18,499,0.05,8532.9,5937.54,2595.36
+2024-07-30,North America,Electronics,Wireless Headphones,Fatima Al-Mansoor,Mid-Market,16,299,0.05,4544.8,2504.67,2040.13
+2024-07-30,Asia-Pacific,Office Supplies,Standing Desk,Bob Miller,Small Business,19,149,0.0,2831.0,1728.91,1102.09
+2024-07-31,Europe,Software,Security Suite,Fatima Al-Mansoor,Enterprise,49,49,0.05,2280.95,421.13,1859.82
+2024-07-31,Europe,Office Supplies,Noise-Cancelling Pod,Alice Chen,Enterprise,26,149,0.1,3486.6,1471.43,2015.17
+2024-07-31,Europe,Software,Team Chat License,Bob Miller,Mid-Market,7,99,0.0,693.0,216.14,476.86
+2024-07-31,Asia-Pacific,Office Supplies,Ergonomic Chair,Carlos Rossi,Mid-Market,7,320,0.0,2240.0,1492.48,747.52
+2024-07-31,Asia-Pacific,Office Supplies,Ergonomic Chair,Diana Prince,Consumer,23,320,0.0,7360.0,5013.21,2346.79
+2024-08-01,North America,Electronics,Smartphone Pro,Alice Chen,Mid-Market,17,1299,0.0,22083.0,17516.42,4566.58
+2024-08-01,North America,Office Supplies,Monitor Arm,Alice Chen,Enterprise,2,89,0.0,178.0,86.77,91.23
+2024-08-01,North America,Office Supplies,Monitor Arm,Evan Wright,Enterprise,28,320,0.05,8512.0,4061.51,4450.49
+2024-08-02,North America,Electronics,Smartphone Pro,Diana Prince,Enterprise,13,899,0.05,11102.65,7066.85,4035.8
+2024-08-02,North America,Office Supplies,Standing Desk,Diana Prince,Consumer,34,650,0.15,18785.0,10806.4,7978.6
+2024-08-03,Europe,Office Supplies,Monitor Arm,Evan Wright,Mid-Market,13,650,0.0,8450.0,3958.28,4491.72
+2024-08-03,Latin America,Electronics,Wireless Headphones,Diana Prince,Consumer,15,499,0.0,7485.0,5730.66,1754.34
+2024-08-03,Europe,Electronics,Smartphone Pro,Evan Wright,Consumer,16,1299,0.0,20784.0,14158.54,6625.46
+2024-08-04,Asia-Pacific,Electronics,Smartphone Pro,Diana Prince,Enterprise,18,1299,0.0,23382.0,13407.02,9974.98
+2024-08-04,North America,Electronics,Wireless Headphones,Diana Prince,Consumer,9,299,0.05,2556.45,1446.07,1110.38
+2024-08-04,Europe,Software,Security Suite,Diana Prince,Enterprise,22,199,0.15,3721.3,1055.28,2666.02
+2024-08-04,North America,Office Supplies,Monitor Arm,Evan Wright,Mid-Market,32,89,0.0,2848.0,1463.87,1384.13
+2024-08-05,Latin America,Electronics,Smartwatch,Carlos Rossi,Mid-Market,6,299,0.05,1704.3,1206.74,497.56
+2024-08-05,North America,Electronics,Ultra Laptop,Alice Chen,Enterprise,19,1299,0.05,23446.95,17025.6,6421.35
+2024-08-06,Europe,Electronics,Smartwatch,Fatima Al-Mansoor,Mid-Market,8,1299,0.0,10392.0,7978.85,2413.15
+2024-08-06,Latin America,Electronics,Wireless Headphones,Bob Miller,Enterprise,6,899,0.1,4854.6,3420.53,1434.07
+2024-08-07,Asia-Pacific,Office Supplies,Monitor Arm,Alice Chen,Consumer,4,320,0.05,1216.0,806.92,409.08
+2024-08-07,North America,Software,Team Chat License,Bob Miller,Enterprise,46,99,0.05,4326.3,1460.61,2865.69
+2024-08-07,Asia-Pacific,Office Supplies,Standing Desk,Bob Miller,Mid-Market,3,320,0.15,816.0,405.67,410.33
+2024-08-07,Asia-Pacific,Electronics,Smartwatch,Carlos Rossi,Consumer,11,299,0.05,3124.55,2175.91,948.64
+2024-08-08,Europe,Office Supplies,Monitor Arm,Carlos Rossi,Mid-Market,27,650,0.0,17550.0,7864.19,9685.81
+2024-08-08,North America,Electronics,Wireless Headphones,Diana Prince,Enterprise,19,899,0.15,14518.85,9262.65,5256.2
+2024-08-08,Asia-Pacific,Electronics,Smartwatch,Fatima Al-Mansoor,Consumer,10,299,0.0,2990.0,2256.86,733.14
+2024-08-10,Europe,Electronics,Ultra Laptop,Diana Prince,Mid-Market,8,899,0.05,6832.4,4430.15,2402.25
+2024-08-10,North America,Software,BI Analytics Tool,Fatima Al-Mansoor,Mid-Market,19,99,0.0,1881.0,383.37,1497.63
+2024-08-10,Europe,Office Supplies,Ergonomic Chair,Alice Chen,Small Business,22,89,0.0,1958.0,1058.34,899.66
+2024-08-11,Europe,Electronics,Smartwatch,Fatima Al-Mansoor,Mid-Market,2,899,0.05,1708.1,1283.88,424.22
+2024-08-11,North America,Office Supplies,Ergonomic Chair,Bob Miller,Enterprise,6,650,0.1,3510.0,1820.61,1689.39
+2024-08-12,North America,Electronics,Smartwatch,Bob Miller,Enterprise,18,299,0.05,5112.9,3153.72,1959.18
+2024-08-12,Asia-Pacific,Software,Team Chat License,Evan Wright,Mid-Market,10,49,0.1,441.0,137.16,303.84
+2024-08-12,Europe,Software,Security Suite,Alice Chen,Small Business,19,199,0.05,3591.95,1174.56,2417.39
+2024-08-13,Asia-Pacific,Software,Team Chat License,Alice Chen,Mid-Market,38,199,0.0,7562.0,2028.96,5533.04
+2024-08-13,Europe,Office Supplies,Monitor Arm,Alice Chen,Mid-Market,13,320,0.05,3952.0,2053.92,1898.08
+2024-08-14,Europe,Electronics,Smartphone Pro,Diana Prince,Consumer,19,1299,0.1,22212.9,12237.66,9975.24
+2024-08-15,Latin America,Electronics,Ultra Laptop,Bob Miller,Enterprise,17,1299,0.1,19874.7,13952.98,5921.72
+2024-08-15,Europe,Software,Security Suite,Diana Prince,Mid-Market,28,499,0.05,13273.4,3310.27,9963.13
+2024-08-15,Europe,Electronics,Ultra Laptop,Fatima Al-Mansoor,Small Business,1,899,0.0,899.0,572.04,326.96
+2024-08-15,Asia-Pacific,Office Supplies,Ergonomic Chair,Evan Wright,Small Business,5,320,0.1,1440.0,779.65,660.35
+2024-08-16,Latin America,Electronics,Smartwatch,Carlos Rossi,Mid-Market,11,499,0.05,5214.55,3242.35,1972.2
+2024-08-16,Asia-Pacific,Electronics,Smartphone Pro,Alice Chen,Mid-Market,18,299,0.0,5382.0,3050.72,2331.28
+2024-08-16,Asia-Pacific,Electronics,Ultra Laptop,Alice Chen,Consumer,14,1299,0.05,17276.7,9679.17,7597.53
+2024-08-16,North America,Office Supplies,Noise-Cancelling Pod,Fatima Al-Mansoor,Enterprise,3,89,0.0,267.0,124.5,142.5
+2024-08-17,Latin America,Office Supplies,Noise-Cancelling Pod,Bob Miller,Consumer,12,320,0.0,3840.0,2204.76,1635.24
+2024-08-18,Europe,Electronics,Smartwatch,Evan Wright,Mid-Market,9,499,0.05,4266.45,2760.76,1505.69
+2024-08-18,Asia-Pacific,Office Supplies,Ergonomic Chair,Diana Prince,Consumer,14,149,,2086.0,898.53,1187.47
+2024-08-19,Asia-Pacific,Electronics,Smartphone Pro,Fatima Al-Mansoor,Consumer,19,299,0.1,5112.9,2887.67,2225.23
+2024-08-19,Europe,Office Supplies,Standing Desk,Carlos Rossi,Mid-Market,16,89,0.0,1424.0,616.85,807.15
+2024-08-19,Asia-Pacific,Electronics,Smartphone Pro,Fatima Al-Mansoor,Enterprise,11,1299,0.1,12860.1,7675.19,5184.91
+2024-08-19,North America,Electronics,Ultra Laptop,Fatima Al-Mansoor,Small Business,14,1299,0.0,18186.0,11057.72,7128.28
+2024-08-20,Latin America,Electronics,Ultra Laptop,Evan Wright,Mid-Market,1,1299,0.0,1299.0,1014.73,284.27
+2024-08-20,Asia-Pacific,Electronics,Smartwatch,Fatima Al-Mansoor,Small Business,19,1299,0.0,24681.0,16702.71,7978.29
+2024-08-20,North America,Electronics,Wireless Headphones,Evan Wright,Mid-Market,17,299,0.15,4320.55,2678.97,1641.58
+2024-08-20,North America,Electronics,Smartwatch,Alice Chen,Enterprise,8,499,0.0,3992.0,2262.26,1729.74
+2024-08-20,North America,Electronics,Ultra Laptop,Alice Chen,Small Business,3,299,0.1,807.3,450.62,356.68
+2024-08-20,North America,Electronics,Smartwatch,Alice Chen,Enterprise,3,499,0.05,1422.15,1100.29,321.86
+2024-08-21,Europe,Office Supplies,Ergonomic Chair,Evan Wright,Enterprise,13,650,0.15,7182.5,3267.38,3915.12
+2024-08-21,Latin America,Electronics,Wireless Headphones,Alice Chen,Enterprise,3,899,0.1,2427.3,1861.39,565.91
+2024-08-21,North America,Office Supplies,Standing Desk,Diana Prince,Consumer,19,149,0.0,2831.0,1145.61,1685.39
+2024-08-22,Europe,Electronics,Wireless Headphones,Alice Chen,Mid-Market,11,1299,0.05,13574.55,10388.51,3186.04
+2024-08-22,Europe,Electronics,Wireless Headphones,Evan Wright,Mid-Market,12,899,0.0,10788.0,6039.59,4748.41
+2024-08-22,North America,Software,Cloud Storage Sub,Evan Wright,Mid-Market,29,199,0.05,5482.45,1842.84,3639.61
+2024-08-22,North America,Electronics,Smartwatch,Evan Wright,Enterprise,3,499,0.0,1497.0,1126.76,370.24
+2024-08-22,North America,Office Supplies,Standing Desk,Alice Chen,Mid-Market,5,149,0.0,745.0,421.67,323.33
+2024-08-23,Asia-Pacific,Electronics,Wireless Headphones,Bob Miller,Mid-Market,1,899,0.0,899.0,592.73,306.27
+2024-08-23,Asia-Pacific,Electronics,Smartphone Pro,Evan Wright,Mid-Market,6,299,0.0,1794.0,1159.18,634.82
+2024-08-23,Europe,Software,BI Analytics Tool,Bob Miller,Consumer,37,499,0.0,18463.0,5872.16,12590.84
+2024-08-23,Latin America,Electronics,Smartphone Pro,Diana Prince,Enterprise,6,499,0.0,2994.0,2217.62,776.38
+2024-08-24,Asia-Pacific,Office Supplies,Monitor Arm,Diana Prince,Consumer,14,320,0.05,4256.0,1910.5,2345.5
+2024-08-24,North America,Software,Security Suite,Evan Wright,Small Business,48,499,0.05,22754.4,6855.19,15899.21
+2024-08-24,North America,Electronics,Wireless Headphones,Diana Prince,Small Business,6,1299,0.0,7794.0,4978.74,2815.26
+2024-08-24,Europe,Office Supplies,Standing Desk,Fatima Al-Mansoor,Enterprise,27,89,0.0,2403.0,1215.31,1187.69
+2024-08-24,Europe,Electronics,Wireless Headphones,Bob Miller,Small Business,19,1299,0.05,23446.95,14896.33,8550.62
+2024-08-24,North America,Software,Team Chat License,Evan Wright,Enterprise,34,499,0.0,16966.0,3328.52,13637.48
+2024-08-25,Asia-Pacific,Electronics,Ultra Laptop,Bob Miller,Mid-Market,15,899,0.1,12136.5,9391.01,2745.49
+2024-08-25,North America,Office Supplies,Ergonomic Chair,Fatima Al-Mansoor,Enterprise,9,89,0.05,760.95,423.49,337.46
+2024-08-25,Europe,Electronics,Smartwatch,Fatima Al-Mansoor,Small Business,16,899,0.15,12226.4,7161.07,5065.33
+2024-08-26,Europe,Software,Team Chat License,Alice Chen,Enterprise,21,49,0.0,1029.0,228.4,800.6
+2024-08-26,Europe,Office Supplies,Standing Desk,Bob Miller,Consumer,26,89,0.0,2314.0,1444.3,869.7
+2024-08-26,North America,Office Supplies,Ergonomic Chair,Carlos Rossi,Small Business,7,320,0.0,2240.0,1111.58,1128.42
+2024-08-27,Europe,Electronics,Smartphone Pro,Diana Prince,Enterprise,7,899,0.1,5663.7,4123.34,1540.36
+2024-08-28,Latin America,Software,Cloud Storage Sub,Evan Wright,Mid-Market,13,199,0.2,2069.6,340.34,1729.26
+2024-08-28,North America,Electronics,Ultra Laptop,Bob Miller,Enterprise,9,499,0.05,4266.45,3126.4,1140.05
+2024-08-28,North America,Software,Cloud Storage Sub,Carlos Rossi,Enterprise,17,99,0.05,1598.85,374.19,1224.66
+2024-08-29,Latin America,Electronics,Smartwatch,Fatima Al-Mansoor,Small Business,1,499,0.0,499.0,391.97,107.03
+2024-08-29,North America,Electronics,Smartwatch,Bob Miller,Mid-Market,17,299,0.0,5083.0,3839.64,1243.36
+2024-08-29,North America,Software,Team Chat License,Carlos Rossi,Small Business,46,199,0.0,9154.0,3007.18,6146.82
+2024-08-29,Latin America,Electronics,Smartwatch,Bob Miller,Consumer,14,1299,0.0,18186.0,11254.6,6931.4
+2024-08-29,Europe,Office Supplies,Noise-Cancelling Pod,Evan Wright,Enterprise,23,320,0.1,6624.0,3642.81,2981.19
+2024-08-30,Europe,Electronics,Wireless Headphones,Alice Chen,Small Business,5,299,0.0,1495.0,1066.71,428.29
+2024-08-30,Europe,Electronics,Wireless Headphones,Diana Prince,Small Business,12,899,0.0,10788.0,6734.16,4053.84
+2024-09-01,Latin America,Electronics,Smartwatch,Bob Miller,Consumer,1,299,0.0,299.0,226.48,72.52
+2024-09-02,North America,Electronics,Wireless Headphones,Bob Miller,Small Business,13,299,0.0,3887.0,3030.31,856.69
+2024-09-02,North America,Electronics,Ultra Laptop,Diana Prince,Mid-Market,9,899,0.0,8091.0,5631.79,2459.21
+2024-09-02,North America,Electronics,Ultra Laptop,Evan Wright,Mid-Market,1,299,0.05,284.05,218.94,65.11
+2024-09-02,Europe,Office Supplies,Ergonomic Chair,Bob Miller,Enterprise,7,149,0.0,1043.0,445.98,597.02
+2024-09-02,Europe,Electronics,Wireless Headphones,Carlos Rossi,Enterprise,11,899,0.0,9889.0,7702.88,2186.12
+2024-09-02,Europe,Office Supplies,Monitor Arm,Evan Wright,Enterprise,6,89,0.1,480.6,328.09,152.51
+2024-09-02,Latin America,Office Supplies,Noise-Cancelling Pod,Fatima Al-Mansoor,Mid-Market,8,320,0.15,2176.0,1425.65,750.35
+2024-09-03,Asia-Pacific,Software,Cloud Storage Sub,Bob Miller,Enterprise,22,499,0.0,10978.0,2021.3,8956.7
+2024-09-04,North America,Software,BI Analytics Tool,Bob Miller,Enterprise,25,49,0.05,1163.75,183.33,980.42
+2024-09-04,Europe,Software,Cloud Storage Sub,Alice Chen,Consumer,39,49,0.0,1911.0,451.97,1459.03
+2024-09-05,Europe,Electronics,Smartphone Pro,Alice Chen,Enterprise,13,899,0.0,11687.0,7029.94,4657.06
+2024-09-05,Europe,Software,BI Analytics Tool,Diana Prince,Mid-Market,26,99,0.05,2445.3,385.68,2059.62
+2024-09-06,North America,Office Supplies,Ergonomic Chair,Evan Wright,Mid-Market,6,149,0.0,894.0,530.55,363.45
+2024-09-06,North America,Electronics,Wireless Headphones,Bob Miller,Enterprise,2,499,0.0,998.0,705.72,292.28
+2024-09-06,Asia-Pacific,Electronics,Smartwatch,Bob Miller,Mid-Market,1,499,0.1,449.1,341.56,107.54
+2024-09-07,Latin America,Office Supplies,Ergonomic Chair,Carlos Rossi,Mid-Market,13,320,0.05,3952.0,1714.13,2237.87
+2024-09-08,North America,Electronics,Smartwatch,Evan Wright,Enterprise,13,299,0.1,3498.3,2675.39,822.91
+2024-09-08,Europe,Electronics,Wireless Headphones,Carlos Rossi,Enterprise,9,899,0.0,8091.0,5075.21,3015.79
+2024-09-08,North America,Electronics,Ultra Laptop,Fatima Al-Mansoor,Mid-Market,19,299,0.1,5112.9,3820.65,1292.25
+2024-09-08,Asia-Pacific,Electronics,Ultra Laptop,Carlos Rossi,Enterprise,10,1299,0.1,11691.0,6638.36,5052.64
+2024-09-09,North America,Software,Cloud Storage Sub,Bob Miller,Enterprise,39,499,0.0,19461.0,3456.88,16004.12
+2024-09-09,Europe,Electronics,Smartwatch,Fatima Al-Mansoor,Mid-Market,8,499,0.0,3992.0,3189.95,802.05
+2024-09-09,Europe,Software,BI Analytics Tool,Evan Wright,Small Business,28,199,0.2,4457.6,1135.75,3321.85
+2024-09-10,Europe,Electronics,Ultra Laptop,Fatima Al-Mansoor,Mid-Market,10,499,0.05,4740.5,3050.68,1689.82
+2024-09-10,Europe,Office Supplies,Noise-Cancelling Pod,Diana Prince,Small Business,20,89,0.0,1780.0,1214.73,565.27
+2024-09-10,North America,Electronics,Ultra Laptop,Diana Prince,Small Business,18,899,0.0,16182.0,12567.72,3614.28
+2024-09-10,North America,Office Supplies,Ergonomic Chair,Evan Wright,Mid-Market,7,89,0.05,591.85,365.04,226.81
+2024-09-10,North America,Software,Cloud Storage Sub,Alice Chen,Small Business,16,199,0.2,2547.2,697.31,1849.89
+2024-09-10,Europe,Software,Cloud Storage Sub,Bob Miller,Small Business,8,199,0.0,1592.0,257.6,1334.4
+2024-09-11,North America,Electronics,Wireless Headphones,Bob Miller,Enterprise,19,299,0.05,5396.95,4275.15,1121.8
+2024-09-11,North America,Electronics,Smartphone Pro,Fatima Al-Mansoor,Mid-Market,14,899,0.05,11956.7,7007.53,4949.17
+2024-09-11,Europe,Electronics,Ultra Laptop,Alice Chen,Enterprise,5,1299,0.0,6495.0,3579.54,2915.46
+2024-09-11,Europe,Office Supplies,Standing Desk,Alice Chen,Consumer,8,320,0.0,2560.0,1705.69,854.31
+2024-09-11,North America,Software,Cloud Storage Sub,Fatima Al-Mansoor,Small Business,48,99,0.0,4752.0,1335.78,3416.22
+2024-09-12,Latin America,Office Supplies,Ergonomic Chair,Fatima Al-Mansoor,Enterprise,15,320,0.15,4080.0,2685.62,1394.38
+2024-09-12,Asia-Pacific,Electronics,Wireless Headphones,Evan Wright,Enterprise,10,499,0.1,4491.0,2809.13,1681.87
+2024-09-13,Europe,Office Supplies,Monitor Arm,Bob Miller,Enterprise,33,650,0.05,20377.5,8516.39,11861.11
+2024-09-13,North America,Office Supplies,Standing Desk,Evan Wright,Enterprise,26,89,0.05,2198.3,1067.32,1130.98
+2024-09-13,Europe,Office Supplies,Ergonomic Chair,Bob Miller,Mid-Market,5,149,0.0,745.0,391.27,353.73
+2024-09-14,Europe,Office Supplies,Noise-Cancelling Pod,Diana Prince,Enterprise,16,149,0.05,2264.8,1510.07,754.73
+2024-09-14,North America,Electronics,Ultra Laptop,Diana Prince,Enterprise,9,1299,0.15,9937.35,6940.2,2997.15
+2024-09-14,North America,Software,BI Analytics Tool,Diana Prince,Mid-Market,6,99,0.0,594.0,97.61,496.39
+2024-09-15,Europe,Office Supplies,Monitor Arm,Carlos Rossi,Mid-Market,29,650,0.05,17907.5,7720.33,10187.17
+2024-09-16,North America,Software,BI Analytics Tool,Fatima Al-Mansoor,Mid-Market,14,49,0.0,686.0,233.66,452.34
+2024-09-16,Asia-Pacific,Software,BI Analytics Tool,Alice Chen,Small Business,20,99,0.0,1980.0,301.59,1678.41
+2024-09-16,North America,Electronics,Ultra Laptop,Diana Prince,Consumer,9,499,0.05,4266.45,2873.17,1393.28
+2024-09-16,Europe,Office Supplies,Standing Desk,Bob Miller,Mid-Market,5,89,0.0,445.0,284.7,160.3
+2024-09-18,Asia-Pacific,Electronics,Smartphone Pro,Diana Prince,Mid-Market,8,899,0.0,7192.0,5324.14,1867.86
+2024-09-19,Europe,Electronics,Smartwatch,Diana Prince,Consumer,5,299,0.0,1495.0,966.06,528.94
+2024-09-19,Europe,Electronics,Smartphone Pro,Diana Prince,Small Business,12,499,0.15,5089.8,3615.51,1474.29
+2024-09-20,North America,Software,Team Chat License,Bob Miller,Small Business,10,99,0.05,940.5,290.06,650.44
+2024-09-20,North America,Office Supplies,Standing Desk,Bob Miller,Enterprise,5,320,0.0,1600.0,787.41,812.59
+2024-09-20,Europe,Office Supplies,Standing Desk,Evan Wright,Enterprise,22,149,0.0,3278.0,1547.18,1730.82
+2024-09-21,Asia-Pacific,Electronics,Smartphone Pro,Evan Wright,Enterprise,9,899,0.05,7686.45,6092.15,1594.3
+2024-09-21,Asia-Pacific,Software,Security Suite,Carlos Rossi,Small Business,10,99,0.0,990.0,300.15,689.85
+2024-09-22,Europe,Office Supplies,Standing Desk,Alice Chen,Mid-Market,3,320,0.15,816.0,359.18,456.82
+2024-09-22,North America,Electronics,Smartphone Pro,Fatima Al-Mansoor,Consumer,17,899,0.15,12990.55,9640.69,3349.86
+2024-09-22,Europe,Electronics,Smartphone Pro,Alice Chen,Small Business,5,899,0.0,4495.0,2865.08,1629.92
+2024-09-23,Europe,Electronics,Ultra Laptop,Carlos Rossi,Small Business,1,299,0.0,299.0,204.17,94.83
+2024-09-23,Europe,Office Supplies,Standing Desk,Bob Miller,Mid-Market,22,320,0.05,6688.0,2949.41,3738.59
+2024-09-23,Asia-Pacific,Office Supplies,Noise-Cancelling Pod,Alice Chen,Mid-Market,22,89,0.0,1958.0,1299.3,658.7
+2024-09-23,North America,Office Supplies,Monitor Arm,Diana Prince,Small Business,22,650,0.05,13585.0,8236.52,5348.48
+2024-09-24,North America,Electronics,Smartphone Pro,Bob Miller,Consumer,17,499,0.0,8483.0,6328.21,2154.79
+2024-09-24,North America,Software,Cloud Storage Sub,Diana Prince,Mid-Market,27,99,0.1,2405.7,543.51,1862.19
+2024-09-25,Asia-Pacific,Office Supplies,Ergonomic Chair,Carlos Rossi,Consumer,5,89,0.1,400.5,200.14,200.36
+2024-09-25,Europe,Office Supplies,Monitor Arm,Alice Chen,Mid-Market,16,650,0.05,9880.0,4216.96,5663.04
+2024-09-26,Asia-Pacific,Electronics,Smartwatch,Evan Wright,Mid-Market,15,899,0.05,12810.75,8984.91,3825.84
+2024-09-26,Europe,Electronics,Wireless Headphones,Carlos Rossi,Mid-Market,10,499,0.0,4990.0,3763.8,1226.2
+2024-09-27,Asia-Pacific,Electronics,Wireless Headphones,Carlos Rossi,Small Business,4,299,0.1,1076.4,674.47,401.93
+2024-09-28,North America,Software,Security Suite,Fatima Al-Mansoor,Mid-Market,26,499,0.1,11676.6,3834.23,7842.37
+2024-09-29,Europe,Electronics,Smartphone Pro,Fatima Al-Mansoor,Enterprise,2,1299,0.0,2598.0,1560.39,1037.61
+2024-09-29,Asia-Pacific,Electronics,Ultra Laptop,Alice Chen,Small Business,5,899,0.0,4495.0,2774.74,1720.26
+2024-09-29,Europe,Electronics,Smartwatch,Bob Miller,Mid-Market,19,299,0.0,5681.0,3825.68,1855.32
+2024-09-29,North America,Electronics,Smartphone Pro,Fatima Al-Mansoor,Mid-Market,13,499,0.0,6487.0,3825.86,2661.14
+2024-09-29,Europe,Office Supplies,Noise-Cancelling Pod,Evan Wright,Mid-Market,2,650,0.0,1300.0,859.62,440.38
+2024-09-29,Latin America,Office Supplies,Monitor Arm,Evan Wright,Enterprise,13,320,0.1,3744.0,2596.1,1147.9
+2024-09-30,North America,Office Supplies,Noise-Cancelling Pod,Bob Miller,Mid-Market,6,149,0.0,894.0,373.57,520.43
+2024-09-30,Europe,Electronics,Ultra Laptop,Carlos Rossi,Enterprise,15,499,0.05,7110.75,5451.43,1659.32
+2024-09-30,Latin America,Office Supplies,Noise-Cancelling Pod,Alice Chen,Enterprise,33,320,0.0,10560.0,7050.32,3509.68
+2024-09-30,Latin America,Electronics,Wireless Headphones,Evan Wright,Mid-Market,17,499,0.0,8483.0,6039.25,2443.75
+2024-10-01,Europe,Electronics,Smartphone Pro,Bob Miller,Consumer,9,899,0.0,8091.0,5080.14,3010.86
+2024-10-01,Asia-Pacific,Electronics,Wireless Headphones,Fatima Al-Mansoor,Small Business,19,899,0.0,17081.0,9937.92,7143.08
+2024-10-01,North America,Electronics,Smartphone Pro,Carlos Rossi,Consumer,6,299,0.0,1794.0,1279.77,514.23
+2024-10-01,Asia-Pacific,Office Supplies,Ergonomic Chair,Evan Wright,Enterprise,29,149,0.05,4104.95,2327.88,1777.07
+2024-10-01,Europe,Electronics,Ultra Laptop,Alice Chen,Mid-Market,3,299,0.05,852.15,509.18,342.97
+2024-10-01,North America,Electronics,Wireless Headphones,Alice Chen,Enterprise,12,299,0.0,3588.0,2356.95,1231.05
+2024-10-02,North America,Electronics,Smartphone Pro,Bob Miller,Mid-Market,7,299,0.0,2093.0,1295.57,797.43
+2024-10-03,North America,Electronics,Smartphone Pro,Fatima Al-Mansoor,Enterprise,5,299,0.0,1495.0,1023.78,471.22
+2024-10-03,Europe,Software,Cloud Storage Sub,Evan Wright,Mid-Market,16,99,0.1,1425.6,363.84,1061.76
+2024-10-04,Europe,Office Supplies,Noise-Cancelling Pod,Evan Wright,Enterprise,10,89,0.0,890.0,510.99,379.01
+2024-10-05,North America,Office Supplies,Ergonomic Chair,Bob Miller,Small Business,3,320,0.0,960.0,430.25,529.75
+2024-10-05,Asia-Pacific,Software,Cloud Storage Sub,Alice Chen,Enterprise,38,99,0.0,3762.0,695.05,3066.95
+2024-10-06,North America,Office Supplies,Noise-Cancelling Pod,Fatima Al-Mansoor,Mid-Market,18,650,0.05,11115.0,6164.01,4950.99
+2024-10-06,North America,Electronics,Smartphone Pro,Evan Wright,Enterprise,18,499,0.05,8532.9,5125.04,3407.86
+2024-10-06,North America,Electronics,Wireless Headphones,Diana Prince,Small Business,13,299,0.05,3692.65,2165.26,1527.39
+2024-10-06,Europe,Electronics,Smartphone Pro,Alice Chen,Mid-Market,5,499,0.05,2370.25,1346.77,1023.48
+2024-10-07,Europe,Electronics,Smartwatch,Evan Wright,Mid-Market,2,899,0.05,1708.1,1295.45,412.65
+2024-10-07,Asia-Pacific,Electronics,Ultra Laptop,Evan Wright,Consumer,9,1299,0.05,11106.45,6610.94,4495.51
+2024-10-07,Asia-Pacific,Electronics,Wireless Headphones,Carlos Rossi,Enterprise,4,899,0.05,3416.2,2263.34,1152.86
+2024-10-07,North America,Electronics,Smartwatch,Carlos Rossi,Enterprise,17,899,0.1,13754.7,10061.28,3693.42
+2024-10-07,Europe,Electronics,Wireless Headphones,Fatima Al-Mansoor,Mid-Market,13,499,0.05,6162.65,4892.54,1270.11
+2024-10-08,Asia-Pacific,Software,Security Suite,Diana Prince,Small Business,27,499,0.0,13473.0,3910.25,9562.75
+2024-10-08,Europe,Electronics,Smartwatch,Bob Miller,Enterprise,15,899,0.0,13485.0,9663.15,3821.85
+2024-10-09,Europe,Office Supplies,Ergonomic Chair,Evan Wright,Mid-Market,25,650,0.0,16250.0,7527.2,8722.8
+2024-10-09,Europe,Office Supplies,Monitor Arm,Bob Miller,Mid-Market,21,149,0.1,2816.1,1738.16,1077.94
+2024-10-09,Latin America,Electronics,Wireless Headphones,Diana Prince,Enterprise,11,899,0.05,9394.55,5926.45,3468.1
+2024-10-09,Asia-Pacific,Electronics,Smartwatch,Evan Wright,Enterprise,6,899,0.1,4854.6,3536.47,1318.13
+2024-10-09,North America,Office Supplies,Monitor Arm,Fatima Al-Mansoor,Small Business,16,320,0.0,5120.0,2521.2,2598.8
+2024-10-10,Europe,Electronics,Wireless Headphones,Alice Chen,Mid-Market,1,899,0.1,809.1,602.68,206.42
+2024-10-10,Asia-Pacific,Software,Team Chat License,Evan Wright,Consumer,37,99,0.0,3663.0,1120.04,2542.96
+2024-10-11,Asia-Pacific,Electronics,Wireless Headphones,Carlos Rossi,Mid-Market,6,1299,0.0,7794.0,5963.09,1830.91
+2024-10-11,Europe,Electronics,Wireless Headphones,Evan Wright,Enterprise,19,499,0.05,9006.95,5149.08,3857.87
+2024-10-11,North America,Office Supplies,Standing Desk,Evan Wright,Mid-Market,20,89,0.0,1780.0,919.54,860.46
+2024-10-11,North America,Electronics,Smartphone Pro,Bob Miller,Small Business,14,299,0.2,3348.8,2048.12,1300.68
+2024-10-11,North America,Office Supplies,Ergonomic Chair,Diana Prince,Mid-Market,3,149,0.0,447.0,276.27,170.73
+2024-10-12,North America,Office Supplies,Monitor Arm,Bob Miller,Enterprise,19,89,,1606.45,763.63,842.82
+2024-10-12,Latin America,Office Supplies,Ergonomic Chair,Bob Miller,Mid-Market,3,89,0.1,240.3,102.12,138.18
+2024-10-12,Europe,Electronics,Wireless Headphones,Alice Chen,Mid-Market,4,1299,0.1,4676.4,2964.31,1712.09
+2024-10-12,Europe,Office Supplies,Standing Desk,Fatima Al-Mansoor,Enterprise,28,320,0.0,8960.0,4927.38,4032.62
+2024-10-13,Europe,Electronics,Smartphone Pro,Fatima Al-Mansoor,Consumer,11,499,0.0,5489.0,3772.54,1716.46
+2024-10-13,North America,Office Supplies,Standing Desk,Fatima Al-Mansoor,Enterprise,14,650,0.05,8645.0,3567.88,5077.12
+2024-10-13,Asia-Pacific,Electronics,Smartphone Pro,Evan Wright,Enterprise,6,1299,0.0,7794.0,5541.62,2252.38
+2024-10-13,Europe,Office Supplies,Standing Desk,Alice Chen,Consumer,11,320,0.1,3168.0,1790.11,1377.89
+2024-10-13,Latin America,Office Supplies,Standing Desk,Fatima Al-Mansoor,Mid-Market,16,89,0.0,1424.0,883.89,540.11
+2024-10-14,Europe,Electronics,Wireless Headphones,Carlos Rossi,Enterprise,17,499,0.0,8483.0,4986.58,3496.42
+2024-10-14,Europe,Electronics,Smartphone Pro,Bob Miller,Mid-Market,17,299,0.1,4574.7,3617.05,957.65
+2024-10-14,North America,Electronics,Wireless Headphones,Bob Miller,Mid-Market,3,499,0.15,1272.45,852.49,419.96
+2024-10-14,Europe,Electronics,Smartwatch,Carlos Rossi,Enterprise,4,499,0.0,1996.0,1525.01,470.99
+2024-10-15,Europe,Software,Security Suite,Alice Chen,Consumer,12,49,0.0,588.0,152.94,435.06
+2024-10-15,North America,Office Supplies,Standing Desk,Evan Wright,Consumer,14,89,0.1,1121.4,747.76,373.64
+2024-10-15,North America,Office Supplies,Noise-Cancelling Pod,Carlos Rossi,Small Business,10,89,0.0,890.0,417.17,472.83
+2024-10-15,Latin America,Software,BI Analytics Tool,Fatima Al-Mansoor,Small Business,21,49,0.05,977.55,322.05,655.5
+2024-10-15,Europe,Office Supplies,Noise-Cancelling Pod,Bob Miller,Enterprise,6,650,0.0,3900.0,2214.99,1685.01
+2024-10-15,Asia-Pacific,Electronics,Ultra Laptop,Evan Wright,Enterprise,15,499,0.1,6736.5,4446.1,2290.4
+2024-10-16,North America,Software,Security Suite,Fatima Al-Mansoor,Enterprise,33,99,0.1,2940.3,686.11,2254.19
+2024-10-17,Europe,Software,Cloud Storage Sub,Carlos Rossi,Mid-Market,6,199,0.1,1074.6,198.5,876.1
+2024-10-17,Asia-Pacific,Software,Team Chat License,Fatima Al-Mansoor,Enterprise,40,499,0.15,16966.0,4537.25,12428.75
+2024-10-18,North America,Electronics,Ultra Laptop,Alice Chen,Enterprise,9,899,0.1,7281.9,4897.58,2384.32
+2024-10-18,North America,Electronics,Smartwatch,Alice Chen,Mid-Market,4,499,0.05,1896.2,1193.34,702.86
+2024-10-19,Europe,Software,Cloud Storage Sub,Carlos Rossi,Mid-Market,14,99,0.05,1316.7,316.38,1000.32
+2024-10-19,North America,Electronics,Ultra Laptop,Alice Chen,Enterprise,4,299,0.15,1016.6,757.81,258.79
+2024-10-20,Asia-Pacific,Office Supplies,Standing Desk,Diana Prince,Small Business,10,320,0.1,2880.0,1751.35,1128.65
+2024-10-20,North America,Electronics,Smartwatch,Bob Miller,Consumer,6,499,0.1,2694.6,1783.28,911.32
+2024-10-20,Latin America,Office Supplies,Noise-Cancelling Pod,Carlos Rossi,Mid-Market,19,320,0.15,5168.0,2625.41,2542.59
+2024-10-21,North America,Office Supplies,Standing Desk,Evan Wright,Enterprise,19,89,0.1,1521.9,776.98,744.92
+2024-10-21,Europe,Office Supplies,Standing Desk,Evan Wright,Consumer,7,89,0.05,591.85,313.49,278.36
+2024-10-22,Europe,Office Supplies,Monitor Arm,Carlos Rossi,Mid-Market,11,149,0.1,1475.1,918.22,556.88
+2024-10-22,Europe,Electronics,Ultra Laptop,Evan Wright,Small Business,11,899,0.0,9889.0,6899.09,2989.91
+2024-10-23,Latin America,Electronics,Ultra Laptop,Carlos Rossi,Enterprise,1,299,0.1,269.1,160.38,108.72
+2024-10-24,Latin America,Electronics,Ultra Laptop,Fatima Al-Mansoor,Mid-Market,13,1299,0.2,13509.6,8669.27,4840.33
+2024-10-24,Europe,Electronics,Smartwatch,Alice Chen,Enterprise,11,899,0.1,8900.1,5348.29,3551.81
+2024-10-25,Europe,Software,Security Suite,Diana Prince,Enterprise,39,499,0.0,19461.0,6221.89,13239.11
+2024-10-26,Asia-Pacific,Office Supplies,Ergonomic Chair,Diana Prince,Mid-Market,14,89,0.0,1246.0,638.11,607.89
+2024-10-27,North America,Software,Team Chat License,Bob Miller,Enterprise,12,199,0.0,2388.0,761.22,1626.78
+2024-10-27,North America,Software,Team Chat License,Diana Prince,Mid-Market,15,499,0.0,7485.0,2230.67,5254.33
+2024-10-27,Europe,Software,BI Analytics Tool,Evan Wright,Enterprise,15,49,0.0,735.0,133.22,601.78
+2024-10-27,Europe,Office Supplies,Noise-Cancelling Pod,Alice Chen,Enterprise,6,149,0.15,759.9,366.67,393.23
+2024-10-28,Europe,Office Supplies,Ergonomic Chair,Carlos Rossi,Small Business,26,149,0.2,3099.2,1948.63,1150.57
+2024-10-29,North America,Software,Security Suite,Fatima Al-Mansoor,Enterprise,14,49,0.0,686.0,148.26,537.74
+2024-10-29,North America,Electronics,Smartwatch,Carlos Rossi,Mid-Market,12,899,0.1,9709.2,6183.58,3525.62
+2024-10-29,Europe,Electronics,Wireless Headphones,Evan Wright,Enterprise,5,499,0.05,2370.25,1324.6,1045.65
+2024-10-30,Europe,Electronics,Smartwatch,Bob Miller,Consumer,9,499,0.2,3592.8,2096.0,1496.8
+2024-10-30,North America,Electronics,Wireless Headphones,Fatima Al-Mansoor,Consumer,4,299,0.1,1076.4,850.64,225.76
+2024-10-30,Europe,Electronics,Wireless Headphones,Fatima Al-Mansoor,Mid-Market,8,1299,0.2,8313.6,5051.04,3262.56
+2024-10-30,North America,Office Supplies,Standing Desk,Bob Miller,Mid-Market,22,320,0.0,7040.0,3215.3,3824.7
+2024-10-31,Latin America,Electronics,Wireless Headphones,Fatima Al-Mansoor,Mid-Market,7,299,0.0,2093.0,1353.68,739.32
+2024-10-31,Europe,Software,Team Chat License,Diana Prince,Enterprise,37,49,0.0,1813.0,579.71,1233.29
+2024-10-31,North America,Software,Team Chat License,Bob Miller,Small Business,16,499,0.0,7984.0,1900.69,6083.31
+2024-10-31,North America,Electronics,Smartphone Pro,Diana Prince,Enterprise,18,899,0.15,13754.7,9445.12,4309.58
+2024-11-01,Europe,Electronics,Smartphone Pro,Diana Prince,Mid-Market,4,499,0.0,1996.0,1230.35,765.65
+2024-11-01,North America,Electronics,Ultra Laptop,Fatima Al-Mansoor,Mid-Market,4,299,0.2,956.8,679.77,277.03
+2024-11-02,North America,Office Supplies,Ergonomic Chair,Evan Wright,Small Business,25,320,0.1,7200.0,3016.45,4183.55
+2024-11-02,North America,Electronics,Ultra Laptop,Fatima Al-Mansoor,Enterprise,6,899,0.05,5124.3,4098.91,1025.39
+2024-11-03,Europe,Electronics,Wireless Headphones,Diana Prince,Enterprise,19,499,0.1,8532.9,5338.09,3194.81
+2024-11-03,Europe,Software,Security Suite,Evan Wright,Consumer,39,99,0.0,3861.0,1067.37,2793.63
+2024-11-03,Europe,Office Supplies,Noise-Cancelling Pod,Fatima Al-Mansoor,Mid-Market,5,89,0.0,445.0,221.2,223.8
+2024-11-03,North America,Software,Security Suite,Carlos Rossi,Small Business,16,199,0.05,3024.8,618.86,2405.94
+2024-11-03,Europe,Office Supplies,Monitor Arm,Diana Prince,Mid-Market,18,149,0.0,2682.0,1464.98,1217.02
+2024-11-03,Europe,Office Supplies,Noise-Cancelling Pod,Alice Chen,Enterprise,13,149,0.0,1937.0,1129.94,807.06
+2024-11-04,Latin America,Office Supplies,Noise-Cancelling Pod,Fatima Al-Mansoor,Consumer,9,320,0.0,2880.0,1416.63,1463.37
+2024-11-04,North America,Software,Cloud Storage Sub,Bob Miller,Enterprise,29,199,0.15,4905.35,869.7,4035.65
+2024-11-04,North America,Software,Security Suite,Evan Wright,Mid-Market,6,99,0.1,534.6,169.33,365.27
+2024-11-04,North America,Electronics,Smartwatch,Evan Wright,Enterprise,13,499,0.0,6487.0,4674.87,1812.13
+2024-11-04,Latin America,Electronics,Smartwatch,Fatima Al-Mansoor,Consumer,18,1299,0.1,21043.8,13314.07,7729.73
+2024-11-04,North America,Software,Team Chat License,Evan Wright,Small Business,8,499,0.0,3992.0,732.22,3259.78
+2024-11-05,Europe,Software,Team Chat License,Alice Chen,Enterprise,25,99,0.0,2475.0,777.73,1697.27
+2024-11-05,North America,Software,Team Chat License,Carlos Rossi,Mid-Market,14,49,0.0,686.0,165.49,520.51
+2024-11-05,Latin America,Office Supplies,Ergonomic Chair,Carlos Rossi,Mid-Market,15,650,0.0,9750.0,6479.21,3270.79
+2024-11-05,Europe,Electronics,Smartphone Pro,Fatima Al-Mansoor,Mid-Market,3,299,0.15,762.45,439.35,323.1
+2024-11-06,Asia-Pacific,Software,BI Analytics Tool,Evan Wright,Consumer,27,49,0.15,1124.55,220.64,903.91
+2024-11-06,Europe,Electronics,Smartwatch,Carlos Rossi,Small Business,17,299,0.05,4828.85,3067.79,1761.06
+2024-11-06,Europe,Electronics,Smartphone Pro,Diana Prince,Enterprise,8,1299,0.15,8833.2,5309.97,3523.23
+2024-11-06,North America,Electronics,Ultra Laptop,Diana Prince,Small Business,2,299,0.0,598.0,374.0,224.0
+2024-11-06,Asia-Pacific,Electronics,Smartphone Pro,Alice Chen,Consumer,16,299,0.1,4305.6,2888.6,1417.0
+2024-11-06,Europe,Software,BI Analytics Tool,Fatima Al-Mansoor,Mid-Market,42,99,0.15,3534.3,644.06,2890.24
+2024-11-07,North America,Electronics,Wireless Headphones,Diana Prince,Enterprise,9,299,0.15,2287.35,1800.21,487.14
+2024-11-08,North America,Electronics,Wireless Headphones,Evan Wright,Mid-Market,15,299,0.15,3812.25,2507.08,1305.17
+2024-11-08,North America,Electronics,Smartwatch,Bob Miller,Enterprise,7,299,0.15,1779.05,1359.82,419.23
+2024-11-08,North America,Software,Cloud Storage Sub,Alice Chen,Enterprise,24,99,0.15,2019.6,311.61,1707.99
+2024-11-08,North America,Electronics,Wireless Headphones,Evan Wright,Mid-Market,14,1299,0.0,18186.0,12799.29,5386.71
+2024-11-08,Asia-Pacific,Electronics,Ultra Laptop,Alice Chen,Enterprise,16,299,0.2,3827.2,2538.16,1289.04
+2024-11-08,North America,Electronics,Wireless Headphones,Evan Wright,Small Business,7,1299,0.2,7274.4,5698.29,1576.11
+2024-11-08,Latin America,Electronics,Wireless Headphones,Alice Chen,Enterprise,1,899,0.0,899.0,606.2,292.8
+2024-11-08,North America,Electronics,Wireless Headphones,Alice Chen,Consumer,11,299,0.2,2631.2,1749.25,881.95
+2024-11-09,Europe,Electronics,Smartphone Pro,Carlos Rossi,Mid-Market,16,499,0.0,7984.0,5922.59,2061.41
+2024-11-09,Asia-Pacific,Electronics,Wireless Headphones,Alice Chen,Enterprise,11,499,0.05,5214.55,3226.73,1987.82
+2024-11-09,North America,Office Supplies,Ergonomic Chair,Evan Wright,Small Business,22,89,0.0,1958.0,1253.79,704.21
+2024-11-09,Europe,Electronics,Wireless Headphones,Fatima Al-Mansoor,Mid-Market,5,299,0.0,1495.0,1159.52,335.48
+2024-11-09,North America,Software,Cloud Storage Sub,Evan Wright,Enterprise,6,49,0.0,294.0,73.62,220.38
+2024-11-10,Latin America,Electronics,Ultra Laptop,Diana Prince,Small Business,10,499,0.05,4740.5,3028.53,1711.97
+2024-11-10,Europe,Office Supplies,Monitor Arm,Fatima Al-Mansoor,Enterprise,13,650,0.0,8450.0,4874.39,3575.61
+2024-11-10,Latin America,Electronics,Smartphone Pro,Fatima Al-Mansoor,Mid-Market,16,1299,0.05,19744.8,15185.28,4559.52
+2024-11-10,Latin America,Office Supplies,Monitor Arm,Bob Miller,Mid-Market,18,149,0.05,2547.9,1694.05,853.85
+2024-11-10,Europe,Electronics,Smartwatch,Fatima Al-Mansoor,Small Business,5,1299,0.0,6495.0,3950.2,2544.8
+2024-11-11,Europe,Electronics,Smartwatch,Diana Prince,Small Business,8,299,0.1,2152.8,1371.67,781.13
+2024-11-11,Latin America,Electronics,Ultra Laptop,Carlos Rossi,Enterprise,7,499,0.1,3143.7,2170.64,973.06
+2024-11-12,North America,Electronics,Smartphone Pro,Alice Chen,Mid-Market,14,299,0.0,4186.0,2722.62,1463.38
+2024-11-13,Europe,Office Supplies,Monitor Arm,Fatima Al-Mansoor,Mid-Market,11,89,0.0,979.0,626.4,352.6
+2024-11-15,Asia-Pacific,Software,Security Suite,Alice Chen,Consumer,14,49,0.05,651.7,165.87,485.83
+2024-11-15,North America,Software,Security Suite,Carlos Rossi,Mid-Market,47,199,0.1,8417.7,2163.87,6253.83
+2024-11-15,Europe,Office Supplies,Ergonomic Chair,Carlos Rossi,Consumer,3,320,0.0,960.0,456.6,503.4
+2024-11-16,Europe,Electronics,Wireless Headphones,Carlos Rossi,Mid-Market,17,899,0.05,14518.85,10850.0,3668.85
+2024-11-16,Latin America,Electronics,Wireless Headphones,Diana Prince,Mid-Market,2,899,0.0,1798.0,1203.89,594.11
+2024-11-16,Asia-Pacific,Electronics,Wireless Headphones,Carlos Rossi,Mid-Market,9,299,0.0,2691.0,1757.66,933.34
+2024-11-17,Europe,Electronics,Smartwatch,Fatima Al-Mansoor,Mid-Market,12,1299,0.0,15588.0,11087.26,4500.74
+2024-11-17,Europe,Electronics,Smartphone Pro,Alice Chen,Mid-Market,16,299,0.05,4544.8,2612.23,1932.57
+2024-11-17,Asia-Pacific,Electronics,Smartphone Pro,Evan Wright,Enterprise,14,899,0.2,10068.8,5602.52,4466.28
+2024-11-18,Asia-Pacific,Electronics,Wireless Headphones,Fatima Al-Mansoor,Enterprise,4,299,0.15,1016.6,561.13,455.47
+2024-11-18,Asia-Pacific,Electronics,Smartphone Pro,Diana Prince,Enterprise,2,299,0.2,478.4,346.45,131.95
+2024-11-18,Europe,Electronics,Smartphone Pro,Fatima Al-Mansoor,Mid-Market,18,899,0.0,16182.0,10902.89,5279.11
+2024-11-18,North America,Electronics,Wireless Headphones,Alice Chen,Small Business,7,1299,0.0,9093.0,6854.64,2238.36
+2024-11-19,North America,Electronics,Ultra Laptop,Alice Chen,Enterprise,4,899,0.1,3236.4,1798.4,1438.0
+2024-11-19,North America,Electronics,Ultra Laptop,Carlos Rossi,Enterprise,8,1299,0.1,9352.8,7268.32,2084.48
+2024-11-19,Europe,Office Supplies,Monitor Arm,Diana Prince,Enterprise,27,650,0.0,17550.0,10597.23,6952.77
+2024-11-19,Asia-Pacific,Electronics,Wireless Headphones,Evan Wright,Small Business,19,299,0.2,4544.8,2618.83,1925.97
+2024-11-19,Latin America,Software,Cloud Storage Sub,Bob Miller,Enterprise,18,99,0.1,1603.8,521.09,1082.71
+2024-11-19,Europe,Office Supplies,Noise-Cancelling Pod,Bob Miller,Consumer,11,89,0.2,783.2,460.38,322.82
+2024-11-20,North America,Electronics,Smartwatch,Alice Chen,Small Business,9,299,0.1,2421.9,1532.34,889.56
+2024-11-20,North America,Office Supplies,Ergonomic Chair,Fatima Al-Mansoor,Mid-Market,23,650,0.05,14202.5,6739.05,7463.45
+2024-11-20,North America,Electronics,Wireless Headphones,Alice Chen,Mid-Market,5,299,0.0,1495.0,873.8,621.2
+2024-11-20,Latin America,Electronics,Smartwatch,Carlos Rossi,Enterprise,2,499,0.15,848.3,519.28,329.02
+2024-11-20,Asia-Pacific,Electronics,Smartphone Pro,Carlos Rossi,Enterprise,4,499,0.0,1996.0,1161.88,834.12
+2024-11-20,North America,Office Supplies,Monitor Arm,Carlos Rossi,Mid-Market,18,320,0.0,5760.0,2763.25,2996.75
+2024-11-20,North America,Electronics,Wireless Headphones,Evan Wright,Small Business,10,899,0.0,8990.0,7141.42,1848.58
+2024-11-21,Latin America,Office Supplies,Monitor Arm,Alice Chen,Small Business,2,650,0.0,1300.0,671.86,628.14
+2024-11-21,North America,Electronics,Smartwatch,Diana Prince,Mid-Market,4,1299,0.0,5196.0,4139.39,1056.61
+2024-11-21,Asia-Pacific,Office Supplies,Monitor Arm,Diana Prince,Enterprise,2,650,0.0,1300.0,729.04,570.96
+2024-11-21,Latin America,Software,Cloud Storage Sub,Fatima Al-Mansoor,Small Business,49,49,0.0,2401.0,504.43,1896.57
+2024-11-21,North America,Office Supplies,Standing Desk,Diana Prince,Consumer,5,650,0.0,3250.0,1350.06,1899.94
+2024-11-22,Europe,Office Supplies,Monitor Arm,Evan Wright,Enterprise,23,650,0.05,14202.5,7603.29,6599.21
+2024-11-22,North America,Software,BI Analytics Tool,Alice Chen,Consumer,36,499,0.0,17964.0,5230.87,12733.13
+2024-11-22,North America,Office Supplies,Noise-Cancelling Pod,Fatima Al-Mansoor,Enterprise,4,320,0.0,1280.0,831.16,448.84
+2024-11-22,North America,Electronics,Wireless Headphones,Alice Chen,Mid-Market,19,299,0.1,5112.9,3647.14,1465.76
+2024-11-22,Asia-Pacific,Electronics,Smartwatch,Carlos Rossi,Enterprise,1,899,0.05,854.05,660.65,193.4
+2024-11-23,Europe,Electronics,Ultra Laptop,Fatima Al-Mansoor,Consumer,13,1299,0.2,13509.6,7786.66,5722.94
+2024-11-23,North America,Software,BI Analytics Tool,Evan Wright,Mid-Market,35,99,0.1,3118.5,633.66,2484.84
+2024-11-23,Latin America,Electronics,Ultra Laptop,Carlos Rossi,Enterprise,13,899,0.0,11687.0,7982.02,3704.98
+2024-11-23,North America,Electronics,Smartwatch,Carlos Rossi,Mid-Market,3,299,0.0,897.0,636.14,260.86
+2024-11-23,Europe,Software,Team Chat License,Bob Miller,Mid-Market,46,199,0.1,8238.6,1646.82,6591.78
+2024-11-23,North America,Electronics,Smartphone Pro,Evan Wright,Mid-Market,8,299,0.0,2392.0,1819.49,572.51
+2024-11-24,North America,Office Supplies,Noise-Cancelling Pod,Alice Chen,Small Business,2,89,0.05,169.1,84.21,84.89
+2024-11-25,Europe,Electronics,Wireless Headphones,Evan Wright,Enterprise,19,899,0.0,17081.0,10495.02,6585.98
+2024-11-26,North America,Electronics,Smartphone Pro,Fatima Al-Mansoor,Enterprise,13,299,0.0,3887.0,2273.19,1613.81
+2024-11-26,Latin America,Electronics,Smartphone Pro,Alice Chen,Enterprise,7,1299,0.05,8638.35,6606.6,2031.75
+2024-11-26,North America,Electronics,Ultra Laptop,Alice Chen,Mid-Market,14,1299,0.0,18186.0,11795.87,6390.13
+2024-11-26,Europe,Electronics,Wireless Headphones,Bob Miller,Consumer,19,899,0.0,17081.0,11557.43,5523.57
+2024-11-26,Asia-Pacific,Electronics,Smartwatch,Fatima Al-Mansoor,Mid-Market,7,899,0.1,5663.7,3910.93,1752.77
+2024-11-27,Asia-Pacific,Office Supplies,Monitor Arm,Evan Wright,Enterprise,31,650,0.2,16120.0,10028.23,6091.77
+2024-11-27,North America,Software,BI Analytics Tool,Carlos Rossi,Mid-Market,22,199,0.1,3940.2,702.97,3237.23
+2024-11-27,North America,Electronics,Smartphone Pro,Fatima Al-Mansoor,Consumer,16,499,0.0,7984.0,4641.17,3342.83
+2024-11-27,North America,Electronics,Wireless Headphones,Alice Chen,Mid-Market,18,299,0.0,5382.0,4101.81,1280.19
+2024-11-27,Latin America,Office Supplies,Monitor Arm,Evan Wright,Mid-Market,16,650,0.05,9880.0,6172.63,3707.37
+2024-11-28,Asia-Pacific,Electronics,Smartwatch,Fatima Al-Mansoor,Small Business,3,899,0.0,2697.0,1618.39,1078.61
+2024-11-28,North America,Electronics,Wireless Headphones,Diana Prince,Enterprise,16,1299,0.0,20784.0,12710.87,8073.13
+2024-11-28,Europe,Electronics,Smartwatch,Diana Prince,Enterprise,18,299,0.0,5382.0,3522.32,1859.68
+2024-11-28,Europe,Electronics,Smartphone Pro,Alice Chen,Small Business,15,1299,0.05,18510.75,11080.19,7430.56
+2024-11-28,Latin America,Software,Cloud Storage Sub,Fatima Al-Mansoor,Small Business,8,199,0.0,1592.0,350.71,1241.29
+2024-11-29,North America,Office Supplies,Monitor Arm,Bob Miller,Enterprise,7,320,0.0,2240.0,1447.03,792.97
+2024-11-29,Europe,Electronics,Smartwatch,Fatima Al-Mansoor,Consumer,16,899,0.2,11507.2,7169.88,4337.32
+2024-11-29,Asia-Pacific,Electronics,Smartwatch,Diana Prince,Consumer,14,299,0.2,3348.8,2394.05,954.75
+2024-11-29,Asia-Pacific,Electronics,Ultra Laptop,Bob Miller,Mid-Market,6,1299,0.0,7794.0,4842.57,2951.43
+2024-11-29,North America,Office Supplies,Standing Desk,Evan Wright,Enterprise,26,650,0.2,13520.0,8902.76,4617.24
+2024-11-29,Europe,Office Supplies,Noise-Cancelling Pod,Alice Chen,Consumer,11,650,0.15,6077.5,3325.02,2752.48
+2024-11-29,Europe,Electronics,Wireless Headphones,Evan Wright,Mid-Market,1,499,0.0,499.0,341.82,157.18
+2024-11-29,North America,Electronics,Wireless Headphones,Alice Chen,Small Business,14,1299,0.1,16367.4,12974.75,3392.65
+2024-11-29,North America,Electronics,Smartphone Pro,Fatima Al-Mansoor,Mid-Market,16,1299,0.15,17666.4,13909.65,3756.75
+2024-11-29,Asia-Pacific,Electronics,Wireless Headphones,Diana Prince,Mid-Market,16,899,0.0,14384.0,8858.2,5525.8
+2024-11-30,Europe,Office Supplies,Ergonomic Chair,Carlos Rossi,Small Business,13,149,0.0,1937.0,1067.27,869.73
+2024-11-30,Asia-Pacific,Office Supplies,Monitor Arm,Bob Miller,Mid-Market,24,650,0.0,15600.0,7466.39,8133.61
+2024-11-30,Asia-Pacific,Software,Security Suite,Fatima Al-Mansoor,Mid-Market,23,499,0.0,11477.0,2408.02,9068.98
+2024-12-01,North America,Software,BI Analytics Tool,Evan Wright,Enterprise,6,199,0.2,955.2,291.6,663.6
+2024-12-01,Latin America,Office Supplies,Ergonomic Chair,Bob Miller,Mid-Market,31,650,0.05,19142.5,9720.86,9421.64
+2024-12-01,Asia-Pacific,Electronics,Smartwatch,Diana Prince,Mid-Market,16,1299,0.05,19744.8,15611.24,4133.56
+2024-12-01,North America,Electronics,Ultra Laptop,Alice Chen,Enterprise,17,499,0.0,8483.0,5938.14,2544.86
+2024-12-01,North America,Electronics,Smartwatch,Evan Wright,Consumer,2,1299,0.15,2208.3,1522.22,686.08
+2024-12-01,Europe,Office Supplies,Noise-Cancelling Pod,Evan Wright,Small Business,10,89,0.0,890.0,434.59,455.41
+2024-12-01,Asia-Pacific,Office Supplies,Standing Desk,Carlos Rossi,Small Business,15,650,0.05,9262.5,6032.16,3230.34
+2024-12-01,Asia-Pacific,Software,Team Chat License,Diana Prince,Mid-Market,30,99,0.15,2524.5,614.81,1909.69
+2024-12-01,Europe,Electronics,Ultra Laptop,Alice Chen,Mid-Market,12,899,0.0,10788.0,6862.74,3925.26
+2024-12-02,Asia-Pacific,Electronics,Ultra Laptop,Fatima Al-Mansoor,Mid-Market,16,299,0.0,4784.0,3086.47,1697.53
+2024-12-02,Europe,Electronics,Wireless Headphones,Carlos Rossi,Enterprise,3,1299,0.0,3897.0,2945.03,951.97
+2024-12-02,Asia-Pacific,Office Supplies,Standing Desk,Fatima Al-Mansoor,Mid-Market,13,650,0.0,8450.0,5413.86,3036.14
+2024-12-02,Europe,Electronics,Ultra Laptop,Diana Prince,Enterprise,14,1299,0.0,18186.0,12911.61,5274.39
+2024-12-02,North America,Electronics,Smartwatch,Evan Wright,Mid-Market,11,899,0.05,9394.55,7068.43,2326.12
+2024-12-03,Asia-Pacific,Office Supplies,Ergonomic Chair,Alice Chen,Enterprise,31,320,0.0,9920.0,4873.35,5046.65
+2024-12-03,Asia-Pacific,Office Supplies,Ergonomic Chair,Diana Prince,Mid-Market,32,89,0.1,2563.2,1648.88,914.32
+2024-12-03,Asia-Pacific,Electronics,Smartwatch,Carlos Rossi,Mid-Market,17,1299,0.15,18770.55,10524.66,8245.89
+2024-12-03,Asia-Pacific,Software,Team Chat License,Carlos Rossi,Enterprise,9,99,0.0,891.0,257.57,633.43
+2024-12-03,North America,Office Supplies,Monitor Arm,Evan Wright,Mid-Market,8,650,0.0,5200.0,2665.47,2534.53
+2024-12-04,Asia-Pacific,Electronics,Ultra Laptop,Bob Miller,Mid-Market,4,499,0.05,1896.2,1251.98,644.22
+2024-12-04,Europe,Office Supplies,Noise-Cancelling Pod,Alice Chen,Enterprise,11,149,0.2,1311.2,889.37,421.83
+2024-12-05,North America,Office Supplies,Ergonomic Chair,Evan Wright,Small Business,23,89,0.0,2047.0,937.46,1109.54
+2024-12-06,Latin America,Electronics,Wireless Headphones,Diana Prince,Mid-Market,19,299,0.05,5396.95,3522.25,1874.7
+2024-12-06,Latin America,Electronics,Wireless Headphones,Evan Wright,Small Business,18,299,0.0,5382.0,3863.53,1518.47
+2024-12-06,Europe,Electronics,Wireless Headphones,Alice Chen,Enterprise,16,299,0.15,4066.4,3081.51,984.89
+2024-12-06,Asia-Pacific,Software,Team Chat License,Evan Wright,Enterprise,30,199,0.1,5373.0,840.26,4532.74
+2024-12-07,North America,Software,BI Analytics Tool,Bob Miller,Small Business,25,49,0.0,1225.0,344.85,880.15
+2024-12-07,North America,Electronics,Smartwatch,Bob Miller,Mid-Market,11,899,0.1,8900.1,6501.87,2398.23
+2024-12-07,North America,Software,Team Chat License,Fatima Al-Mansoor,Small Business,8,499,0.1,3592.8,840.14,2752.66
+2024-12-08,Asia-Pacific,Office Supplies,Noise-Cancelling Pod,Carlos Rossi,Enterprise,17,320,0.15,4624.0,2338.62,2285.38
+2024-12-08,Asia-Pacific,Software,Cloud Storage Sub,Diana Prince,Small Business,8,99,0.0,792.0,216.4,575.6
+2024-12-09,North America,Office Supplies,Noise-Cancelling Pod,Fatima Al-Mansoor,Enterprise,22,149,0.2,2622.4,1430.38,1192.02
+2024-12-09,Europe,Software,Team Chat License,Alice Chen,Enterprise,47,499,0.0,23453.0,5450.04,18002.96
+2024-12-09,Asia-Pacific,Electronics,Smartphone Pro,Diana Prince,Enterprise,3,1299,0.0,3897.0,2555.96,1341.04
+2024-12-09,Latin America,Electronics,Ultra Laptop,Evan Wright,Mid-Market,17,899,0.0,15283.0,12092.07,3190.93
+2024-12-09,Asia-Pacific,Software,BI Analytics Tool,Carlos Rossi,Mid-Market,17,499,0.0,8483.0,1701.29,6781.71
+2024-12-09,Asia-Pacific,Electronics,Smartphone Pro,Fatima Al-Mansoor,Consumer,19,1299,0.0,24681.0,17253.19,7427.81
+2024-12-10,Latin America,Electronics,Smartphone Pro,Evan Wright,Enterprise,12,1299,0.2,12470.4,9568.31,2902.09
+2024-12-10,Asia-Pacific,Office Supplies,Monitor Arm,Bob Miller,Small Business,28,149,0.2,3337.6,2260.64,1076.96
+2024-12-10,North America,Software,Cloud Storage Sub,Fatima Al-Mansoor,Consumer,25,99,0.15,2103.75,563.24,1540.51
+2024-12-11,Asia-Pacific,Electronics,Smartphone Pro,Alice Chen,Consumer,19,899,0.0,17081.0,11139.91,5941.09
+2024-12-11,Asia-Pacific,Electronics,Smartwatch,Alice Chen,Small Business,6,899,0.15,4584.9,3517.02,1067.88
+2024-12-11,North America,Electronics,Ultra Laptop,Diana Prince,Mid-Market,1,499,0.1,449.1,283.74,165.36
+2024-12-11,North America,Electronics,Wireless Headphones,Alice Chen,Enterprise,7,499,0.0,3493.0,2130.07,1362.93
+2024-12-12,Asia-Pacific,Electronics,Wireless Headphones,Diana Prince,Mid-Market,18,499,0.0,8982.0,5464.07,3517.93
+2024-12-12,North America,Software,Team Chat License,Alice Chen,Mid-Market,38,199,0.05,7183.9,1404.01,5779.89
+2024-12-12,North America,Software,Security Suite,Fatima Al-Mansoor,Enterprise,13,99,0.2,1029.6,224.68,804.92
+2024-12-12,Europe,Software,Cloud Storage Sub,Diana Prince,Enterprise,37,199,0.05,6994.85,1729.92,5264.93
+2024-12-12,Asia-Pacific,Electronics,Smartphone Pro,Alice Chen,Enterprise,4,1299,0.0,5196.0,3104.22,2091.78
+2024-12-13,North America,Electronics,Smartphone Pro,Evan Wright,Small Business,18,899,0.05,15372.9,11477.75,3895.15
+2024-12-13,Europe,Software,Cloud Storage Sub,Diana Prince,Mid-Market,9,499,0.15,3817.35,1329.99,2487.36
+2024-12-13,Latin America,Software,Team Chat License,Alice Chen,Consumer,47,99,0.0,4653.0,1619.89,3033.11
+2024-12-13,Asia-Pacific,Electronics,Wireless Headphones,Bob Miller,Enterprise,19,299,0.0,5681.0,4397.95,1283.05
+2024-12-14,Asia-Pacific,Electronics,Wireless Headphones,Diana Prince,Mid-Market,11,1299,0.05,13574.55,10776.01,2798.54
+2024-12-14,North America,Software,BI Analytics Tool,Diana Prince,Small Business,7,49,0.0,343.0,118.99,224.01
+2024-12-15,Europe,Office Supplies,Monitor Arm,Evan Wright,Consumer,31,149,0.0,4619.0,3176.39,1442.61
+2024-12-15,North America,Office Supplies,Standing Desk,Bob Miller,Mid-Market,21,149,0.15,2659.65,1817.69,841.96
+2024-12-16,North America,Electronics,Smartphone Pro,Carlos Rossi,Enterprise,19,899,0.0,17081.0,11931.03,5149.97
+2024-12-16,Europe,Office Supplies,Ergonomic Chair,Diana Prince,Enterprise,4,89,0.15,302.6,153.69,148.91
+2024-12-16,Asia-Pacific,Electronics,Ultra Laptop,Evan Wright,Enterprise,16,899,0.0,14384.0,9663.84,4720.16
+2024-12-17,Europe,Software,Cloud Storage Sub,Fatima Al-Mansoor,Small Business,33,499,0.15,13996.95,4122.04,9874.91
+2024-12-19,Europe,Electronics,Ultra Laptop,Diana Prince,Enterprise,13,299,0.1,3498.3,2243.32,1254.98
+2024-12-19,North America,Software,Cloud Storage Sub,Carlos Rossi,Small Business,10,199,0.0,1990.0,395.52,1594.48
+2024-12-20,North America,Software,Security Suite,Diana Prince,Small Business,17,99,0.0,1683.0,287.62,1395.38
+2024-12-20,Asia-Pacific,Electronics,Ultra Laptop,Bob Miller,Enterprise,2,499,0.15,848.3,640.26,208.04
+2024-12-20,Europe,Office Supplies,Ergonomic Chair,Evan Wright,Small Business,20,89,0.0,1780.0,966.94,813.06
+2024-12-20,Europe,Electronics,Wireless Headphones,Bob Miller,Mid-Market,11,1299,0.15,12145.65,8322.92,3822.73
+2024-12-21,Latin America,Electronics,Wireless Headphones,Carlos Rossi,Small Business,5,299,0.0,1495.0,1182.42,312.58
+2024-12-21,North America,Software,Team Chat License,Diana Prince,Small Business,46,199,0.0,9154.0,2000.7,7153.3
+2024-12-23,Asia-Pacific,Electronics,Smartwatch,Fatima Al-Mansoor,Mid-Market,1,1299,0.2,1039.2,761.67,277.53
+2024-12-24,Asia-Pacific,Electronics,Wireless Headphones,Fatima Al-Mansoor,Mid-Market,18,299,0.0,5382.0,3139.06,2242.94
+2024-12-24,Europe,Office Supplies,Ergonomic Chair,Carlos Rossi,Mid-Market,31,650,0.1,18135.0,8054.72,10080.28
+2024-12-24,Europe,Electronics,Ultra Laptop,Diana Prince,Consumer,7,1299,0.1,8183.7,5153.11,3030.59
+2024-12-24,Latin America,Office Supplies,Ergonomic Chair,Fatima Al-Mansoor,Enterprise,17,320,0.15,4624.0,2855.06,1768.94
+2024-12-24,Asia-Pacific,Electronics,Smartphone Pro,Carlos Rossi,Mid-Market,18,499,0.05,8532.9,5259.87,3273.03
+2024-12-24,Europe,Electronics,Smartphone Pro,Carlos Rossi,Enterprise,7,899,0.0,6293.0,3838.24,2454.76
+2024-12-25,Europe,Electronics,Smartwatch,Carlos Rossi,Mid-Market,18,1299,0.0,23382.0,15186.99,8195.01
+2024-12-25,North America,Office Supplies,Ergonomic Chair,Fatima Al-Mansoor,Consumer,22,89,0.15,1664.3,1136.85,527.45
+2024-12-26,North America,Electronics,Smartwatch,Evan Wright,Enterprise,1,899,0.0,899.0,649.54,249.46
+2024-12-26,North America,Software,Cloud Storage Sub,Fatima Al-Mansoor,Consumer,5,49,0.0,245.0,83.0,162.0
+2024-12-26,Europe,Office Supplies,Monitor Arm,Carlos Rossi,Mid-Market,5,149,0.2,596.0,388.2,207.8
+2024-12-27,North America,Office Supplies,Monitor Arm,Diana Prince,Enterprise,4,89,0.1,320.4,144.93,175.47
+2024-12-28,North America,Software,Security Suite,Diana Prince,Mid-Market,33,49,0.0,1617.0,482.29,1134.71
+2024-12-28,North America,Electronics,Ultra Laptop,Fatima Al-Mansoor,Small Business,10,899,0.0,8990.0,5169.06,3820.94
+2024-12-28,Latin America,Software,Security Suite,Bob Miller,Enterprise,37,99,0.15,3113.55,638.88,2474.67
+2024-12-28,North America,Office Supplies,Ergonomic Chair,Carlos Rossi,Enterprise,7,149,0.1,938.7,562.09,376.61
+2024-12-28,North America,Electronics,Smartwatch,Evan Wright,Enterprise,9,899,0.0,8091.0,4545.84,3545.16
+2024-12-29,Asia-Pacific,Office Supplies,Standing Desk,Evan Wright,Small Business,24,149,0.0,3576.0,1752.57,1823.43
+2024-12-29,North America,Electronics,Smartphone Pro,Alice Chen,Enterprise,3,1299,0.0,3897.0,2764.17,1132.83
+2024-12-29,North America,Office Supplies,Standing Desk,Carlos Rossi,Small Business,10,320,0.05,3040.0,2069.14,970.86
+2024-12-30,Asia-Pacific,Office Supplies,Monitor Arm,Evan Wright,Mid-Market,10,89,0.0,890.0,385.31,504.69
+2024-12-31,North America,Electronics,Smartphone Pro,Evan Wright,Enterprise,11,1299,0.0,14289.0,7968.54,6320.46
+2024-12-31,Asia-Pacific,Software,Cloud Storage Sub,Alice Chen,Enterprise,6,49,0.0,294.0,68.98,225.02
