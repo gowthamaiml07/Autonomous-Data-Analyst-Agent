@@ -71,7 +71,6 @@ MAX_FILE_SIZE_MB = 100
 
 # Built-in default Groq API Key
 DEFAULT_GROQ_API_KEY = ""
-DEFAULT_GROQ_API_KEY = GROQ_API_KEY
 
 
 # Default Groq Models
