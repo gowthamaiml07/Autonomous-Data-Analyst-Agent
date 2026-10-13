@@ -28,7 +28,7 @@ def render_page_header(title: str, subtitle: str, badge: Optional[str] = None):
     )
 
 
-def render_brand_header(title: str = "InsightFlow AI", subtitle: str = "Autonomous Data Analyst Agent"):
+def render_brand_header(title: str = "DataPilot AI", subtitle: str = "Autonomous Data Analyst Agent"):
     """Render top brand hero banner matching the blue SaaS palette."""
     render_page_header(title, subtitle)
 
@@ -122,12 +122,12 @@ def render_kpis(profile: ProfileReport):
 
 
 def render_chat_welcome():
-    """Render ChatGPT-style welcome hero with prompt cards."""
+    """Render ChatGPT-style welcome hero featuring DN AI."""
     st.markdown(
         """
         <div class="chat-welcome-container">
-            <div class="chat-welcome-title">What would you like to discover in your data?</div>
-            <div class="chat-welcome-subtitle">Ask questions in natural language, calculate KPIs, generate charts, or predict future trends.</div>
+            <div class="chat-welcome-title">💬 Meet DN AI — Autonomous Data Analyst & AI Assistant</div>
+            <div class="chat-welcome-subtitle">Dual-Mode Intelligence: Ask general knowledge & programming questions, or analyze your data with deterministic calculations, interactive charts, and predictive insights.</div>
         </div>
         """,
         unsafe_allow_html=True
@@ -135,8 +135,36 @@ def render_chat_welcome():
 
 
 def get_default_prompt_cards(profile: Optional[ProfileReport]) -> List[Dict[str, str]]:
-    """Return 4-6 contextual prompt cards for the ChatGPT welcome screen."""
+    """Return 4-6 contextual prompt cards for DN AI welcome screen."""
     cards = []
+
+    if profile is None:
+        cards.append({
+            "icon": "🤖",
+            "prompt": "Explain artificial intelligence agents.",
+            "title": "General AI Assistant",
+            "desc": "Understand autonomous agents, reasoning, and tool use"
+        })
+        cards.append({
+            "icon": "📉",
+            "prompt": "What is gradient descent?",
+            "title": "Machine Learning Concept",
+            "desc": "Intuitive explanation with optimization mathematics"
+        })
+        cards.append({
+            "icon": "🐍",
+            "prompt": "Help me debug this Python error",
+            "title": "Programming Assistance",
+            "desc": "Traceback diagnostics and code debugging solutions"
+        })
+        cards.append({
+            "icon": "📂",
+            "prompt": "Analyze my sales data.",
+            "title": "Autonomous Data Analyst",
+            "desc": "Upload CSV/Excel to inspect KPIs and generate charts"
+        })
+        return cards
+
     num_cols = profile.numerical_columns if profile else []
     cat_cols = profile.categorical_columns if profile else []
     dt_cols = profile.datetime_columns if profile else []
@@ -176,13 +204,6 @@ def get_default_prompt_cards(profile: Optional[ProfileReport]) -> List[Dict[str,
         "prompt": "Recommend actions to improve profitability and performance",
         "title": "Strategic Recommendations",
         "desc": "Synthesize data-backed opportunities and risk factors"
-    })
-
-    cards.append({
-        "icon": "🔍",
-        "prompt": "Identify missing values and outliers",
-        "title": "Data Hygiene Audit",
-        "desc": "Detect null distributions and statistical anomalies"
     })
 
     return cards[:4]

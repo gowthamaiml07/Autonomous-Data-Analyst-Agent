@@ -1,12 +1,17 @@
-# InsightFlow AI — Autonomous Data Analyst Agent (v2.0)
+# DataPilot AI — Autonomous Data Analyst Agent (v2.0)
+
+<p align="center">
+  <img src="assets/logo.png" alt="DataPilot AI Logo" width="160" style="border-radius: 20px; box-shadow: 0 8px 30px rgba(37,99,235,0.3);" />
+</p>
 
 [![Python 3.12+](https://img.shields.io/badge/Python-3.12+-2563EB.svg)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.42+-1D4ED8.svg)](https://streamlit.io/)
 [![LangGraph](https://img.shields.io/badge/LangGraph-Orchestrated-102A43.svg)](https://github.com/langchain-ai/langgraph)
 [![Groq](https://img.shields.io/badge/Groq-Llama%203.3%20Streaming-2563EB.svg)](https://groq.com/)
+[![OAuth 2.0](https://img.shields.io/badge/Google%20OAuth-2.0%20%2F%20OIDC-4285F4.svg)](https://cloud.google.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-1D4ED8.svg)](LICENSE)
 
-**InsightFlow AI** is a premium, enterprise-grade AI Data Analyst SaaS platform. Built with **Streamlit, Pandas, LangGraph, Groq, Plotly, Scikit-learn, and ReportLab**, it delivers a **ChatGPT-like conversational experience** paired with deterministic mathematical calculations, multi-turn follow-up reasoning, data transformations, interactive Plotly visualizations, time-series forecasting, and executive PDF intelligence reports.
+**DataPilot AI** is a premium, enterprise-grade AI Data Analyst SaaS platform. Built with **Streamlit, Pandas, LangGraph, Groq, Plotly, Scikit-learn, and ReportLab**, it delivers a **ChatGPT-like conversational experience** paired with deterministic mathematical calculations, multi-turn follow-up reasoning, data transformations, interactive Plotly visualizations, time-series forecasting, executive PDF intelligence reports, and **enterprise Google OAuth 2.0 authentication**.
 
 ---
 
@@ -16,8 +21,9 @@ The application strictly implements the curated **Blue and White SaaS Palette**:
 - **Primary Blue**: `#2563EB`
 - **Primary Hover**: `#1D4ED8`
 - **Dark Blue**: `#1E40AF`
-- **Sidebar Background**: `#102A43`
-- **Sidebar Gradient End**: `#163B63`
+- **Sidebar Background**: `#0B2545` (Dark Navy)
+- **Sidebar Secondary Navy**: `#102F55`
+- **Sidebar Divider**: `#315477`
 - **Light Blue**: `#DBEAFE`
 - **Pale Blue**: `#EFF6FF`
 - **Main Background**: `#FFFFFF`
@@ -29,6 +35,53 @@ The application strictly implements the curated **Blue and White SaaS Palette**:
 - **Success Background**: `#DCFCE7`
 - **Warning**: `#D97706`
 - **Error**: `#DC2626`
+
+---
+
+## 🔐 Google OAuth 2.0 & Authenticated User Profiles
+
+DataPilot AI integrates production-grade **Google OAuth 2.0 / OpenID Connect (OIDC)** authentication with strict user session isolation.
+
+### 1. Visual Sidebar Account Component
+- **Logged Out State**: A compact, professional section at the bottom of the sidebar featuring a subtle divider (`#315477`), official 4-color Google G logo, a clean `"Continue with Google"` button, and secondary caption `"Sign in to your workspace"`.
+- **Logged In State**: Displays the user's authentic Google profile photo (or high-contrast initials badge), verified Google display name, email, Google Verified indicator badge, and a menu toggle.
+- **Account Dropdown**: Provides quick navigation to **Profile & Settings** and an instant **Sign Out** button that wipes active datasets, in-memory chats, and caches.
+
+### 2. Google Cloud Console Setup Guide
+To enable live Google OAuth in your environment:
+1. Navigate to the [Google Cloud Console](https://console.cloud.google.com/).
+2. Create a new Google Cloud project (or select an existing one).
+3. Go to **APIs & Services > OAuth consent screen**:
+   - User Type: **External** (or Internal for Workspace organizations).
+   - App Name: `DataPilot AI`.
+   - Scopes: Select `.../auth/userinfo.email`, `.../auth/userinfo.profile`, and `openid`.
+4. Go to **APIs & Services > Credentials**:
+   - Click **Create Credentials > OAuth client ID**.
+   - Application type: **Web application**.
+   - Authorized JavaScript origins: `http://localhost:8501` (and your production domain).
+   - Authorized redirect URIs: `http://localhost:8501` (and `https://your-domain.com`).
+5. Copy your **Client ID** and **Client Secret**.
+
+### 3. Configuring Secrets
+Create `.streamlit/secrets.toml` from `.streamlit/secrets.toml.example`:
+```toml
+# .streamlit/secrets.toml
+[google_oauth]
+client_id = "YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com"
+client_secret = "GOCSPX-your_google_client_secret"
+redirect_uri = "http://localhost:8501"
+
+[groq]
+api_key = "gsk_your_groq_api_key_here"
+```
+Or set system environment variables:
+```powershell
+$env:GOOGLE_CLIENT_ID="YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com"
+$env:GOOGLE_CLIENT_SECRET="GOCSPX-your_google_client_secret"
+$env:GOOGLE_REDIRECT_URI="http://localhost:8501"
+```
+
+*Note: If OAuth credentials are not yet configured, an informative Administrator Setup Guide popover is displayed with an optional 1-click Sandbox Demo profile for local evaluation.*
 
 ---
 
@@ -51,8 +104,13 @@ The application strictly implements the curated **Blue and White SaaS Palette**:
 Autonomous Data Analyst Agent/
 ├── .streamlit/
 │   ├── config.toml           # Streamlit theme (Blue & White palette)
-│   └── secrets.toml.example  # Secrets placeholder template
+│   └── secrets.toml.example  # Secrets placeholder template (OAuth & Groq)
+├── assets/
+│   └── logo.png              # Futuristic neural head brand logo
 ├── src/
+│   ├── auth/                 # Google OAuth 2.0 & OpenID Connect engine
+│   │   ├── __init__.py
+│   │   └── google_auth.py    # OIDC verification, CSRF validation, user session
 │   ├── config.py             # Centralized color tokens, constants, models
 │   ├── data/
 │   │   ├── loader.py         # CSV & multi-sheet Excel loader
@@ -79,6 +137,7 @@ Autonomous Data Analyst Agent/
 │   ├── customer_churn.csv    # 1,200 row customer churn classification dataset
 │   └── student_performance.xlsx # 3-sheet academic performance Excel workbook
 ├── tests/
+│   ├── test_google_auth.py   # Google OAuth, token verification & session isolation tests
 │   ├── test_loader.py        # File loader tests
 │   ├── test_profiler.py      # Profiler & narrative tests
 │   ├── test_cleaner.py       # Cleaning, AST formula, undo & audit tests
@@ -107,15 +166,15 @@ Install the project dependencies using Python 3.12+:
 python -m pip install -r requirements.txt
 ```
 
-### 2. Configure Groq API Key (Optional)
-InsightFlow AI works in **Deterministic Offline Mode** out-of-the-box. To enable true streaming and advanced conversational reasoning:
+### 2. Groq API Key (Pre-Configured & Built-In)
+DataPilot AI comes with a **built-in Groq API key** pre-configured out-of-the-box for instant access to conversational reasoning, LangGraph orchestration, and streaming intelligence. 
 
-1. Obtain a free API key at [Groq Console](https://console.groq.com).
-2. Set the environment variable:
+*(Optional)* If you wish to use your own custom Groq API key:
+1. Set the environment variable:
    ```powershell
-   $env:GROQ_API_KEY="gsk_your_groq_api_key_here"
+   $env:GROQ_API_KEY="gsk_your_custom_key_here"
    ```
-   *Alternatively*, copy `.streamlit/secrets.toml.example` to `.streamlit/secrets.toml` or enter your API key directly on the **Settings & About** page inside the application.
+2. Or configure it directly in `.streamlit/secrets.toml` or the **Settings / About** page.
 
 ### 3. Launch the Web Application
 ```powershell
@@ -127,13 +186,16 @@ Open [http://localhost:8501](http://localhost:8501) in your browser.
 
 ## 🧪 Automated Testing
 
-Run the full automated test suite (67 tests):
+Run the full automated test suite:
 ```powershell
 python -m pytest tests/
 ```
 
 Run specific test modules:
 ```powershell
+# Test Google OAuth authentication & session isolation
+python -m pytest tests/test_google_auth.py
+
 # Test streaming generator & multi-turn memory
 python -m pytest tests/test_streaming_and_context.py
 
@@ -152,12 +214,12 @@ python -m pytest tests/test_predictor.py tests/test_visualizer.py
 ## 🛡️ Enterprise Security & Privacy Guarantees
 
 - **Zero Arbitrary Code Execution**: `eval()` and `exec()` are strictly prohibited. User formulas are safely evaluated using Python's `ast` module with whitelist-only operators.
+- **Cryptographic Token Verification**: Real Google ID tokens are verified using `google.oauth2.id_token.verify_oauth2_token` with audience and expiry checking.
 - **Pydantic Validation**: Tool arguments and coordinator outputs are strictly validated via Pydantic schemas.
-- **Session Isolation**: All datasets, transformations, and conversations are isolated per session in memory.
-- **Secret Protection**: API keys are masked, never exposed in client logs or committed to Git, and excluded by `.gitignore`.
+- **Session & Identity Isolation**: Datasets, transformations, conversations, and user tokens are strictly isolated per session in memory and wiped immediately on logout.
+- **Secret Protection**: API keys and OAuth secrets are masked, never exposed in client logs or committed to Git, and excluded by `.gitignore`.
 
 ---
 
 ## 📄 License
 This project is open-source under the MIT License.
-"# Autonomous-Data-Analyst-Agent" 

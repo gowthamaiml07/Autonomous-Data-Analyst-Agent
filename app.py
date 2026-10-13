@@ -1,4 +1,4 @@
-"""InsightFlow AI — Autonomous Data Analyst Agent
+"""DataPilot AI — Autonomous Data Analyst Agent
 Premium SaaS Platform with Blue & White Theme and ChatGPT-Style Streaming Conversation Interface
 """
 import io
@@ -6,6 +6,7 @@ import os
 import sys
 import time
 import uuid
+import base64
 from datetime import datetime
 import streamlit as st
 import pandas as pd
@@ -13,11 +14,128 @@ import numpy as np
 
 # Page configuration
 st.set_page_config(
-    page_title="InsightFlow AI — Autonomous Data Analyst Agent",
+    page_title="DataPilot AI — Autonomous Data Analyst Agent",
     page_icon="📊",
     layout="wide",
     initial_sidebar_state="expanded"
 )
+
+# Authentication & Google OAuth handling
+from src.auth.google_auth import (
+    is_google_oauth_configured,
+    get_google_auth_url,
+    handle_oauth_callback,
+    sign_out,
+    login_demo_user,
+    get_oauth_config,
+    login_guest_user,
+    update_guest_name,
+    validate_guest_name,
+)
+
+# Process OAuth 2.0 callback if returning from Google authorization
+_oauth_user = handle_oauth_callback()
+
+# Modal Dialogs for Authentication & Guest Mode
+if hasattr(st, "dialog"):
+    @st.dialog("Welcome to InsightFlow AI")
+    def guest_login_dialog():
+        st.markdown(
+            '<div style="font-size: 13.5px; color: #4B5563; margin-bottom: 0.85rem; line-height: 1.4;">'
+            'Enter your name to explore with a temporary guest session. No email or password required.'
+            '</div>',
+            unsafe_allow_html=True
+        )
+        name_input = st.text_input(
+            "Your name",
+            placeholder="Enter your name",
+            max_chars=50,
+            key="guest_name_input_field"
+        )
+        col1, col2 = st.columns([1, 1], gap="small")
+        with col1:
+            if st.button("Continue as Guest", type="primary", use_container_width=True, key="dlg_guest_submit_btn"):
+                is_valid, res = validate_guest_name(name_input)
+                if not is_valid:
+                    st.error(res)
+                else:
+                    login_guest_user(res)
+                    st.rerun()
+        with col2:
+            if st.button("Cancel", use_container_width=True, key="dlg_guest_cancel_btn"):
+                st.rerun()
+
+    @st.dialog("Update Guest Name")
+    def change_guest_name_dialog():
+        curr_name = ""
+        if st.session_state.get("auth_user"):
+            curr_name = st.session_state["auth_user"].get("name", "")
+        st.markdown(
+            '<div style="font-size: 13.5px; color: #4B5563; margin-bottom: 0.85rem; line-height: 1.4;">'
+            'Update your guest session display name.'
+            '</div>',
+            unsafe_allow_html=True
+        )
+        name_input = st.text_input(
+            "Your name",
+            value=curr_name,
+            placeholder="Enter your name",
+            max_chars=50,
+            key="guest_rename_input_field"
+        )
+        col1, col2 = st.columns([1, 1], gap="small")
+        with col1:
+            if st.button("Save Name", type="primary", use_container_width=True, key="dlg_rename_submit_btn"):
+                is_valid, res = validate_guest_name(name_input)
+                if not is_valid:
+                    st.error(res)
+                else:
+                    update_guest_name(res)
+                    st.rerun()
+        with col2:
+            if st.button("Cancel", use_container_width=True, key="dlg_rename_cancel_btn"):
+                st.rerun()
+
+    @st.dialog("Google Authentication Setup")
+    def google_setup_notice_dialog():
+        st.markdown(
+            """
+            <div style="font-size: 14.5px; color: #111827; font-weight: 600; margin-bottom: 0.5rem;">
+                Google OAuth 2.0 Credentials Required
+            </div>
+            <div style="font-size: 13px; color: #4B5563; line-height: 1.5; margin-bottom: 0.75rem;">
+                Google Cloud OAuth is not configured on this server yet.<br><br>
+                To enable Google Sign-In with OpenID Connect:
+                <ol style="margin-top: 6px; padding-left: 18px;">
+                    <li>Open <b><a href="https://console.cloud.google.com/apis/credentials" target="_blank" style="color: #2563EB;">Google Cloud Console</a></b> &rarr; <b>APIs & Services</b> &rarr; <b>Credentials</b>.</li>
+                    <li>Create an <b>OAuth 2.0 Client ID</b> (Application type: <i>Web application</i>).</li>
+                    <li>Add the Authorized Redirect URI: <code>http://localhost:8501</code></li>
+                    <li>Add your Client ID and Client Secret in <code>.streamlit/secrets.toml</code>:</li>
+                </ol>
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+        st.code(
+            'GOOGLE_CLIENT_ID = "YOUR_CLIENT_ID.apps.googleusercontent.com"\n'
+            'GOOGLE_CLIENT_SECRET = "GOCSPX-YOUR_CLIENT_SECRET"\n'
+            'GOOGLE_REDIRECT_URI = "http://localhost:8501"',
+            language="toml"
+        )
+        st.markdown(
+            '<div style="font-size: 12.5px; color: #64748B; margin-top: 0.5rem; margin-bottom: 0.75rem;">'
+            'Or set environment variables <code>GOOGLE_CLIENT_ID</code> and <code>GOOGLE_CLIENT_SECRET</code>.<br>'
+            'Tip: You can click <b>Continue as Guest</b> in the sidebar to start immediately without setup!'
+            '</div>',
+            unsafe_allow_html=True
+        )
+        if st.button("Close", use_container_width=True, key="dlg_google_notice_close"):
+            st.rerun()
+else:
+    def guest_login_dialog(): pass
+    def change_guest_name_dialog(): pass
+    def google_setup_notice_dialog(): pass
+
 
 # Core imports
 from src.config import (
@@ -28,7 +146,13 @@ from src.config import (
     COLOR_SECONDARY_BG, COLOR_TEXT_PRIMARY, COLOR_TEXT_SECONDARY,
     COLOR_BORDER, COLOR_SUCCESS, COLOR_SUCCESS_BG,
     COLOR_WARNING, COLOR_ERROR,
-    AVAILABLE_MODELS, DEFAULT_GROQ_MODEL, FAST_GROQ_MODEL, SAMPLE_DATA_DIR
+    AVAILABLE_MODELS, DEFAULT_GROQ_MODEL, FAST_GROQ_MODEL, SAMPLE_DATA_DIR,
+    DEFAULT_GROQ_API_KEY,
+    SIDEBAR_EXPANDED_WIDTH, SIDEBAR_COLLAPSED_WIDTH,
+    COLOR_SIDEBAR_EXACT_BG, COLOR_SIDEBAR_SECONDARY,
+    COLOR_SIDEBAR_ACTIVE, COLOR_SIDEBAR_ACTIVE_HOVER, COLOR_SIDEBAR_NAV_HOVER,
+    COLOR_SIDEBAR_INACTIVE_TEXT, COLOR_SIDEBAR_INACTIVE_ICON,
+    COLOR_SIDEBAR_SUBTITLE, COLOR_SIDEBAR_DIVIDER
 )
 from src.ui.styles import CUSTOM_CSS
 from src.ui.components import (
@@ -70,6 +194,10 @@ if "groq_api_key" not in st.session_state:
             st.session_state.groq_api_key = st.secrets["GROQ_API_KEY"].strip()
     except Exception:
         pass
+    if not st.session_state.groq_api_key and DEFAULT_GROQ_API_KEY:
+        st.session_state.groq_api_key = DEFAULT_GROQ_API_KEY
+    if st.session_state.groq_api_key:
+        os.environ["GROQ_API_KEY"] = st.session_state.groq_api_key
 if "selected_model" not in st.session_state:
     st.session_state.selected_model = DEFAULT_GROQ_MODEL
 if "active_sheet" not in st.session_state:
@@ -157,125 +285,490 @@ if st.session_state.df is None:
 
 
 # -------------------------------------------------------------
-# Fixed/Collapsible Dark Navy Sidebar Navigation
+# Fixed/Collapsible Dark Navy Sidebar Navigation (Exact Visual Specification)
 # -------------------------------------------------------------
-with st.sidebar:
+NAV_ITEMS = [
+    {"name": "Home", "icon": ":material/home:", "tooltip": "Home Dashboard"},
+    {"name": "Data Workspace", "icon": ":material/database:", "tooltip": "Data Workspace"},
+    {"name": "Ask AI", "icon": ":material/chat_bubble:", "tooltip": "Ask AI Data Analyst"},
+    {"name": "Visualization Studio", "icon": ":material/bar_chart:", "tooltip": "Visualization Studio"},
+    {"name": "Data Lab", "icon": ":material/science:", "tooltip": "Data Lab Cleaning & Prep"},
+    {"name": "Prediction & Insights", "icon": ":material/trending_up:", "tooltip": "Prediction & Insights"},
+    {"name": "Reports & History", "icon": ":material/description:", "tooltip": "Reports & Audit History"},
+    {"name": "Settings / About", "icon": ":material/settings:", "tooltip": "Settings & System Info"},
+]
+
+if "current_page" not in st.session_state:
+    st.session_state.current_page = "Home"
+if "sidebar_collapsed" not in st.session_state:
+    st.session_state.sidebar_collapsed = False
+
+# Normalize programmatic target_nav
+if st.session_state.get("target_nav"):
+    t_nav = str(st.session_state.target_nav)
+    matched = False
+    for item in NAV_ITEMS:
+        if item["name"].lower() in t_nav.lower():
+            st.session_state.current_page = item["name"]
+            matched = True
+            break
+    if not matched:
+        if "mobile" in t_nav.lower():
+            st.session_state.current_page = "Ask AI"
+            st.session_state.mobile_chat_mode = True
+        elif "home" in t_nav.lower():
+            st.session_state.current_page = "Home"
+    st.session_state.target_nav = None
+
+is_collapsed = st.session_state.get("sidebar_collapsed", False)
+
+# Load DataPilot AI brand logo
+LOGO_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets", "logo.png")
+LOGO_B64 = ""
+if os.path.exists(LOGO_FILE):
+    try:
+        with open(LOGO_FILE, "rb") as _f:
+            LOGO_B64 = base64.b64encode(_f.read()).decode("utf-8")
+    except Exception:
+        LOGO_B64 = ""
+
+# Dynamic collapse/expand responsive CSS
+# Dynamic collapse/expand responsive CSS
+if is_collapsed:
     st.markdown(
         f"""
-        <div class="sidebar-brand-box">
-            <h2 class="sidebar-brand-title">📊 {APP_TITLE}</h2>
-            <div class="sidebar-brand-sub">{APP_SUBTITLE} • v{VERSION}</div>
-        </div>
+        <style>
+        section[data-testid="stSidebar"] {{
+            width: {SIDEBAR_COLLAPSED_WIDTH}px !important;
+            min-width: {SIDEBAR_COLLAPSED_WIDTH}px !important;
+            max-width: {SIDEBAR_COLLAPSED_WIDTH}px !important;
+            background-color: {COLOR_SIDEBAR_EXACT_BG} !important;
+        }}
+        section[data-testid="stSidebar"] div[data-testid="stSidebarUserContent"] {{
+            padding: 0.75rem 0.4rem !important;
+            align-items: center !important;
+            background-color: {COLOR_SIDEBAR_EXACT_BG} !important;
+        }}
+        .sidebar-branding-text {{
+            display: none !important;
+        }}
+        .sidebar-branding-box {{
+            justify-content: center !important;
+            gap: 0 !important;
+            margin-bottom: 0.3rem !important;
+        }}
+        section[data-testid="stSidebar"] button div[data-testid="stMarkdownContainer"] {{
+            display: none !important;
+        }}
+        section[data-testid="stSidebar"] button {{
+            width: 50px !important;
+            min-width: 50px !important;
+            height: 48px !important;
+            padding: 0 !important;
+            justify-content: center !important;
+            margin: 2px auto !important;
+            border-radius: 10px !important;
+        }}
+        section[data-testid="stSidebar"] button span[data-testid="stIconMaterial"] {{
+            margin: 0 !important;
+            font-size: 24px !important;
+        }}
+        section[data-testid="stSidebar"] button[kind="secondary"],
+        section[data-testid="stSidebar"] button[data-testid="baseButton-secondary"] {{
+            background-color: transparent !important;
+            background: transparent !important;
+            color: {COLOR_SIDEBAR_INACTIVE_ICON} !important;
+            border: none !important;
+            box-shadow: none !important;
+        }}
+        section[data-testid="stSidebar"] button[kind="secondary"]:hover {{
+            background-color: {COLOR_SIDEBAR_NAV_HOVER} !important;
+            background: {COLOR_SIDEBAR_NAV_HOVER} !important;
+            color: #FFFFFF !important;
+        }}
+        section[data-testid="stSidebar"] button[kind="secondary"] span[data-testid="stIconMaterial"] {{
+            color: {COLOR_SIDEBAR_INACTIVE_ICON} !important;
+        }}
+        section[data-testid="stSidebar"] button[kind="secondary"]:hover span[data-testid="stIconMaterial"] {{
+            color: #FFFFFF !important;
+        }}
+        section[data-testid="stSidebar"] button[kind="primary"],
+        section[data-testid="stSidebar"] button[data-testid="baseButton-primary"] {{
+            background-color: {COLOR_SIDEBAR_ACTIVE} !important;
+            background: {COLOR_SIDEBAR_ACTIVE} !important;
+            color: #FFFFFF !important;
+            border: none !important;
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4) !important;
+        }}
+        section[data-testid="stSidebar"] button[kind="primary"] span[data-testid="stIconMaterial"] {{
+            color: #FFFFFF !important;
+        }}
+        /* Expand button prominent styling override */
+        section[data-testid="stSidebar"] div.st-key-sidebar_expand_toggle button {{
+            width: 48px !important;
+            min-width: 48px !important;
+            height: 42px !important;
+            min-height: 42px !important;
+            margin: 4px auto 12px auto !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            background: linear-gradient(135deg, #1D4ED8 0%, #2563EB 100%) !important;
+            color: #FFFFFF !important;
+            border: 1.5px solid #60A5FA !important;
+            border-radius: 10px !important;
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.5) !important;
+            cursor: pointer !important;
+        }}
+        section[data-testid="stSidebar"] div.st-key-sidebar_expand_toggle button span[data-testid="stIconMaterial"] {{
+            color: #FFFFFF !important;
+            font-size: 26px !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            margin: 0 !important;
+            line-height: 1 !important;
+        }}
+        section[data-testid="stSidebar"] div.st-key-sidebar_expand_toggle button:hover {{
+            background: #2563EB !important;
+            border-color: #93C5FD !important;
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.7) !important;
+            transform: scale(1.08) !important;
+        }}
+        section[data-testid="stSidebar"] div.st-key-sidebar_expand_toggle button:hover span[data-testid="stIconMaterial"] {{
+            color: #FFFFFF !important;
+        }}
+        .sidebar-profile-info, .sidebar-profile-chevron {{
+            display: none !important;
+        }}
+        .sidebar-profile-card {{
+            justify-content: center !important;
+            padding: 0.4rem 0 !important;
+        }}
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+else:
+    st.markdown(
+        f"""
+        <style>
+        section[data-testid="stSidebar"] {{
+            width: {SIDEBAR_EXPANDED_WIDTH}px !important;
+            min-width: {SIDEBAR_EXPANDED_WIDTH}px !important;
+            max-width: {SIDEBAR_EXPANDED_WIDTH}px !important;
+            background-color: {COLOR_SIDEBAR_EXACT_BG} !important;
+        }}
+        section[data-testid="stSidebar"] div[data-testid="stSidebarUserContent"] {{
+            padding: 0.75rem 0.85rem 0.85rem 0.85rem !important;
+            background-color: {COLOR_SIDEBAR_EXACT_BG} !important;
+        }}
+        /* Inactive buttons: dark transparent navy with inactive text/icon */
+        section[data-testid="stSidebar"] button[kind="secondary"],
+        section[data-testid="stSidebar"] button[data-testid="baseButton-secondary"],
+        section[data-testid="stSidebar"] div[data-testid="stButton"] > button[kind="secondary"] {{
+            background-color: transparent !important;
+            background: transparent !important;
+            color: {COLOR_SIDEBAR_INACTIVE_TEXT} !important;
+            border: none !important;
+            box-shadow: none !important;
+        }}
+        section[data-testid="stSidebar"] button[kind="secondary"]:hover,
+        section[data-testid="stSidebar"] button[data-testid="baseButton-secondary"]:hover {{
+            background-color: {COLOR_SIDEBAR_NAV_HOVER} !important;
+            background: {COLOR_SIDEBAR_NAV_HOVER} !important;
+            color: #FFFFFF !important;
+            border: none !important;
+        }}
+        section[data-testid="stSidebar"] button[kind="secondary"] p,
+        section[data-testid="stSidebar"] button[kind="secondary"] span {{
+            color: {COLOR_SIDEBAR_INACTIVE_TEXT} !important;
+        }}
+        section[data-testid="stSidebar"] button[kind="secondary"]:hover p,
+        section[data-testid="stSidebar"] button[kind="secondary"]:hover span {{
+            color: #FFFFFF !important;
+        }}
+        section[data-testid="stSidebar"] button[kind="secondary"] span[data-testid="stIconMaterial"] {{
+            color: {COLOR_SIDEBAR_INACTIVE_ICON} !important;
+        }}
+        section[data-testid="stSidebar"] button[kind="secondary"]:hover span[data-testid="stIconMaterial"] {{
+            color: #FFFFFF !important;
+        }}
+        /* Active button: bright blue pill */
+        section[data-testid="stSidebar"] button[kind="primary"],
+        section[data-testid="stSidebar"] button[data-testid="baseButton-primary"],
+        section[data-testid="stSidebar"] div[data-testid="stButton"] > button[kind="primary"] {{
+            background-color: {COLOR_SIDEBAR_ACTIVE} !important;
+            background: {COLOR_SIDEBAR_ACTIVE} !important;
+            color: #FFFFFF !important;
+            border: none !important;
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4) !important;
+        }}
+        section[data-testid="stSidebar"] button[kind="primary"]:hover {{
+            background-color: {COLOR_SIDEBAR_ACTIVE_HOVER} !important;
+            background: {COLOR_SIDEBAR_ACTIVE_HOVER} !important;
+        }}
+        section[data-testid="stSidebar"] button[kind="primary"] p,
+        section[data-testid="stSidebar"] button[kind="primary"] span {{
+            color: #FFFFFF !important;
+        }}
+        section[data-testid="stSidebar"] button[kind="primary"] span[data-testid="stIconMaterial"] {{
+            color: #FFFFFF !important;
+        }}
+        </style>
         """,
         unsafe_allow_html=True
     )
 
-    # New Chat / Analysis action
-    if st.button("➕ New Chat / Analysis", use_container_width=True, type="primary"):
-        create_new_conversation("Data Discovery")
-        st.session_state.target_nav = "💬 Ask AI"
-        st.rerun()
-
-    st.markdown("---")
-
-    # Authoritative 9-view navigation structure matching reference layout
-    nav_options = [
-        "🏠 Home",
-        "📁 Data Workspace",
-        "💬 Ask AI",
-        "📊 Visualization Studio",
-        "🧪 Data Lab",
-        "🔮 Prediction & Insights",
-        "📑 Reports & History",
-        "⚙️ Settings / About",
-        "📱 Mobile Ask AI"
-    ]
-
-    default_nav_idx = 0
-    if st.session_state.target_nav in nav_options:
-        default_nav_idx = nav_options.index(st.session_state.target_nav)
-        st.session_state.target_nav = None
-
-    navigation = st.radio(
-        "Platform Navigation",
-        nav_options,
-        index=default_nav_idx
+with st.sidebar:
+    # 1. Top Branding Header & Collapse Toggle
+    logo_img_html = (
+        f'<img src="data:image/png;base64,{LOGO_B64}" alt="DataPilot AI" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;" />'
+        if LOGO_B64
+        else '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="M18 17V9"></path><path d="M13 17V5"></path><path d="M8 17v-3"></path></svg>'
     )
-
-    st.markdown("---")
-
-    # Active dataset status card in sidebar
-    if st.session_state.df is not None:
-        sheet_text = f" • Sheet: `{st.session_state.active_sheet}`" if st.session_state.active_sheet else ""
+    if not is_collapsed:
+        b_col1, b_col2 = st.columns([5.2, 1], vertical_alignment="center")
+        with b_col1:
+            st.markdown(
+                f"""
+                <div class="sidebar-branding-box">
+                    <div class="sidebar-branding-logo">
+                        {logo_img_html}
+                    </div>
+                    <div class="sidebar-branding-text">
+                        <div class="sidebar-branding-title">DataPilot AI</div>
+                        <div class="sidebar-branding-subtitle">AI Data Analyst Agent</div>
+                    </div>
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
+        with b_col2:
+            if st.button("◀", key="sidebar_collapse_toggle"):
+                st.session_state.sidebar_collapsed = True
+                st.rerun()
+    else:
         st.markdown(
             f"""
-            <div class="sidebar-dataset-card">
-                <div class="sidebar-dataset-title">Active Dataset</div>
-                <div class="sidebar-dataset-name">{st.session_state.file_name}</div>
-                <div class="sidebar-dataset-meta">{len(st.session_state.df):,} rows × {len(st.session_state.df.columns)} cols{sheet_text}</div>
+            <div class="sidebar-branding-box">
+                <div class="sidebar-branding-logo">
+                    {logo_img_html}
+                </div>
             </div>
             """,
             unsafe_allow_html=True
         )
+        if st.button("", key="sidebar_expand_toggle", icon=":material/chevron_right:", help="Open Sidebar", use_container_width=True):
+            st.session_state.sidebar_collapsed = False
+            st.rerun()
+
+    # 2. Exactly 8 Navigation Items in Exact Order
+    st.markdown('<div class="sidebar-nav-container">', unsafe_allow_html=True)
+    for item in NAV_ITEMS:
+        is_active = (st.session_state.current_page == item["name"])
+        btn_type = "primary" if is_active else "secondary"
+        btn_label = "" if is_collapsed else item["name"]
+        btn_help = item["name"] if is_collapsed else None
+
+        if st.button(
+            btn_label,
+            icon=item["icon"],
+            key=f"sidebar_nav_{item['name']}",
+            help=btn_help,
+            type=btn_type,
+            use_container_width=True
+        ):
+            st.session_state.current_page = item["name"]
+            st.rerun()
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    # 3. Bottom Google Account Authentication & Guest Profile Section
+    auth_user = st.session_state.get("auth_user")
+    is_authenticated = bool(auth_user and st.session_state.get("is_authenticated"))
+    auth_mode = st.session_state.get("auth_mode", "google" if is_authenticated else None)
+
+    st.markdown('<div class="sidebar-bottom-profile">', unsafe_allow_html=True)
+    st.markdown('<div class="sidebar-profile-divider"></div>', unsafe_allow_html=True)
+
+    if not is_authenticated:
+        if not is_collapsed:
+            # 1. Option A: Continue with Google
+            if is_google_oauth_configured():
+                auth_url = get_google_auth_url()
+                st.markdown(
+                    f"""
+                    <div class="google-signin-container">
+                        <a href="{auth_url}" target="_self" class="google-signin-btn" style="background: #FFFFFF !important; color: #1F2937 !important;">
+                            <svg width="18" height="18" viewBox="0 0 24 24">
+                                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+                                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+                            </svg>
+                            <span style="color: #1F2937 !important; font-weight: 600; font-size: 14px;">Continue with Google</span>
+                        </a>
+                    </div>
+                    """,
+                    unsafe_allow_html=True
+                )
+            else:
+                st.markdown('<div class="sidebar-google-btn">', unsafe_allow_html=True)
+                if st.button("Continue with Google", key="btn_google_signin_prompt", use_container_width=True):
+                    google_setup_notice_dialog()
+                st.markdown('</div>', unsafe_allow_html=True)
+
+            # 2. Option B: Continue as Guest
+            st.markdown('<div class="sidebar-guest-btn" style="margin-top: 8px;">', unsafe_allow_html=True)
+            if st.button("Continue as Guest", icon=":material/person:", key="btn_guest_signin_prompt", use_container_width=True):
+                guest_login_dialog()
+            st.markdown('</div>', unsafe_allow_html=True)
+
+        else:
+            # Collapsed mode: icon-only controls
+            if is_google_oauth_configured():
+                auth_url = get_google_auth_url()
+                st.markdown(
+                    f"""
+                    <div style="display: flex; justify-content: center; width: 100%; margin-bottom: 8px;">
+                        <a href="{auth_url}" target="_self" title="Continue with Google" style="display: flex; align-items: center; justify-content: center; width: 42px; height: 42px; background: #FFFFFF; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
+                            <svg width="20" height="20" viewBox="0 0 24 24">
+                                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+                                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    """,
+                    unsafe_allow_html=True
+                )
+            else:
+                st.markdown('<div class="sidebar-google-btn" style="margin-bottom: 8px;">', unsafe_allow_html=True)
+                if st.button("", icon=":material/login:", key="btn_col_google", help="Continue with Google", use_container_width=True):
+                    google_setup_notice_dialog()
+                st.markdown('</div>', unsafe_allow_html=True)
+
+            st.markdown('<div class="sidebar-guest-btn">', unsafe_allow_html=True)
+            if st.button("", icon=":material/person:", key="btn_col_guest", help="Continue as Guest", use_container_width=True):
+                guest_login_dialog()
+            st.markdown('</div>', unsafe_allow_html=True)
+
+    elif auth_mode == "guest":
+        # State B: Guest session (name-only, temporary)
+        guest_name = auth_user.get("name", "Guest")
+        initials = "".join([part[0] for part in guest_name.split()[:2]]).upper() or "G"
+
+        if not is_collapsed:
+            st.markdown(
+                f"""
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; padding: 0 4px;">
+                    <span style="font-size: 11px; font-weight: 600; color: #94A3B8; text-transform: uppercase; letter-spacing: 0.04em;">Session</span>
+                    <span style="display: inline-flex; align-items: center; font-size: 11px; font-weight: 700; color: #E2E8F0; background: rgba(148, 163, 184, 0.25); border: 1px solid rgba(255, 255, 255, 0.15); padding: 1px 8px; border-radius: 999px;">Guest</span>
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
+            with st.popover(
+                f"👤  {guest_name}",
+                use_container_width=True
+            ):
+                st.markdown(
+                    f"""
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                        <div class="sidebar-profile-avatar" style="width: 40px; height: 40px; min-width: 40px; background: #475569;">
+                            <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #FFFFFF; font-weight: 700; font-size: 15px; border-radius: 50%;">
+                                {initials}
+                            </div>
+                        </div>
+                        <div style="min-width: 0;">
+                            <div style="font-weight: 600; font-size: 14px; color: #111827;">{guest_name}</div>
+                            <div style="font-size: 11.5px; color: #64748B;">Temporary Session</div>
+                        </div>
+                    </div>
+                    <div style="display: inline-flex; align-items: center; gap: 5px; font-size: 11.5px; font-weight: 600; color: #475569; background: #F1F5F9; padding: 2px 8px; border-radius: 999px; margin-bottom: 8px;">
+                        Guest
+                    </div>
+                    """,
+                    unsafe_allow_html=True
+                )
+                st.divider()
+                if st.button("✏️ Change Name", key="btn_guest_change_name", use_container_width=True):
+                    change_guest_name_dialog()
+                if st.button("🚪 Exit Guest Mode", key="btn_guest_exit", type="primary", use_container_width=True):
+                    sign_out()
+        else:
+            with st.popover("👤", use_container_width=True):
+                st.markdown(f"**{guest_name}**")
+                st.markdown('<span style="color: #64748B; font-size: 12px; font-weight: 600;">Guest</span>', unsafe_allow_html=True)
+                st.divider()
+                if st.button("✏️ Change Name", key="btn_guest_change_name_col", use_container_width=True):
+                    change_guest_name_dialog()
+                if st.button("🚪 Exit Guest Mode", key="btn_guest_exit_col", type="primary", use_container_width=True):
+                    sign_out()
+
     else:
-        st.markdown(
-            """
-            <div class="sidebar-dataset-card">
-                <div class="sidebar-dataset-title">Active Dataset</div>
-                <div class="sidebar-dataset-name" style="color: #94A3B8;">No dataset loaded</div>
-            </div>
-            """,
-            unsafe_allow_html=True
+        # State C: Authenticated Google User
+        user_name = auth_user.get("name", "Google User")
+        user_email = auth_user.get("email", "user@example.com")
+        user_photo = auth_user.get("picture", "")
+        initials = "".join([part[0] for part in user_name.split()[:2]]).upper() or "U"
+        
+        avatar_html = (
+            f'<img src="{user_photo}" alt="{user_name}" onerror="this.style.display=\'none\';" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;" />'
+            if user_photo and not "default-user" in user_photo
+            else f'<div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: #2563EB; color: #FFFFFF; font-weight: 700; font-size: 15px; border-radius: 50%;">{initials}</div>'
         )
 
-    # LLM Connection Status Indicator
-    has_key = LLMClient.is_available(st.session_state.groq_api_key)
-    if has_key:
-        st.markdown('<span class="status-badge-active">● Groq LLM Connected</span>', unsafe_allow_html=True)
-    else:
-        st.markdown('<span class="status-badge-offline">● Deterministic Mode (Offline)</span>', unsafe_allow_html=True)
-        st.caption("Add Groq API Key in Settings for streaming synthesis.")
-
-    # Recent Conversation Sessions list
-    st.markdown("---")
-    st.markdown("###### 🕒 Recent Conversations")
-    for cid, cinfo in list(st.session_state.conversations.items())[-5:]:
-        is_active = (cid == st.session_state.active_conv_id)
-        c_title = cinfo["title"][:22]
-        c_cols = st.columns([4, 1])
-        with c_cols[0]:
-            btn_label = f"{'🔹 ' if is_active else '💬 '}{c_title}"
-            if st.button(btn_label, key=f"sel_conv_{cid}", use_container_width=True):
-                st.session_state.active_conv_id = cid
-                st.session_state.target_nav = "💬 Ask AI"
-                st.rerun()
-        with c_cols[1]:
-            if len(st.session_state.conversations) > 1:
-                if st.button("🗑️", key=f"del_conv_{cid}", help="Delete chat"):
-                    del st.session_state.conversations[cid]
-                    if st.session_state.active_conv_id == cid:
-                        st.session_state.active_conv_id = list(st.session_state.conversations.keys())[0]
+        if not is_collapsed:
+            with st.popover(
+                f"👤  {user_name}",
+                use_container_width=True
+            ):
+                st.markdown(
+                    f"""
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                        <div class="sidebar-profile-avatar" style="width: 40px; height: 40px; min-width: 40px;">
+                            {avatar_html}
+                        </div>
+                        <div style="min-width: 0;">
+                            <div style="font-weight: 600; font-size: 14px; color: #111827;">{user_name}</div>
+                            <div style="font-size: 12px; color: #6B7280; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{user_email}</div>
+                        </div>
+                    </div>
+                    <div style="display: inline-flex; align-items: center; gap: 5px; font-size: 11.5px; font-weight: 600; color: #16A34A; background: #DCFCE7; padding: 2px 8px; border-radius: 999px; margin-bottom: 8px;">
+                        ● Google Verified Account
+                    </div>
+                    """,
+                    unsafe_allow_html=True
+                )
+                st.divider()
+                if st.button("⚙️ Profile & Settings", key="acct_menu_settings", use_container_width=True):
+                    st.session_state.current_page = "Settings / About"
                     st.rerun()
+                if st.button("🚪 Sign Out", key="acct_menu_signout", type="primary", use_container_width=True):
+                    sign_out()
+        else:
+            with st.popover("👤", use_container_width=True):
+                st.markdown(f"**{user_name}**")
+                st.caption(f"📧 {user_email}")
+                st.markdown('<span style="color: #16A34A; font-size: 12px; font-weight: 600;">● Google Verified</span>', unsafe_allow_html=True)
+                st.divider()
+                if st.button("⚙️ Profile & Settings", key="acct_menu_settings_col", use_container_width=True):
+                    st.session_state.current_page = "Settings / About"
+                    st.rerun()
+                if st.button("🚪 Sign Out", key="acct_menu_signout_col", type="primary", use_container_width=True):
+                    sign_out()
 
-    # Compact user profile area at bottom of sidebar matching reference
-    st.markdown(
-        """
-        <div class="sidebar-user-footer">
-            <div class="sidebar-user-avatar">👤</div>
-            <div>
-                <div class="sidebar-user-name">Analyst Workspace</div>
-                <div class="sidebar-user-role">Enterprise Edition • Active</div>
-            </div>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    st.markdown('</div>', unsafe_allow_html=True)
+
+navigation = st.session_state.current_page
 
 
 # =============================================================
 # 1. HOME DASHBOARD
 # =============================================================
-if navigation == "🏠 Home":
+if navigation in ["Home", "🏠 Home"]:
     render_page_header("Home Dashboard", "Your data. Your questions. Clear answers.")
 
     # Main content: Upload card on the left, Quick Actions card beside it
@@ -464,7 +957,7 @@ if navigation == "🏠 Home":
 # =============================================================
 # 2. DATA WORKSPACE
 # =============================================================
-elif navigation == "📁 Data Workspace":
+elif navigation in ["Data Workspace", "📁 Data Workspace"]:
     render_page_header("Data Workspace", "Inspect schema, column distributions, and data quality metrics")
 
     if st.session_state.df is not None and st.session_state.profile is not None:
@@ -678,17 +1171,17 @@ elif navigation == "📁 Data Workspace":
 # =============================================================
 # 3. ASK AI (CHATGPT-STYLE CHATBOT)
 # =============================================================
-elif navigation == "💬 Ask AI":
+elif navigation in ["Ask AI", "💬 Ask AI"]:
     h_col1, h_col2 = st.columns([4.2, 1])
     with h_col1:
         render_page_header(
-            "Ask AI",
-            "Ask questions in plain English and get instant data analysis, charts, and business insights."
+            "DN AI — Conversational Analyst",
+            "ChatGPT-level conversational assistant with dual-mode intelligence: general reasoning & deterministic data analysis."
         )
     with h_col2:
         st.markdown("<div style='height: 14px;'></div>", unsafe_allow_html=True)
         if st.button("➕ New Chat", key="chat_new_btn", use_container_width=True):
-            create_new_conversation("Data Discovery")
+            create_new_conversation("Discovery Session")
             st.rerun()
 
     if st.session_state.df is not None:
@@ -698,183 +1191,185 @@ elif navigation == "💬 Ask AI":
             col_count=len(st.session_state.df.columns),
             active_sheet=st.session_state.active_sheet
         )
-
-    if st.session_state.df is None:
-        st.warning("Please upload or select a dataset first in Data Workspace or Home to begin analysis.")
     else:
-        active_messages = get_active_messages()
-        clicked_chip = None
-        if st.session_state.get("pending_query"):
-            clicked_chip = st.session_state.pop("pending_query")
+        st.info("💡 **Mode A: General AI Active** — Ask any general question, programming challenge, or concept explanation freely! Upload a dataset anytime via Home to unlock **Mode B: Autonomous Data Analyst**.")
 
-        # Welcome screen if no messages in active conversation
-        clicked_prompt = None
-        if not active_messages:
-            render_chat_welcome()
-            cards = get_default_prompt_cards(st.session_state.profile)
-            p_cols = st.columns(2)
-            for idx, c in enumerate(cards):
-                with p_cols[idx % 2]:
-                    st.markdown(
-                        f"""
-                        <div class="prompt-card">
-                            <div class="prompt-card-icon">{c['icon']}</div>
-                            <div class="prompt-card-text">{c['title']}</div>
-                            <div class="prompt-card-desc">{c['desc']}</div>
-                        </div>
-                        """,
-                        unsafe_allow_html=True
-                    )
-                    if st.button(f"Ask: {c['prompt']}", key=f"pcard_{idx}", use_container_width=True):
-                        clicked_prompt = c["prompt"]
+    active_messages = get_active_messages()
+    clicked_chip = None
+    if st.session_state.get("pending_query"):
+        clicked_chip = st.session_state.pop("pending_query")
 
-        # Render Conversation Message Bubbles
-        retry_query = None
-        for i, msg in enumerate(active_messages):
-            if msg["role"] == "user":
-                with st.chat_message("user", avatar="🧑‍💻"):
-                    st.markdown(msg["content"])
-            else:
-                with st.chat_message("assistant", avatar="📊"):
-                    st.markdown('<div class="assistant-badge">● InsightFlow Analyst</div>', unsafe_allow_html=True)
-                    st.markdown(msg["content"])
+    # Welcome screen if no messages in active conversation
+    clicked_prompt = None
+    if not active_messages:
+        render_chat_welcome()
+        cards = get_default_prompt_cards(st.session_state.profile)
+        p_cols = st.columns(2)
+        for idx, c in enumerate(cards):
+            with p_cols[idx % 2]:
+                st.markdown(
+                    f"""
+                    <div class="prompt-card">
+                        <div class="prompt-card-icon">{c['icon']}</div>
+                        <div class="prompt-card-text">{c['title']}</div>
+                        <div class="prompt-card-desc">{c['desc']}</div>
+                    </div>
+                    """,
+                    unsafe_allow_html=True
+                )
+                if st.button(f"Ask: {c['prompt']}", key=f"pcard_{idx}", use_container_width=True):
+                    clicked_prompt = c["prompt"]
 
-                    if msg.get("formula"):
-                        st.markdown(f'<div class="formula-pill">Formula: {msg["formula"]}</div>', unsafe_allow_html=True)
-                        with st.expander("🔬 Formula & Execution Details", expanded=False):
-                            st.markdown(f"**Verified Execution Formula**: `{msg['formula']}`")
-                            st.caption("Computed deterministically via Pandas/NumPy execution pipeline. Zero LLM math hallucination.")
-
-                    if msg.get("figure") is not None:
-                        st.plotly_chart(msg["figure"], use_container_width=True)
-                        if st.session_state.profile and st.session_state.profile.numerical_columns:
-                            c_anom = st.session_state.profile.numerical_columns[0]
-                            if st.button(f"🔍 Analyze Anomalies in {c_anom}", key=f"anom_btn_{i}"):
-                                clicked_chip = f"Detect outliers and anomalies in {c_anom}"
-
-                    if msg.get("table") is not None:
-                        with st.expander("📊 View Data Table", expanded=True):
-                            tbl_df = msg["table"]
-                            if len(tbl_df) > 5:
-                                top_n = st.slider("Display records:", min_value=5, max_value=min(100, len(tbl_df)), value=min(10, len(tbl_df)), key=f"slicer_{i}")
-                                st.dataframe(tbl_df.head(top_n), use_container_width=True)
-                            else:
-                                st.dataframe(tbl_df, use_container_width=True)
-                            csv_b = DataExporter.to_csv_bytes(tbl_df)
-                            st.download_button(
-                                "📥 Download Table (CSV)",
-                                data=csv_b,
-                                file_name="analysis_table.csv",
-                                mime="text/csv",
-                                key=f"dl_tbl_{i}"
-                            )
-
-                    # Copy response / actions bar
-                    act_c1, act_c2 = st.columns([4, 1])
-                    with act_c1:
-                        with st.expander("📋 Copy Response Text", expanded=False):
-                            st.code(msg["content"], language="markdown")
-                    with act_c2:
-                        if msg.get("has_error"):
-                            if st.button("🔄 Retry", key=f"retry_{i}"):
-                                # Find prior user query
-                                for prev_m in reversed(active_messages[:i]):
-                                    if prev_m["role"] == "user":
-                                        retry_query = prev_m["content"]
-                                        break
-
-        # Dynamic Follow-up Action Chips below chat
-        if active_messages and active_messages[-1]["role"] == "assistant":
-            last_u_query = ""
-            for m in reversed(active_messages):
-                if m["role"] == "user":
-                    last_u_query = m["content"]
-                    break
-            fup_chips = get_follow_up_action_chips(last_u_query, st.session_state.profile)
-            if fup_chips:
-                st.markdown("###### ⚡ Suggested Follow-up Questions")
-                f_cols = st.columns(len(fup_chips))
-                for f_i, fc in enumerate(fup_chips):
-                    with f_cols[f_i]:
-                        if st.button(fc["label"], key=f"fup_btn_{f_i}_{len(active_messages)}", use_container_width=True):
-                            clicked_chip = fc["query"]
-
-        # Message Input Composer
-        user_input = st.chat_input("Ask a question about your data (Shift+Enter for newline)...")
-        active_query = retry_query or clicked_chip or clicked_prompt or user_input
-
-        if active_query:
-            # 1. Append User Message
-            active_messages.append({"role": "user", "content": active_query})
+    # Render Conversation Message Bubbles
+    retry_query = None
+    for i, msg in enumerate(active_messages):
+        if msg["role"] == "user":
             with st.chat_message("user", avatar="🧑‍💻"):
-                st.markdown(active_query)
+                st.markdown(msg["content"])
+        else:
+            with st.chat_message("assistant", avatar="🤖"):
+                badge_title = "● DN AI Analyst" if st.session_state.df is not None else "● DN AI Assistant"
+                st.markdown(f'<div class="assistant-badge">{badge_title}</div>', unsafe_allow_html=True)
+                st.markdown(msg["content"])
 
-            # 2. Assistant Streaming Response
-            with st.chat_message("assistant", avatar="📊"):
-                st.markdown('<div class="assistant-badge">● InsightFlow Analyst</div>', unsafe_allow_html=True)
-                
-                # Execute tool deterministically & stream explanation
-                with st.spinner("Analyzing schema, executing deterministic calculation, and verifying output..."):
-                    stream_iter, meta = AnalystAgent.run_stream(
-                        query=active_query,
-                        df=st.session_state.df,
-                        profile=st.session_state.profile,
-                        chat_history=active_messages,
-                        api_key=st.session_state.groq_api_key,
-                        model_name=st.session_state.selected_model
-                    )
-
-                # Real token streaming rendering
-                full_response = st.write_stream(stream_iter)
-
-                # Render formula pill if present
-                if meta.get("formula"):
-                    st.markdown(f'<div class="formula-pill">Formula: {meta["formula"]}</div>', unsafe_allow_html=True)
+                if msg.get("formula"):
+                    st.markdown(f'<div class="formula-pill">Formula: {msg["formula"]}</div>', unsafe_allow_html=True)
                     with st.expander("🔬 Formula & Execution Details", expanded=False):
-                        st.markdown(f"**Verified Execution Formula**: `{meta['formula']}`")
+                        st.markdown(f"**Verified Execution Formula**: `{msg['formula']}`")
                         st.caption("Computed deterministically via Pandas/NumPy execution pipeline. Zero LLM math hallucination.")
 
-                # Render attached Plotly figure if generated
-                if meta.get("figure") is not None:
-                    st.plotly_chart(meta["figure"], use_container_width=True)
+                if msg.get("figure") is not None:
+                    st.plotly_chart(msg["figure"], use_container_width=True)
+                    if st.session_state.profile and st.session_state.profile.numerical_columns:
+                        c_anom = st.session_state.profile.numerical_columns[0]
+                        if st.button(f"🔍 Analyze Anomalies in {c_anom}", key=f"anom_btn_{i}"):
+                            clicked_chip = f"Detect outliers and anomalies in {c_anom}"
 
-                # Render attached Table if generated
-                if meta.get("table") is not None:
+                if msg.get("table") is not None:
                     with st.expander("📊 View Data Table", expanded=True):
-                        tbl_out = meta["table"]
-                        if len(tbl_out) > 5:
-                            slicer_out = st.slider("Display records:", min_value=5, max_value=min(100, len(tbl_out)), value=min(10, len(tbl_out)), key=f"slicer_stream_{len(active_messages)}")
-                            st.dataframe(tbl_out.head(slicer_out), use_container_width=True)
+                        tbl_df = msg["table"]
+                        if len(tbl_df) > 5:
+                            top_n = st.slider("Display records:", min_value=5, max_value=min(100, len(tbl_df)), value=min(10, len(tbl_df)), key=f"slicer_{i}")
+                            st.dataframe(tbl_df.head(top_n), use_container_width=True)
                         else:
-                            st.dataframe(tbl_out, use_container_width=True)
-                        csv_b = DataExporter.to_csv_bytes(tbl_out)
+                            st.dataframe(tbl_df, use_container_width=True)
+                        csv_b = DataExporter.to_csv_bytes(tbl_df)
                         st.download_button(
                             "📥 Download Table (CSV)",
                             data=csv_b,
                             file_name="analysis_table.csv",
                             mime="text/csv",
-                            key=f"dl_tbl_{len(active_messages)}"
+                            key=f"dl_tbl_{i}"
                         )
 
-            # 3. Save Assistant Message in Conversation History
-            active_messages.append({
-                "role": "assistant",
-                "content": full_response,
-                "formula": meta.get("formula"),
-                "figure": meta.get("figure"),
-                "table": meta.get("table"),
-                "has_error": not meta.get("success", True)
-            })
+                # Copy response / actions bar
+                act_c1, act_c2 = st.columns([4, 1])
+                with act_c1:
+                    with st.expander("📋 Copy Response Text", expanded=False):
+                        st.code(msg["content"], language="markdown")
+                with act_c2:
+                    if msg.get("has_error"):
+                        if st.button("🔄 Retry", key=f"retry_{i}"):
+                            # Find prior user query
+                            for prev_m in reversed(active_messages[:i]):
+                                if prev_m["role"] == "user":
+                                    retry_query = prev_m["content"]
+                                    break
 
-            # Auto-title conversation from first query
-            if len(active_messages) <= 2:
-                st.session_state.conversations[st.session_state.active_conv_id]["title"] = active_query[:25]
+    # Dynamic Follow-up Action Chips below chat
+    if active_messages and active_messages[-1]["role"] == "assistant":
+        last_u_query = ""
+        for m in reversed(active_messages):
+            if m["role"] == "user":
+                last_u_query = m["content"]
+                break
+        fup_chips = get_follow_up_action_chips(last_u_query, st.session_state.profile)
+        if fup_chips:
+            st.markdown("###### ⚡ Suggested Follow-up Questions")
+            f_cols = st.columns(len(fup_chips))
+            for f_i, fc in enumerate(fup_chips):
+                with f_cols[f_i]:
+                    if st.button(fc["label"], key=f"fup_btn_{f_i}_{len(active_messages)}", use_container_width=True):
+                        clicked_chip = fc["query"]
+
+    # Message Input Composer
+    user_input = st.chat_input("Ask DN AI anything or analyze your data (Shift+Enter for newline)...")
+    active_query = retry_query or clicked_chip or clicked_prompt or user_input
+
+    if active_query:
+        # 1. Append User Message
+        active_messages.append({"role": "user", "content": active_query})
+        with st.chat_message("user", avatar="🧑‍💻"):
+            st.markdown(active_query)
+
+        # 2. Assistant Streaming Response
+        with st.chat_message("assistant", avatar="🤖"):
+            badge_title = "● DN AI Analyst" if st.session_state.df is not None else "● DN AI Assistant"
+            st.markdown(f'<div class="assistant-badge">{badge_title}</div>', unsafe_allow_html=True)
+
+            # Execute tool deterministically & stream explanation
+            with st.spinner("DN AI is thinking and formulating response..."):
+                stream_iter, meta = AnalystAgent.run_stream(
+                    query=active_query,
+                    df=st.session_state.df,
+                    profile=st.session_state.profile,
+                    chat_history=active_messages,
+                    api_key=st.session_state.groq_api_key,
+                    model_name=st.session_state.selected_model
+                )
+
+            # Real token streaming rendering
+            full_response = st.write_stream(stream_iter)
+
+            # Render formula pill if present
+            if meta.get("formula"):
+                st.markdown(f'<div class="formula-pill">Formula: {meta["formula"]}</div>', unsafe_allow_html=True)
+                with st.expander("🔬 Formula & Execution Details", expanded=False):
+                    st.markdown(f"**Verified Execution Formula**: `{meta['formula']}`")
+                    st.caption("Computed deterministically via Pandas/NumPy execution pipeline. Zero LLM math hallucination.")
+
+            # Render attached Plotly figure if generated
+            if meta.get("figure") is not None:
+                st.plotly_chart(meta["figure"], use_container_width=True)
+
+            # Render attached Table if generated
+            if meta.get("table") is not None:
+                with st.expander("📊 View Data Table", expanded=True):
+                    tbl_out = meta["table"]
+                    if len(tbl_out) > 5:
+                        slicer_out = st.slider("Display records:", min_value=5, max_value=min(100, len(tbl_out)), value=min(10, len(tbl_out)), key=f"slicer_stream_{len(active_messages)}")
+                        st.dataframe(tbl_out.head(slicer_out), use_container_width=True)
+                    else:
+                        st.dataframe(tbl_out, use_container_width=True)
+                    csv_b = DataExporter.to_csv_bytes(tbl_out)
+                    st.download_button(
+                        "📥 Download Table (CSV)",
+                        data=csv_b,
+                        file_name="analysis_table.csv",
+                        mime="text/csv",
+                        key=f"dl_tbl_{len(active_messages)}"
+                    )
+
+        # 3. Save Assistant Message in Conversation History
+        active_messages.append({
+            "role": "assistant",
+            "content": full_response,
+            "formula": meta.get("formula"),
+            "figure": meta.get("figure"),
+            "table": meta.get("table"),
+            "has_error": not meta.get("success", True)
+        })
+
+        # Auto-title conversation from first query
+        if len(active_messages) <= 2:
+            st.session_state.conversations[st.session_state.active_conv_id]["title"] = active_query[:25]
+
 
 
 # =============================================================
 # 4. VISUALIZATION STUDIO
 # =============================================================
-elif navigation == "📊 Visualization Studio":
+elif navigation in ["Visualization Studio", "📊 Visualization Studio"]:
     render_page_header("Visualization Studio", "Interactive visual analytics and custom charts")
 
     if st.session_state.df is None:
@@ -1011,7 +1506,7 @@ elif navigation == "📊 Visualization Studio":
 # =============================================================
 # 5. DATA LAB (CLEANING, TRANSFORMATIONS, MERGE & CONVERSION)
 # =============================================================
-elif navigation == "🧪 Data Lab":
+elif navigation in ["Data Lab", "🧪 Data Lab"]:
     render_page_header("Data Lab", "Data transformation, cleaning, and preparation suite")
 
     if st.session_state.df is None:
@@ -1019,6 +1514,7 @@ elif navigation == "🧪 Data Lab":
     else:
         df = st.session_state.df
         history: CleaningHistory = st.session_state.cleaning_history
+        profile = st.session_state.profile
 
         # 4 Tabs matching reference: Cleaning, Transformations, Merge & Reshape, Conversion
         t_clean, t_trans, t_merge, t_conv = st.tabs([
@@ -1266,7 +1762,7 @@ elif navigation == "🧪 Data Lab":
 # =============================================================
 # 6. PREDICTION & INSIGHTS (ML & TIME SERIES)
 # =============================================================
-elif navigation == "🔮 Prediction & Insights":
+elif navigation in ["Prediction & Insights", "🔮 Prediction & Insights"]:
     render_page_header(
         "Prediction & Insights",
         "Train machine learning models, forecast future trends, and simulate 'what-if' business scenarios."
@@ -1565,7 +2061,7 @@ elif navigation == "🔮 Prediction & Insights":
 # =============================================================
 # 7. REPORTS & HISTORY (FILE EXPORTS & PDF REPORT)
 # =============================================================
-elif navigation == "📑 Reports & History":
+elif navigation in ["Reports & History", "📑 Reports & History"]:
     render_page_header(
         "Reports & History",
         "Generate comprehensive reports, download datasets in multiple formats, and review analytical audit trails."
@@ -1741,138 +2237,58 @@ elif navigation == "📑 Reports & History":
 # =============================================================
 # 8. SETTINGS / ABOUT
 # =============================================================
-elif navigation == "⚙️ Settings / About":
+elif navigation in ["Settings / About", "⚙️ Settings / About"]:
     render_page_header(
         "Settings / About",
-        "Configure API credentials, model inference parameters, and inspect system architecture."
+        "Configure API credentials and model inference parameters."
     )
 
-    col_cfg1, col_cfg2 = st.columns(2)
+    st.markdown('<div class="white-content-card" style="max-width: 720px; margin: 0 auto;">', unsafe_allow_html=True)
+    st.markdown("##### 🔑 Groq API Configuration")
+    user_key = st.text_input(
+        "Groq API Key:",
+        value=st.session_state.groq_api_key,
+        type="password",
+        help="Built-in Groq API key is pre-configured. You can also specify an alternate key if desired."
+    )
+    if user_key != st.session_state.groq_api_key:
+        st.session_state.groq_api_key = user_key
+        os.environ["GROQ_API_KEY"] = user_key
 
-    with col_cfg1:
-        st.markdown('<div class="white-content-card">', unsafe_allow_html=True)
-        st.markdown("##### 🔑 Groq API Configuration")
-        user_key = st.text_input(
-            "Groq API Key:",
-            value=st.session_state.groq_api_key,
-            type="password",
-            help="Get your free API key at https://console.groq.com"
-        )
-        if user_key != st.session_state.groq_api_key:
-            st.session_state.groq_api_key = user_key
-            os.environ["GROQ_API_KEY"] = user_key
+    model_choice = st.selectbox(
+        "Select Model Architecture",
+        AVAILABLE_MODELS,
+        index=AVAILABLE_MODELS.index(st.session_state.selected_model) if st.session_state.selected_model in AVAILABLE_MODELS else 0
+    )
+    st.session_state.selected_model = model_choice
 
-        model_choice = st.selectbox(
-            "Select Model Architecture",
-            AVAILABLE_MODELS,
-            index=AVAILABLE_MODELS.index(st.session_state.selected_model) if st.session_state.selected_model in AVAILABLE_MODELS else 0
-        )
-        st.session_state.selected_model = model_choice
-
-        if st.button("⚡ Test Groq Connection", type="secondary"):
-            if LLMClient.is_available(st.session_state.groq_api_key):
-                with st.spinner("Testing Groq API connection and latency..."):
-                    test_res = LLMClient.test_connection(
-                        explicit_key=st.session_state.groq_api_key,
-                        model_name=st.session_state.selected_model
-                    )
-                    if test_res["success"]:
-                        st.success(f"Groq API Connected! Latency: {test_res['latency_ms']}ms • Model: {test_res['model']}")
-                    else:
-                        st.error(f"Connection failed: {test_res.get('error')}")
-            else:
-                st.warning("Please provide a valid Groq API key starting with 'gsk_'.")
-        st.markdown('</div>', unsafe_allow_html=True)
-
-        st.markdown('<div class="white-content-card" style="margin-top: 1rem;">', unsafe_allow_html=True)
-        st.markdown("##### 🎨 Active Color Theme — Blue & White")
-        th_c1, th_c2, th_c3 = st.columns(3)
-        with th_c1:
-            st.markdown(f'<div style="background:{COLOR_PRIMARY}; color:#FFFFFF; padding:8px; border-radius:6px; text-align:center; font-weight:600;">Primary: {COLOR_PRIMARY}</div>', unsafe_allow_html=True)
-            st.markdown(f'<div style="background:{COLOR_SIDEBAR_BG}; color:#FFFFFF; padding:8px; border-radius:6px; text-align:center; font-weight:600; margin-top:6px;">Sidebar: {COLOR_SIDEBAR_BG}</div>', unsafe_allow_html=True)
-        with th_c2:
-            st.markdown(f'<div style="background:{COLOR_DARK_BLUE}; color:#FFFFFF; padding:8px; border-radius:6px; text-align:center; font-weight:600;">Dark Blue: {COLOR_DARK_BLUE}</div>', unsafe_allow_html=True)
-            st.markdown(f'<div style="background:{COLOR_LIGHT_BLUE}; color:{COLOR_DARK_BLUE}; padding:8px; border-radius:6px; text-align:center; font-weight:600; margin-top:6px;">Light Blue: {COLOR_LIGHT_BLUE}</div>', unsafe_allow_html=True)
-        with th_c3:
-            st.markdown(f'<div style="background:{COLOR_SUCCESS_BG}; color:{COLOR_SUCCESS}; padding:8px; border-radius:6px; text-align:center; font-weight:600;">Success: {COLOR_SUCCESS}</div>', unsafe_allow_html=True)
-            st.markdown(f'<div style="background:#FEF3C7; color:{COLOR_WARNING}; padding:8px; border-radius:6px; text-align:center; font-weight:600; margin-top:6px;">Warning: {COLOR_WARNING}</div>', unsafe_allow_html=True)
-        st.markdown('</div>', unsafe_allow_html=True)
-
-    with col_cfg2:
-        st.markdown('<div class="white-content-card">', unsafe_allow_html=True)
-        st.markdown("##### 🛡️ Enterprise Security & Privacy")
-        st.info(
-            """
-            **Deterministic Execution**:
-            - All mathematical and statistical metrics computed via Pandas & NumPy.
-            - Arbitrary code execution (`eval()`, `exec()`) is completely disallowed.
-            - Derived formulas are parsed through an Abstract Syntax Tree (AST) validator.
-            - Uploaded data is strictly isolated within the active Streamlit session state.
-            """
-        )
-
-        st.markdown("##### 📦 System Diagnostics & Dependencies")
-        d_c1, d_c2 = st.columns(2)
-        with d_c1:
-            st.caption(f"• Python: `{sys.version.split()[0]}`")
-            st.caption(f"• Streamlit: `{st.__version__}`")
-            st.caption(f"• Pandas: `{pd.__version__}`")
-            st.caption(f"• NumPy: `{np.__version__}`")
-        with d_c2:
-            try:
-                import sklearn
-                st.caption(f"• Scikit-Learn: `{sklearn.__version__}`")
-            except Exception:
-                pass
-            try:
-                import plotly
-                st.caption(f"• Plotly: `{plotly.__version__}`")
-            except Exception:
-                pass
-            try:
-                import langgraph
-                st.caption(f"• LangGraph: `{langgraph.__version__}`")
-            except Exception:
-                pass
-            try:
-                import reportlab
-                st.caption(f"• ReportLab: `{reportlab.__version__}`")
-            except Exception:
-                pass
-
-        st.markdown("##### 📐 LangGraph Workflow Structure")
-        st.code(
-            """
-[User Request]
-       │
-       ▼
-[Understand Schema & Context] ──> (Groq JSON / Semantic Router / Pydantic)
-       │
-       ▼
-[Execute Validated Tool]     ──> (Calculator | Visualizer | Predictor | Cleaner)
-       │
-       ▼
-[Validate Tool Result]       ──> (Checks integrity & error bounds)
-       │
-       ▼
-[Stream Synthesized Response] ──> (Token-by-token Natural Language Explanation)
-            """,
-            language="text"
-        )
-        st.markdown('</div>', unsafe_allow_html=True)
+    if st.button("⚡ Test Groq Connection", type="secondary"):
+        if LLMClient.is_available(st.session_state.groq_api_key):
+            with st.spinner("Testing Groq API connection and latency..."):
+                test_res = LLMClient.test_connection(
+                    explicit_key=st.session_state.groq_api_key,
+                    model_name=st.session_state.selected_model
+                )
+                if test_res["success"]:
+                    st.success(f"Groq API Connected! Latency: {test_res['latency_ms']}ms • Model: {test_res['model']}")
+                else:
+                    st.error(f"Connection failed: {test_res.get('error')}")
+        else:
+            st.warning("Please provide a valid Groq API key starting with 'gsk_'.")
+    st.markdown('</div>', unsafe_allow_html=True)
 
 
 # =============================================================
 # 9. MOBILE ASK AI (RESPONSIVE VIEW)
 # =============================================================
-elif navigation == "📱 Mobile Ask AI":
+elif navigation in ["Mobile Ask AI", "📱 Mobile Ask AI"]:
     # Compact mobile top bar matching reference view 9
     st.markdown(
         f"""
         <div class="mobile-chat-topbar">
             <div class="mobile-chat-title">
                 <span style="font-size: 1.2rem;">💬</span>
-                <span>InsightFlow AI</span>
+                <span>DataPilot AI</span>
             </div>
             <div style="display: flex; align-items: center; gap: 0.5rem;">
                 <span class="assistant-badge" style="font-size: 0.72rem; padding: 0.2rem 0.5rem;">
@@ -1892,112 +2308,116 @@ elif navigation == "📱 Mobile Ask AI":
             create_new_conversation("Mobile Chat")
             st.rerun()
 
-    if st.session_state.df is None:
-        st.warning("Please upload or select a dataset first in Data Workspace or Home to begin analysis.")
+    if st.session_state.df is not None:
+        st.caption(f"📁 Active Dataset: **{st.session_state.file_name}** ({len(st.session_state.df):,} rows)")
     else:
-        mob_active_messages = get_active_messages()
-        mob_clicked_chip = None
+        st.info("💡 **Mode A: General AI Active** • Ask any question or upload data to enable **Mode B: Data Analyst**!")
 
-        # Mobile welcome state
-        if not mob_active_messages:
-            st.markdown(
-                """
-                <div class="empty-state-card" style="padding: 1.25rem;">
-                    <div class="empty-state-icon">🤖</div>
-                    <div class="empty-state-title">InsightFlow Mobile Analyst</div>
-                    <div class="empty-state-desc">Ask any question about your data below to receive instant formulas, charts, and executive insights.</div>
-                </div>
-                """,
-                unsafe_allow_html=True
-            )
-            cards = get_default_prompt_cards(st.session_state.profile)
-            for idx, c in enumerate(cards[:2]):
-                if st.button(f"{c['icon']} {c['title']}: {c['prompt']}", key=f"mob_pcard_{idx}", use_container_width=True):
-                    mob_clicked_chip = c["prompt"]
+    mob_active_messages = get_active_messages()
+    mob_clicked_chip = None
 
-        # Render conversation messages in responsive single column
-        for i, msg in enumerate(mob_active_messages):
-            if msg["role"] == "user":
-                with st.chat_message("user", avatar="🧑‍💻"):
-                    st.markdown(msg["content"])
-            else:
-                with st.chat_message("assistant", avatar="📊"):
-                    st.markdown('<div class="assistant-badge">● InsightFlow Analyst</div>', unsafe_allow_html=True)
-                    st.markdown(msg["content"])
+    # Mobile welcome state
+    if not mob_active_messages:
+        st.markdown(
+            """
+            <div class="empty-state-card" style="padding: 1.25rem;">
+                <div class="empty-state-icon">🤖</div>
+                <div class="empty-state-title">DN AI Mobile Assistant</div>
+                <div class="empty-state-desc">Ask any question or analyze data on mobile to receive instant formulas, charts, and executive insights.</div>
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+        cards = get_default_prompt_cards(st.session_state.profile)
+        for idx, c in enumerate(cards[:2]):
+            if st.button(f"{c['icon']} {c['title']}: {c['prompt']}", key=f"mob_pcard_{idx}", use_container_width=True):
+                mob_clicked_chip = c["prompt"]
 
-                    if msg.get("formula"):
-                        st.markdown(f'<div class="formula-pill">Formula: {msg["formula"]}</div>', unsafe_allow_html=True)
-
-                    if msg.get("table") is not None:
-                        with st.expander("📊 View Data Table", expanded=True):
-                            mob_tbl = msg["table"]
-                            st.dataframe(mob_tbl.head(10), use_container_width=True)
-                            mob_csv = DataExporter.to_csv_bytes(mob_tbl)
-                            st.download_button("📥 Download Table (CSV)", data=mob_csv, file_name="table.csv", mime="text/csv", key=f"mob_dl_tbl_{i}")
-
-                    if msg.get("figure") is not None:
-                        st.plotly_chart(msg["figure"], use_container_width=True)
-
-                    if msg.get("insights"):
-                        st.markdown(
-                            f"""
-                            <div class="key-insights-card">
-                                <div class="key-insights-title">💡 Key Insights</div>
-                                <div>{msg['insights']}</div>
-                            </div>
-                            """,
-                            unsafe_allow_html=True
-                        )
-
-        # Dynamic follow-up chips
-        if mob_active_messages and mob_active_messages[-1]["role"] == "assistant":
-            last_u = ""
-            for m in reversed(mob_active_messages):
-                if m["role"] == "user":
-                    last_u = m["content"]
-                    break
-            fup = get_follow_up_action_chips(last_u, st.session_state.profile)
-            if fup:
-                st.markdown("###### ⚡ Follow-up Actions")
-                for f_i, fc in enumerate(fup[:2]):
-                    if st.button(fc["label"], key=f"mob_fup_{f_i}_{len(mob_active_messages)}", use_container_width=True):
-                        mob_clicked_chip = fc["query"]
-
-        # Mobile input composer anchored at bottom
-        mob_user_input = st.chat_input("Ask about your data on mobile...", key="mob_chat_input")
-        mob_query = mob_clicked_chip or mob_user_input
-
-        if mob_query:
-            mob_active_messages.append({"role": "user", "content": mob_query})
+    # Render conversation messages in responsive single column
+    for i, msg in enumerate(mob_active_messages):
+        if msg["role"] == "user":
             with st.chat_message("user", avatar="🧑‍💻"):
-                st.markdown(mob_query)
+                st.markdown(msg["content"])
+        else:
+            with st.chat_message("assistant", avatar="🤖"):
+                badge_title = "● DN AI Analyst" if st.session_state.df is not None else "● DN AI Assistant"
+                st.markdown(f'<div class="assistant-badge">{badge_title}</div>', unsafe_allow_html=True)
+                st.markdown(msg["content"])
 
-            with st.chat_message("assistant", avatar="📊"):
-                st.markdown('<div class="assistant-badge">● InsightFlow Analyst</div>', unsafe_allow_html=True)
+                if msg.get("formula"):
+                    st.markdown(f'<div class="formula-pill">Formula: {msg["formula"]}</div>', unsafe_allow_html=True)
 
-                with st.spinner("Analyzing schema & executing deterministic calculation..."):
-                    stream_iter, meta = AnalystAgent.run_stream(
-                        query=mob_query,
-                        df=st.session_state.df,
-                        profile=st.session_state.profile,
-                        chat_history=mob_active_messages,
-                        api_key=st.session_state.groq_api_key,
-                        model_name=st.session_state.selected_model
+                if msg.get("table") is not None:
+                    with st.expander("📊 View Data Table", expanded=True):
+                        mob_tbl = msg["table"]
+                        st.dataframe(mob_tbl.head(10), use_container_width=True)
+                        mob_csv = DataExporter.to_csv_bytes(mob_tbl)
+                        st.download_button("📥 Download Table (CSV)", data=mob_csv, file_name="table.csv", mime="text/csv", key=f"mob_dl_tbl_{i}")
+
+                if msg.get("figure") is not None:
+                    st.plotly_chart(msg["figure"], use_container_width=True)
+
+                if msg.get("insights"):
+                    st.markdown(
+                        f"""
+                        <div class="key-insights-card">
+                            <div class="key-insights-title">💡 Key Insights</div>
+                            <div>{msg['insights']}</div>
+                        </div>
+                        """,
+                        unsafe_allow_html=True
                     )
 
-                full_resp = st.write_stream(stream_iter)
+    # Dynamic follow-up chips
+    if mob_active_messages and mob_active_messages[-1]["role"] == "assistant":
+        last_u = ""
+        for m in reversed(mob_active_messages):
+            if m["role"] == "user":
+                last_u = m["content"]
+                break
+        fup = get_follow_up_action_chips(last_u, st.session_state.profile)
+        if fup:
+            st.markdown("###### ⚡ Follow-up Actions")
+            for f_i, fc in enumerate(fup[:2]):
+                if st.button(fc["label"], key=f"mob_fup_{f_i}_{len(mob_active_messages)}", use_container_width=True):
+                    mob_clicked_chip = fc["query"]
 
-                if meta.get("formula"):
-                    st.markdown(f'<div class="formula-pill">Formula: {meta["formula"]}</div>', unsafe_allow_html=True)
+    # Mobile input composer anchored at bottom
+    mob_user_input = st.chat_input("Ask DN AI anything on mobile...", key="mob_chat_input")
+    mob_query = mob_clicked_chip or mob_user_input
 
-                if meta.get("table") is not None:
-                    with st.expander("📊 View Data Table", expanded=True):
-                        st.dataframe(meta["table"].head(10), use_container_width=True)
-                        c_b = DataExporter.to_csv_bytes(meta["table"])
-                        st.download_button("📥 Download Table", data=c_b, file_name="table.csv", mime="text/csv", key=f"mob_stream_tbl_{len(mob_active_messages)}")
+    if mob_query:
+        mob_active_messages.append({"role": "user", "content": mob_query})
+        with st.chat_message("user", avatar="🧑‍💻"):
+            st.markdown(mob_query)
 
-                if meta.get("figure") is not None:
-                    st.plotly_chart(meta["figure"], use_container_width=True)
+        with st.chat_message("assistant", avatar="🤖"):
+            badge_title = "● DN AI Analyst" if st.session_state.df is not None else "● DN AI Assistant"
+            st.markdown(f'<div class="assistant-badge">{badge_title}</div>', unsafe_allow_html=True)
+
+            with st.spinner("DN AI is thinking and formulating response..."):
+                stream_iter, meta = AnalystAgent.run_stream(
+                    query=mob_query,
+                    df=st.session_state.df,
+                    profile=st.session_state.profile,
+                    chat_history=mob_active_messages,
+                    api_key=st.session_state.groq_api_key,
+                    model_name=st.session_state.selected_model
+                )
+
+            full_resp = st.write_stream(stream_iter)
+
+            if meta.get("formula"):
+                st.markdown(f'<div class="formula-pill">Formula: {meta["formula"]}</div>', unsafe_allow_html=True)
+
+            if meta.get("table") is not None:
+                with st.expander("📊 View Data Table", expanded=True):
+                    st.dataframe(meta["table"].head(10), use_container_width=True)
+                    c_b = DataExporter.to_csv_bytes(meta["table"])
+                    st.download_button("📥 Download Table", data=c_b, file_name="table.csv", mime="text/csv", key=f"mob_stream_tbl_{len(mob_active_messages)}")
+
+            if meta.get("figure") is not None:
+                st.plotly_chart(meta["figure"], use_container_width=True)
 
             mob_active_messages.append({
                 "role": "assistant",

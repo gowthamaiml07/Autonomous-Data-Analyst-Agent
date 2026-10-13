@@ -369,6 +369,56 @@ class ToolsRegistry:
                     raw_result={"matching_rows": len(filt_df)}
                 )
 
+            # 13. dataset_overview / analyze_dataset
+            elif t_name in ("dataset_overview", "analyze_dataset"):
+                r_rep = RecommendationEngine.generate_recommendations(df, profile)
+                summary_text = (
+                    f"**Dataset Overview**: Analyzed {len(df):,} records across {len(df.columns)} dimensions.\n\n"
+                    f"- **Numerical Attributes**: {', '.join(profile.numerical_columns[:5]) if profile and profile.numerical_columns else 'None'}\n"
+                    f"- **Categorical Dimensions**: {', '.join(profile.categorical_columns[:5]) if profile and profile.categorical_columns else 'None'}\n"
+                    f"- **Data Completeness**: {round(100.0 - (profile.missing_pct if profile else 0), 1)}%\n\n"
+                    f"{r_rep.summary_markdown}"
+                )
+                chart_rec = DataVisualizer.recommend_best_chart(df)
+                fig_out = None
+                if chart_rec.get("x_col") and chart_rec.get("y_col"):
+                    c_build = DataVisualizer.build_chart(
+                        df, chart_type=chart_rec["chart_type"],
+                        x_col=chart_rec["x_col"], y_col=chart_rec["y_col"],
+                        title="Dataset Primary Distribution"
+                    )
+                    fig_out = c_build.fig
+                return ToolOutput(
+                    tool_name=t_name,
+                    success=True,
+                    text_summary=summary_text,
+                    table=df.head(10),
+                    figure=fig_out,
+                    raw_result={"rows": len(df), "cols": len(df.columns)}
+                )
+
+            # 14. prompt_dataset_upload
+            elif t_name == "prompt_dataset_upload":
+                return ToolOutput(
+                    tool_name=t_name,
+                    success=True,
+                    text_summary=(
+                        "📂 **Dataset Required for Analysis**\n\n"
+                        "To analyze specific metrics, build charts, or run predictions, please upload your CSV or Excel file via the **Home** or **Data Workspace** page.\n\n"
+                        "💡 *Quick Tip*: You can also choose one of our curated sample datasets on the **Home** page (*Sales & Profitability*, *Customer Churn*, or *Student Performance*) to test DN AI immediately!"
+                    ),
+                    raw_result={"status": "needs_dataset"}
+                )
+
+            # 15. general_chat
+            elif t_name == "general_chat":
+                return ToolOutput(
+                    tool_name=t_name,
+                    success=True,
+                    text_summary=tool_args.get("response", "DN AI is ready to help."),
+                    raw_result={"status": "general_ai"}
+                )
+
             else:
                 return ToolOutput(
                     tool_name=t_name,

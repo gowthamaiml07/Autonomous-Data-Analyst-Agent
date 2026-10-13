@@ -4,7 +4,7 @@ import time
 from typing import Optional, List, Dict, Any, Iterator
 from groq import Groq
 from langchain_groq import ChatGroq
-from src.config import DEFAULT_GROQ_MODEL, FAST_GROQ_MODEL
+from src.config import DEFAULT_GROQ_MODEL, FAST_GROQ_MODEL, DEFAULT_GROQ_API_KEY
 
 
 class LLMClient:
@@ -12,7 +12,7 @@ class LLMClient:
 
     @classmethod
     def get_api_key(cls, explicit_key: Optional[str] = None) -> Optional[str]:
-        """Retrieve Groq API key from explicit argument, env var, or Streamlit secrets."""
+        """Retrieve Groq API key from explicit argument, env var, Streamlit secrets, or built-in default."""
         if explicit_key and explicit_key.strip():
             return explicit_key.strip()
 
@@ -27,6 +27,10 @@ class LLMClient:
                 return st.secrets["GROQ_API_KEY"].strip()
         except Exception:
             pass
+
+        # Built-in default key
+        if DEFAULT_GROQ_API_KEY and DEFAULT_GROQ_API_KEY.strip():
+            return DEFAULT_GROQ_API_KEY.strip()
 
         return None
 
@@ -118,8 +122,8 @@ class LLMClient:
                 content = chunk.choices[0].delta.content
                 if content:
                     yield content
-        except Exception as e:
-            yield f"\n\n*[Streaming encountered an issue: {str(e)}]*"
+        except Exception:
+            return
 
     @classmethod
     def get_chat_model(

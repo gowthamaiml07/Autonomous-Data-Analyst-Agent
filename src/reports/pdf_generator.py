@@ -100,7 +100,7 @@ class PDFReportGenerator:
         elements = []
 
         # 1. Header & Title Banner
-        elements.append(Paragraph(f"InsightFlow AI | {report_title}", title_style))
+        elements.append(Paragraph(f"DataPilot AI | {report_title}", title_style))
         elements.append(Paragraph(
             f"Generated autonomously • Analyzed {len(df):,} records across {len(df.columns)} dimensions",
             subtitle_style
